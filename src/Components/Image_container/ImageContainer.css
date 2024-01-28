@@ -1,0 +1,24 @@
+.image-container {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: space-between;
+  }
+  
+  .image {
+    width: 50vw;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .image-container {
+      flex-direction: column-reverse; 
+      align-items: center; 
+    }
+  
+    .image {
+      width: 100%; /* Full width in mobile view */
+      max-width: none; /* Remove max-width in mobile view */
+      margin-bottom: 10px; /* Optional: Add some margin between stacked images */
+    }
+  }

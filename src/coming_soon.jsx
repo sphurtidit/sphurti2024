@@ -1,11 +1,14 @@
 import React from "react";
 import "./coming_soon.css";
-import img from "./assets/background.png";
+
+import ImageContainer from "./Components/Image_container/ImageContainer";
+import Navbar from "./Components/LogoNavbar/LogoNavbar";
 const Page = ()  => {
   return (
     <>
       <div className="back">
-        <img src={img} alt="" />
+            <Navbar/>
+            <ImageContainer/>
       </div>
     </>
   );
