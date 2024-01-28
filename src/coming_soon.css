@@ -1,9 +1,0 @@
-/* YourComponent.css */
-.back{
-    background-image: url('src/assets/back.png');
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    max-width: 100vw;
-  }
-  
