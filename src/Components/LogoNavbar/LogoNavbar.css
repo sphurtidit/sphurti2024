@@ -1,18 +1,22 @@
 /* Navbar.css */
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  
   padding: 10px;
   background-color: transparent;
   color: white;
-  width: 80%;
-  margin-left:auto;
+
+  box-sizing: border-box;
+  
   
 }
 
 .navbar img {
   height: 60px;
-  margin-right: 140px;
+  margin-right: 120px;
+  
+  
 }
 
 .navbar img:last-child {
