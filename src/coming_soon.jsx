@@ -5,19 +5,23 @@ import ImageContainer from "./Components/Image_container/ImageContainer";
 import Navbar from "./Components/LogoNavbar/LogoNavbar";
 const Page = ()  => {
 
-  const sty = {
+  const backgroundStyles = {
     backgroundImage: `url(${backgroundImage})`,
     width: '100vw',
     height: '100vh',
     backgroundSize: 'cover',
     maxWidth: '100vw',
   };
-  
+  const soonImageStyles = {
+    width: "80vw",
+    height: "auto",
+    marginTop: "20px",
+  }
   return (
     <>
-      <div className="back" style={sty}>
+      <div className="back" style={backgroundStyles}>
             <Navbar/>
-            <ImageContainer/>   
+            <ImageContainer  customStyles={soonImageStyles}/> 
       </div>
     </>
   );

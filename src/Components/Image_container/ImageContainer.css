@@ -6,19 +6,33 @@
   }
   
   .image {
-    width: 50vw;
-    height: auto;
+    width: 80vw;
+    height: 600px;
   }
-  
+  .image:first-child {
+    position: relative;
+    margin-top: -79px; 
+  }
+  .soon-image{
+    order:1;
+    width: 80vw !important;
+    height: auto!important;
+    margin-top: 20px !important;
+  }
   @media (max-width: 768px) {
     .image-container {
       flex-direction: column-reverse; 
-      align-items: center; 
+      align-items: flex-start; 
     }
   
     .image {
+      order: 2;
       width: 100%; /* Full width in mobile view */
       max-width: none; /* Remove max-width in mobile view */
+      height: auto;
       margin-bottom: 10px; /* Optional: Add some margin between stacked images */
+
     }
-  }
+      
+    }
+  

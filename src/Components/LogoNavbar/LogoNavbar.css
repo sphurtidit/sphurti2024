@@ -1,17 +1,20 @@
 /* Navbar.css */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: transparent;
-    color: white;
-  }
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  width: 80%;
+  margin-left:auto;
   
-  .navbar img {
-    height: 50px;
-  }
-  
-  .navbar img:last-child {
-    margin-right: 0;
-  }
-  
+}
+
+.navbar img {
+  height: 60px;
+  margin-right: 140px;
+}
+
+.navbar img:last-child {
+  margin-right: 0;
+}
