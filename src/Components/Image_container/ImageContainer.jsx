@@ -11,11 +11,13 @@ const ImageContainer = () => {
                 className="left-image"
                 alt="Left Image"
             />
-            <imgn
+            <img
                 src={RIGHT}
-                className="image soon-image"
+                className="soon-image"
                 alt="Soon Image"
             />
       </div>
       );
     };
+
+export default ImageContainer;

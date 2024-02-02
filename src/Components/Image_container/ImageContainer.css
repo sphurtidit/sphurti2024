@@ -5,20 +5,18 @@
     justify-content: space-between;
   }
   
-  .image {
-    width: 80vw;
-    height: 600px;
+  .left-image{
+    width: 48vw;
+    height: auto;
   }
-  .image:first-child {
-    position: relative;
-    margin-top: -79px; 
-  }
+  
   .soon-image{
     order:1;
-    width: 80vw !important;
-    height: auto!important;
+    width: 48vw !important;
+    height: auto !important;
     margin-top: 20px !important;
   }
+  
   @media (max-width: 768px) {
     .image-container {
       flex-direction: column-reverse; 
