@@ -20,7 +20,7 @@ const Page = ()  => {
   return (
     <>
       <div className="back" style={backgroundStyles}>
-            <Navbar/>
+            
             <ImageContainer  customStyles={soonImageStyles}/> 
       </div>
     </>
