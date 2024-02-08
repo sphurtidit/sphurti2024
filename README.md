@@ -15,5 +15,5 @@ Currently, two official plugins are available:
  - If you install new package or see a error message showing that you must commit the changes before pulling, you should run the command ```git add <filename/s>``` with the file names shown in the error message and then commit the same file with a commit messsage
 
 #How to write commit Message:
-  -You should use the tag feat whenever you add some additional feature as ```"feat: added the nav icon```
-  -You should use the tag chores whenever you update the existing feature, make any style changes or make any functionality change to the existing feature like ```chores: added functionality to nav icon```
+  - You should use the tag feat whenever you add some additional feature as ```"feat: added the nav icon```
+  - You should use the tag chores whenever you update the existing feature, make any style changes or make any functionality change to the existing feature like ```chores: added functionality to nav icon```
