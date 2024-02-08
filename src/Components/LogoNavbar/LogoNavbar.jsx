@@ -1,5 +1,5 @@
 // Navbar.js
-import React from 'react';
+// import React from 'react';
 import './LogoNavbar.css';
 import DIT from '../../assets/DIT.png';
 import NAAC from '../../assets/naac.png';

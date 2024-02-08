@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./ImageContainer.css";
 import LEFT from "../../assets/color.png";
 import RIGHT from "../../assets/soon.png";
