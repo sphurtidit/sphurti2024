@@ -1,0 +1,52 @@
+.sports-container{
+    border: 2px solid red;
+    display:flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.sports-heading{
+    color: #FFCC32;
+}
+.reg{
+    display: flex;
+  align-items: center;
+    
+}
+
+.reg img{
+    margin-right: 5px;
+}
+.reg-text{
+    color:black;
+    margin: 0 5px;
+    margin-bottom: 1px;
+}
+.left-column{
+    flex:1;
+
+}
+.right-column{
+    flex:1;
+
+}
+.fee{
+    border:1px solid black;
+
+}
+
+.fee-text {
+    text-align: center;
+  }
+  
+  .fee-text .fees {
+    color: #FFCC32; 
+    font-weight: bold;
+    font-size: 240;
+  }
+  
+  .fee-text .per-team {
+    display: inline-block;
+    color:black;
+    size: 12px;
+  }
+  
