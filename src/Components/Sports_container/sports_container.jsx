@@ -1,7 +1,9 @@
 // import React from 'react';
 import "./sports_container.css";
 import badminton from '../../assets/badminton.png'
+import { MdKeyboardArrowDown } from "react-icons/md";
 import flag from '../../assets/flag.png'
+
 const SportsContainer = () => {
     return (
         <div className="sports-container">
@@ -14,24 +16,29 @@ const SportsContainer = () => {
                 </div>
                 <div className="fee">
                     <div className="fee-text">
-                        <span className="fees">FEES</span><br />
-                        <span className="per-team">PER TEAM</span>
+                        <p className="fees">FEES</p>
+                        <p className="team">PER TEAM</p>
                     </div>
-
-                    <div className="fee-boy">BOYS 1500</div>
-                    <div className="fee-boy">GIRLS 1000</div>
-
+                    <div className="fee-text">
+                        <p className="cate">BOYS</p>
+                        <p className="cate-fees">₹1500</p>
+                    </div>
+                    <div className="fee-text">
+                        <p className="cate">GIRLS</p>
+                        <p className="cate-fees">₹1000</p>
+                    </div>
                 </div>
                 <div className="buttons">
-                    <button title='Register' className='primary'></button>
-                    <button title='View Details' className='secondary' />
+                    {/* Change the primary button to something like the secondary button */}
+                    <button title='Register' className='primary' />
+                    <button title='detail' className='secondary' >
+                        View Details <MdKeyboardArrowDown />
+                    </button>
                 </div>
             </div>
             <div className="right-column">
                 <img src={badminton}></img>
             </div>
-
-            {/* Add your sports-related content here */}
         </div>
     );
 };
