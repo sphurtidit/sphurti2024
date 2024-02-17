@@ -14,11 +14,11 @@ const SportsContainer = (games) => {
     return (
         <div className={`sports-container ${col}`}>
             <div className="left-column">
-                <h1 className='sports-heading'>{games.name}</h1>
+                <p className='sports-heading'>{games.name}</p>
                 <div className="reg">
-                    <img src={flag} height={22}></img>
+                    <img src={flag}></img>
                     <h2 className='reg-text'>REGISTRATION</h2>
-                    <img src={flag} height={22}></img>
+                    <img src={flag}></img>
                 </div>
                 <div className="fee">
                     <div className="fee-text">

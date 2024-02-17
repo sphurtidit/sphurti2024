@@ -1,44 +1,38 @@
-/* Add margin & padding to different elements to make the overall component spaced */
-
 .sports-container {
     --primary-color: #ffcc32;
-    --secondary-color: red;
+    --secondary-color: #ee0942;
     border: 2px solid var(--secondary-color);
     display: flex;
     justify-content: space-between;
     background-color: white;
     width: 35vw;
-
+    height: fit-content;
 }
 
 .red {
     --primary-color: #ee0942;
     --secondary-color: #7f1bb6;
-
 }
 
 .yellow {
     --primary-color: #ffcc32;
     --secondary-color: #ee0942;
-
 }
 
 .purple {
     --primary-color: #7f1bb6;
     --secondary-color: #ffcc32;
-
 }
 
 .sports-heading {
     margin-top: 2.5rem;
-    margin-right: 60px;
     font-family: 'SF Sports Night';
     color: var(--primary-color);
-    font-size: 51px;
+    font-size: 2rem;
 }
 
 .reg {
-    margin-top: 1.25rem;
+    margin-top: 1vh;
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -46,28 +40,32 @@
 
 .reg img {
     margin-right: 5px;
-
+    height: 1.2em;
 }
 
 .reg-text {
     font-family: 'SF Sports Upright';
-    font-size: 28px;
+    font-size: 1.25rem;
     color: black;
     margin: 0 5px;
     margin-bottom: 1px;
-
 }
 
 .left-column {
     flex: 1;
-    margin-left: 30px;
+    margin-left: 1vw;
     width: 60%;
 }
 
 .right-column {
     width: 40%;
-    flex: 1;
-    object-fit: cover;
+    flex: 1;    
+    display: flex;
+    justify-content: end;   
+}
+
+.right-column img{
+    height: 100%;
 }
 
 .fee {
@@ -83,25 +81,25 @@
 .fees {
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5vw;
     font-family: 'SF Sports Upright';
 }
 
 .team {
     color: black;
-    font-size: 12px;
+    font-size: 0.75vw;
     font-family: 'DM Sans';
 }
 
 .cate {
     color: black;
-    font-size: 18px;
+    font-size: 1.3vw;
     font-family: 'SF Sports Upright';
 }
 
 .cate-fees {
     color: var(--primary-color);
-    font-size: 18px;
+    font-size: 1.3vw;
     font-family: 'DM Sans';
 }
 
@@ -112,18 +110,14 @@
 }
 
 .primary {
-    /* Primary button css goes here */
     background-color: var(--primary-color);
-    ;
     background-color: var(--primary-color);
-    ;
     color: white;
     border-radius: 2px;
     font-size: 16px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     margin-top: 15px;
     margin-right: 10px;
-    width: 135px;
 }
 
 .secondary {
@@ -134,7 +128,6 @@
     font-size: 16px;
     padding: 5px 10px;
     margin-top: 15px;
-    width: 135px;
 }
 
 .details {
@@ -173,7 +166,6 @@
     font-size: 16px;
     font-family: 'DM Sans';
     margin-right: 0.25rem;
-
 }
 
 a {
@@ -209,14 +201,11 @@ a:hover {
 .vertical-line {
     border-left: 1.5px solid var(--primary-color);
     height: auto;
-    /* width: 1px; */
-
 }
 
 .cinfo {
     flex: 1;
     display: flex;
-    /* padding: 0rem 0.1rem; */
 }
 
 .cinfo p {
@@ -227,7 +216,6 @@ a:hover {
     font-weight: 700;
 }
 
-
 .hr {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -237,5 +225,4 @@ a:hover {
     color: black;
     font-size: 16px;
     font-family: 'DM Sans';
-
 }
