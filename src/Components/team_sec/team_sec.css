@@ -26,7 +26,11 @@
 .StudentCard{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     row-gap: 2rem;
-    column-gap: 3rem;
+    /* column-gap: 3rem; */
+}
+
+.StudentCard .TeamCard {
+    flex-basis: 50%; /* Calculate width for three items in a row with gap */
 }

@@ -1,10 +1,9 @@
 .parent-container{
-    width:300px;
-    height:450px;
-    margin: 0;
+    margin: 0 5vw;
     padding: 0;
-    line-height: 1;
+    line-height: 0.1;
     --imageurl:url("../../assets/Purple.png");
+    width: 20%;
 }
 .red{
     --imageurl:url("../../assets/red.png");
@@ -17,20 +16,16 @@
     --imageurl:url("../../assets/Purple.png");
 }
 .image-container{
-    width:300px;
-    height:300px;
     background-image: var(--imageurl);
     background-repeat: no-repeat;
     background-size: contain;
-
-}
-.Images{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    bottom: 0; /* Position at the bottom */
-    left: 50%;
 }
+
+.image{
+    width: 100%;
+}
+
 .Text{
     font-family: Arial, sans-serif;
     font-size: 30px;

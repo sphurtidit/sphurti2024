@@ -5,31 +5,31 @@ function TeamSec() {
 
   return (
     <div className="whole">
-        <p className="Heading1">
-            OUR TEAM
-        </p>
-        <p className="Heading2">
-            Faculty co-ordinator
-        </p>
-        <div className="FacultyCard">
-        <TeamCard name={"Tanya"} designation={"head"} type={"red"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"}/>
-        </div>
-        <p className="Heading2">
-            Student co-ordinator
-        </p>
-        <div className="StudentCard">
-        <TeamCard name={"Tanya"} designation={"head"} type={"red"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"purple"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"red"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"purple"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"red"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"purple"}/>
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"}/>
-        </div>
+      <p className="Heading1">
+        OUR TEAM
+      </p>
+      <p className="Heading2">
+        Faculty co-ordinator
+      </p>
+      <div className="FacultyCard">
+        <TeamCard name={"R. S. Chauhan"} designation={"Sports Officer"} type={"red"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
+      </div>
+      <p className="Heading2">
+        Student co-ordinator
+      </p>
+      <div className="StudentCard">
+        <TeamCard name={"Tanya"} designation={"head"} type={"red"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"purple"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"red"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"purple"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"red"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"purple"} />
+        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
+      </div>
     </div>
 
   )

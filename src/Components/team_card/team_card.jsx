@@ -2,15 +2,13 @@
 import './team_card.css';
 import PropTypes from 'prop-types';
 import Proff from '../../assets/bg 3.png';
-const TeamCard = ({type,name,designation}) => {
-  
+const TeamCard = ({ type, name, designation }) => {
+
 
   return (
     <div className={`parent-container ${type}`}>
       <div className="image-container">
-       
-        <img src={Proff} className="Images">
-        </img>
+        <img src={Proff} className="image" />
       </div>
       <p className="Text">
         {name}
@@ -18,7 +16,7 @@ const TeamCard = ({type,name,designation}) => {
       <p className="SText">
         {designation}
       </p>
-  
+
     </div>
   );
 }
