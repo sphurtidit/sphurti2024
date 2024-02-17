@@ -1,21 +1,33 @@
 // import React from 'react';
 import './team_card.css';
-import Purple from '../../assets/Purple.png';
-// import Red from '../../assets/red.png';
-// import Yellow from '../../assets/yellow.png';
+import PropTypes from 'prop-types';
 import Proff from '../../assets/bg 3.png';
-const TeamCard = () => {
+const TeamCard = ({type,name,designation}) => {
+  
+
   return (
-    <div>
-      {/* <h1>Hello, World!</h1> */}
-      {/* <p>This is a basic React component.</p> */}
-      <div className="box">
-    <img src={Purple}/>
-    <img src={Proff}/>
-  </div>
+    <div className={`parent-container ${type}`}>
+      <div className="image-container">
+       
+        <img src={Proff} className="Images">
+        </img>
+      </div>
+      <p className="Text">
+        {name}
+      </p>
+      <p className="SText">
+        {designation}
+      </p>
   
     </div>
   );
 }
+
+
+TeamCard.propTypes = {
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  designation: PropTypes.string.isRequired
+};
 
 export default TeamCard;
