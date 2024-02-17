@@ -1,13 +1,13 @@
- import Page from './coming_soon'
+//  import Page from './coming_soon'
 import './App.css'
-// import SportsContainer from './Components/Sports_container/sports_container'
+import SportsSection from './Components/Sports_section/Sports_section'
 
 function App() {
 
   return (
     <>
-      {/* <SportsContainer name="BADMINTON" boyfees="₹1500" girlfees="₹1000"/> */}
-   <Page></Page>
+       <SportsSection/>
+   
     </>
   )
 }

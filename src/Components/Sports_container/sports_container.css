@@ -7,9 +7,27 @@
     display: flex;
     justify-content: space-between;
     background-color: white;
+    width: 35vw;
+
 }
 
+.red {
+    --primary-color: #ee0942;
+    --secondary-color: #7f1bb6;
 
+}
+
+.yellow {
+    --primary-color: #ffcc32;
+    --secondary-color: #ee0942;
+
+}
+
+.purple {
+    --primary-color: #7f1bb6;
+    --secondary-color: #ffcc32;
+
+}
 
 .sports-heading {
     margin-top: 2.5rem;
@@ -40,14 +58,17 @@
 
 }
 
-.left-column,
-.right-column {
+.left-column {
     flex: 1;
     margin-left: 30px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    width: 60%;
 }
 
+.right-column {
+    width: 40%;
+    flex: 1;
+    object-fit: cover;
+}
 
 .fee {
     border: 1px solid black;
@@ -55,8 +76,8 @@
     display: flex;
     color: #000;
     box-sizing: border-box;
-    width: 256px;
     justify-content: space-evenly;
+    padding: 10px 0;
 }
 
 .fees {
@@ -64,21 +85,18 @@
     font-weight: bold;
     font-size: 24px;
     font-family: 'SF Sports Upright';
-    margin-top: 10px;
 }
 
 .team {
     color: black;
     font-size: 12px;
     font-family: 'DM Sans';
-    margin-bottom: 10px;
 }
 
 .cate {
     color: black;
     font-size: 18px;
     font-family: 'SF Sports Upright';
-    margin-top: 10px;
 }
 
 .cate-fees {
@@ -137,7 +155,11 @@
 }
 
 .winner {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+}
+
+.runner {
+    margin-left: 0.5rem;
 }
 
 .schedule {
@@ -181,14 +203,14 @@ a:hover {
 .info {
     display: flex;
     font-size: 12px;
-    justify-content: center;
+    justify-content: start;
 }
 
 .vertical-line {
-    border-left: 1px solid black;
-    height: 100%;
-    width: 1px;
-    /* Occupy the height of the parent div */
+    border-left: 1.5px solid var(--primary-color);
+    height: auto;
+    /* width: 1px; */
+
 }
 
 .cinfo {
