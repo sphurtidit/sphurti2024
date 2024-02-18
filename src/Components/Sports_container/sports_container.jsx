@@ -10,37 +10,39 @@ const SportsContainer = (games) => {
     const viewDetails = () => {
         setShowContent(!showContent);
     }
-    let col=(games.type==1)?"yellow":(games.type==2)?"red":"purple";
+    let col = (games.type == 1) ? "yellow" : (games.type == 2) ? "red" : "purple";
     return (
         <div className={`sports-container ${col}`}>
             <div className="left-column">
-                <p className='sports-heading'>{games.name}</p>
-                <div className="reg">
-                    <img src={flag}></img>
-                    <h2 className='reg-text'>REGISTRATION</h2>
-                    <img src={flag}></img>
-                </div>
-                <div className="fee">
-                    <div className="fee-text">
-                        <p className="fees">FEES</p>
-                        <p className="team">PER TEAM</p>
+                <div className='container'>
+                    <p className='sports-heading'>{games.name}</p>
+                    <div className="reg">
+                        <img src={flag}></img>
+                        <h2 className='reg-text'>REGISTRATION</h2>
+                        <img src={flag}></img>
                     </div>
-                    <div className="fee-text">
-                        <p className="cate">BOYS</p>
-                        <p className="cate-fees">{games.boyfees}</p>
+                    <div className="fee">
+                        <div className="fee-text">
+                            <p className="fees">FEES</p>
+                            <p className="team">PER TEAM</p>
+                        </div>
+                        <div className="fee-text">
+                            <p className="cate">BOYS</p>
+                            <p className="cate-fees">{games.boyfees}</p>
+                        </div>
+                        <div className="vertical-line"></div>
+                        <div className="fee-text">
+                            <p className="cate">GIRLS</p>
+                            <p className="cate-fees">{games.girlfees}</p>
+                        </div>
                     </div>
-                    <div className="vertical-line"></div>
-                    <div className="fee-text">
-                        <p className="cate">GIRLS</p>
-                        <p className="cate-fees">{games.girlfees}</p>
+                    <div className="buttons">
+                        <button title='Register' className='primary' >
+                            Register</button>
+                        <button title='detail' className='secondary' onClick={viewDetails}>
+                            {showContent ? (<>View Less <MdKeyboardArrowUp /> </>) : (<>View More <MdKeyboardArrowDown /> </>)}
+                        </button>
                     </div>
-                </div>
-                <div className="buttons">
-                    <button title='Register' className='primary' >
-                        Register</button>
-                    <button title='detail' className='secondary' onClick={viewDetails}>
-                        {showContent ? (<>View Less <MdKeyboardArrowUp /> </>) : (<>View Details <MdKeyboardArrowDown /> </>)}
-                    </button>
                 </div>
                 {showContent &&
                     <div className="details">
@@ -68,7 +70,7 @@ const SportsContainer = (games) => {
                                     <p className="name">Soumya Nilay:</p>
                                     <p className="mob">8002686694</p>
                                 </div>
-                                <div className="vertical-line"></div>
+
                                 <div className="cinfo">
                                     <p className="name">Maanav Aryan:</p>
                                     <p className="mob">9334914647</p>
@@ -79,7 +81,7 @@ const SportsContainer = (games) => {
                 }
             </div>
             <div className="right-column">
-                <img src={showContent?badminton:badmintonsmall} className="image"></img>
+                <img src={showContent ? badminton : badmintonsmall} className="image"></img>
             </div>
         </div>
     );

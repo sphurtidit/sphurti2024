@@ -3,7 +3,6 @@
     --secondary-color: #ee0942;
     border: 2px solid var(--secondary-color);
     display: flex;
-    justify-content: space-between;
     background-color: white;
     width: 35vw;
     height: fit-content;
@@ -59,12 +58,12 @@
 
 .right-column {
     width: 40%;
-    flex: 1;    
+    flex: 1;
     display: flex;
-    justify-content: end;   
+    justify-content: end;
 }
 
-.right-column img{
+.right-column img {
     height: 100%;
 }
 
@@ -93,13 +92,13 @@
 
 .cate {
     color: black;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     font-family: 'SF Sports Upright';
 }
 
 .cate-fees {
     color: var(--primary-color);
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     font-family: 'DM Sans';
 }
 
@@ -115,7 +114,7 @@
     color: white;
     border-radius: 2px;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin-top: 15px;
     margin-right: 10px;
 }
@@ -125,8 +124,8 @@
     background-color: white;
     color: var(--primary-color);
     border-radius: 2px;
-    font-size: 16px;
-    padding: 5px 10px;
+    font-size: 14px;
+    padding: 5px 5px;
     margin-top: 15px;
 }
 
@@ -136,6 +135,7 @@
     font-family: 'DM Sans';
     margin-top: 10px;
     margin-bottom: 10px;
+    width: auto;
 }
 
 .amount {
@@ -163,13 +163,13 @@
 
 .sch-text {
     color: black;
-    font-size: 16px;
+    font-size: 1.1vw;
     font-family: 'DM Sans';
     margin-right: 0.25rem;
 }
 
 a {
-    font-size: 16px;
+    font-size: 1.1vw;
 }
 
 a:active {
@@ -196,6 +196,7 @@ a:hover {
     display: flex;
     font-size: 12px;
     justify-content: start;
+    flex-direction: column;
 }
 
 .vertical-line {
@@ -206,6 +207,7 @@ a:hover {
 .cinfo {
     flex: 1;
     display: flex;
+
 }
 
 .cinfo p {
@@ -225,4 +227,17 @@ a:hover {
     color: black;
     font-size: 16px;
     font-family: 'DM Sans';
+}
+.container{
+    max-width: 100%;
+    width: auto;
+}
+@media only screen and (max-width:768px){
+    .sports-container{
+        width: 70vw;
+    }
+    .sports-heading{
+        font-size: 2.19rem;
+    }
+    .r
 }
