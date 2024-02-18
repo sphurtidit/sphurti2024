@@ -6,6 +6,7 @@
     background-color: white;
     width: 35vw;
     height: fit-content;
+    aspect-ratio: 3/2;
 }
 
 .red {
@@ -27,7 +28,7 @@
     margin-top: 2.5rem;
     font-family: 'SF Sports Night';
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 170%;
 }
 
 .reg {
@@ -64,7 +65,8 @@
 }
 
 .right-column img {
-    height: 100%;
+    height: auto;
+    width:auto;
 }
 
 .fee {
@@ -239,5 +241,44 @@ a:hover {
     .sports-heading{
         font-size: 2.19rem;
     }
-    .r
+    .reg-text{
+        font-size: 1.5rem;
+    }
+    .fees{
+        font-size: 3vw;
+    }
+    .fee{
+    padding: 5px 0;
+    justify-content: space-around;
+    }
+    .team{
+        font-size: 1.5vw;
+    }
+    .cate{
+        font-size: 2.2vw;
+    }
+    .cate-fees{
+        font-size: 2.2vw;
+    }
+    .sch-text{
+        font-size:2vw;
+    }
+    a{
+        font-size: 2vw;
+    }
+    .prize{
+        font-size:2vw;
+    }
+    .winner{
+        font-size: 2vw;
+    }
+    .runner{
+        font-size: 2vw;
+    }
+    .coord-text{
+        font-size: 2vw;
+    }
+    .cinfo{
+        font-size: 2vw;
+    }
 }
