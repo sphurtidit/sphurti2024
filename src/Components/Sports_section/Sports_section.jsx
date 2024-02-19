@@ -1,6 +1,6 @@
 // nimport React from 'react';
 import SportsContainer from '../Sports_container/sports_container';
-import './sports_section.css';
+import './Sports_section.css';
 import badminton from '../../assets/badminton.png'
 import badmintonsmall from '../../assets/badminton small.png'
 import cricket from '../../assets/cricket.png'
