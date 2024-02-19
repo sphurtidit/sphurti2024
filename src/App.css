@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'SF Sports Night';
+    src: url('./fonts/SF/SF Sports Night NS.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Sports Upright';
+    src: url('./fonts/SF/SF Sports Night NS Upright.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/DM/DMSans-Bold.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
