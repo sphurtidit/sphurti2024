@@ -2,14 +2,15 @@
 import './App.css'
 import SportsSection from './Components/Sports_section/Sports_section'
 import HeroPage from './pages/HeroPage/HeroPage'
-
+import Navbar from './Components/Navbar/navbar'
 function App() {
 
   return (
     <>
+    <div className="background-container">
+      <Navbar />   
     <HeroPage />
-       <SportsSection/>
-   
+    </div> 
     </>
   )
 }
