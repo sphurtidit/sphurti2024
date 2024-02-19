@@ -16,7 +16,7 @@ import tabletennissmall from '../../assets/table tennis small.png'
 const SportsSection = () => {
     return (
         <div className='parent-container'>
-            <div className='heading'><h1>Sports</h1></div>
+            <div className='heading'><h1>SPORTS</h1></div>
             <div className='allsports'>
                 <SportsContainer name="BADMINTON" boyfees="₹1500" girlfees="₹1000" type="1" image={badminton} imagesmall={badmintonsmall}/>
                 <SportsContainer name="BASKETBALL" boyfees="₹1500" girlfees="₹1000" type="2" image={basketball} imagesmall={basketballsmall}/>
