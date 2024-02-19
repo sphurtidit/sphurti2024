@@ -1,0 +1,44 @@
+.parent-container{
+    margin: 0 5vw;
+    padding: 0;
+    line-height: 0.1;
+    --imageurl:url("../../assets/Purple.png");
+    width: 20%;
+}
+.red{
+    --imageurl:url("../../assets/red.png");
+
+}
+.yellow{
+    --imageurl:url("../../assets/yellow.png");
+}
+.purple{
+    --imageurl:url("../../assets/Purple.png");
+}
+.image-container{
+    background-image: var(--imageurl);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+.image{
+    width: 100%;
+}
+
+.Text{
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.SText{
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+}
