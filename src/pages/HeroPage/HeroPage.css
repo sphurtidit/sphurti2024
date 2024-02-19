@@ -1,0 +1,32 @@
+.main {
+    background-color: #fff;
+    height: 100vh;
+    background-repeat: repeat;
+    max-width: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.container .back-right, .back-center, .back-left {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    
+}
+
+.container .back-center img {
+    width: 60vw;
+    height: 90vh;
+    margin-top: 27rem;
+    display: flex;
+}
+
+/* .container .back-right img {
+    display: flex;
+    flex-direction: row;
+} */
