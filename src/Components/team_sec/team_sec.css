@@ -1,0 +1,36 @@
+.whole{
+    width:100vw;
+    line-height: 0.25;
+}
+.Heading1{
+    font-family: Arial, sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.Heading2{
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+}
+.FacultyCard{
+ display: flex;
+ justify-content: space-around;
+}
+.StudentCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2rem;
+    /* column-gap: 3rem; */
+}
+
+.StudentCard .TeamCard {
+    flex-basis: 50%; /* Calculate width for three items in a row with gap */
+}
