@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import "./sports_container.css";
-import badminton from '../../assets/badminton.png'
-import badmintonsmall from '../../assets/badminton small.png'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import flag from '../../assets/flag.png'
 
@@ -82,7 +80,7 @@ const SportsContainer = (games) => {
                 }
             </div>
             <div className="right-column">
-                <img src={showContent ? badminton : badmintonsmall} className="image"></img>
+                <img src={showContent ? games.image : games.imagesmall} className="image"></img>
             </div>
         </div>
     );
