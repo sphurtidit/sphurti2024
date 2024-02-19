@@ -364,7 +364,7 @@ a:hover {
     }
 
     .expanded {
-        --ratio: 3/3;
+        --ratio: 3/3.2;
     }
     .hr {
         margin-top: 1.5vh;
@@ -379,7 +379,7 @@ a:hover {
     }
 
     .expanded {
-        --ratio: 3/3.8;
+        --ratio: 3/4;
     }
 
     .sports-heading {
