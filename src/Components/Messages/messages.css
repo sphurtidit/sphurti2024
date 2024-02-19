@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    background-image: url(./assets/BG.svg);
+    margin: 0;
+    padding: 0;
+}
+.headbox{
+    font-family: 'Outfit';
+    color: #1F1F21;
+    /* width: 559%; */
+    text-align: center;
+    margin-top: -1%;
+}
+.box{
+    /* height: 230px; */
+    padding:0.5% ;
+    padding-bottom:1% ;
+    transform:skew(0deg,-1.5deg);
+}
+.facpics{
+    margin-top: 0.7%;
+    margin-left: 5%;
+    width: 18%;
+}
+.contentbox{
+    width: 60%;
+    margin-top: 5%;
+    position: relative;
+    z-index: 10; 
+    margin-left: 28%;
+}
+.facname{
+    font-family: 'Outfit';
+    margin-bottom: 0%;
+    font-size: 35px;
+    color: #FFFFFF;
+}
+.designation{
+    color: #FFFFFF99;
+    font-family: 'Poppins';
+    margin-bottom: 0%;
+}
+.message{
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    margin-top: 1%;
+    margin-bottom: 0%;
+    /* font-size: 20px; */
+}
+.readmore{
+    color: black;
+    background: transparent;
+    font-family:'Poppins' ;
+    padding: 0%;
+    text-decoration: underline;
+}
+/* Your existing styles here */
+
+@media screen and (max-width: 767px) {
+    .headbox {
+        margin-bottom: 20%;
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .box {
+        transform:skew(0deg,-3deg);
+        height: 150%;
+        padding: 2%; /*Adjust padding for smaller screens*/
+        padding-top: 0%;
+    }
+
+    .facpics {
+        margin: 5% 0; /* Adjust margin for smaller screens */
+        width: 45%; /* Adjust image width for smaller screens */
+    }
+
+    .contentbox {
+        width: 80%;
+        margin: 5% 5%; /* Adjust margin for smaller screens */
+    }
+
+    .facname {
+        margin-left: 55%;
+        font-size: 30px; /* Adjust font size for smaller screens */
+        width: 30%;
+    }
+
+    .designation{
+        width: 35%;
+        /* border: 2px solid #FFFFFF99; */
+        font-size: 12px; /* Adjust font size for smaller screens */
+        margin-left: 55%;
+    }
+    .message {
+        margin-top: 6%;
+        width: 110%;
+        font-size: 11px; /* Adjust font size for smaller screens */
+    }
+    
+}
