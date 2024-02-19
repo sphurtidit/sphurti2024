@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./messages.css";
 import raghurama from "../../assets/graghurama.png";
 import drrakeshmohan from "../../assets/drrakeshmohan.png";
@@ -29,7 +29,7 @@ const Messages = () => {
       }
     }
     return {
-      marginTop: expandedContent ? "-62%" : "-40%",
+      marginTop: expandedContent ? "-60%" : "-38%",
     };
   };
 
@@ -39,13 +39,13 @@ const Messages = () => {
     if (window.matchMedia("(max-width: 767px)").matches) {
       return {
         backgroundColor: "#FFB800",
-        marginTop: expandedContent === 1 ? "-61%" : "0%",
+        marginTop: expandedContent === 1 ? "-61%" : "1%",
         height: expandedContent === 1 ? "600px" : "330px",
       };
     }
     return {
       backgroundColor: "#FFB800",
-      marginTop: expandedContent === 1 ? "-64%" : "-40%",
+      marginTop: expandedContent === 1 ? "-44%" : "-30%",
       height: expandedContent === 1 ? "580px" : "230px",
     };
   };
@@ -74,7 +74,7 @@ const Messages = () => {
       };
     }
     return {
-      marginTop: expandedContent ? "-1%" : "-3%",
+      marginTop: expandedContent ? "2%" : "5%",
     };
   };
 
@@ -91,7 +91,7 @@ const Messages = () => {
   };
   const content1 = getContent1();
   const content2 = {
-    marginBottom: expandedContent === 2 ? "8%" : "12%",
+    marginBottom: expandedContent === 2 ? "12%" : "12%",
   };
 
   return (
@@ -129,7 +129,7 @@ const Messages = () => {
                     <br />
                     I wish the event a grand success.
                     <br />
-                    May all have a great and peaceful "SPHURTI -2024".
+                    May all have a great and peaceful &quot;SPHURTI -2024&quot;.
                     <br />
                     <br />
                     Jai Hind!
@@ -162,7 +162,7 @@ const Messages = () => {
             to the SPHURTI-2024, the eighth annual sports meet of DIT
             University, from 13th March to 15 March 2024. On this occasion, I
             extend my warm wishes to all the sports persons with a great motto
-            of "Aim for excellence, not perfection." we will form the nucleus of
+            of &quot;Aim for excellence, not perfection.&quot; we will form the nucleus of
             change when we combine efforts with those who have walked the path
             before us and are
             {expandedContent === 2 ? (
@@ -177,7 +177,7 @@ const Messages = () => {
                     ready to do your best-and your best is the best you can do.
                     <br />
                     The DIT University, Dehradun, under the leadership of
-                    Hon'ble vice Chancellor, Prof. G. Raghurama is fully
+                    Hon&apos;ble vice Chancellor, Prof. G. Raghurama is fully
                     committed for all around development and empowerment of
                     students so that they can realize their full potential and
                     also contribute to the career-building process. Not only
@@ -219,4 +219,4 @@ const Messages = () => {
   );
 };
 
-export default Page;
+export default Messages;

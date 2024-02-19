@@ -8,7 +8,7 @@ html{
 }
 .headbox{
     font-family: 'Outfit';
-    color: #1F1F21;
+    color: white;
     /* width: 559%; */
     text-align: center;
     margin-top: -1%;
@@ -16,11 +16,11 @@ html{
 .box{
     /* height: 230px; */
     padding:0.5% ;
-    padding-bottom:1% ;
+    padding-bottom:2% ;
     transform:skew(0deg,-1.5deg);
 }
 .facpics{
-    margin-top: 0.7%;
+    /* margin-top: 0%; */
     margin-left: 5%;
     width: 18%;
 }
