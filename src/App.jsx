@@ -1,4 +1,4 @@
-import Page from './coming_soon'
+import Page from './Messages'
 import './App.css'
 
 function App() {
