@@ -19,7 +19,7 @@ const SportsContainer = (games) => {
                     <p className='sports-heading'>{games.name}</p>
                     <div className="reg">
                         <img src={flag}></img>
-                        <h2 className='reg-text'>REGISTRATION</h2>
+                        <p className='reg-text'>REGISTRATION</p>
                         <img src={flag}></img>
                     </div>
                     <div className="fee">
