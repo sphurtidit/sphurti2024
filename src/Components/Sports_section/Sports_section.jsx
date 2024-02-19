@@ -10,7 +10,7 @@ const SportsSection = () => {
                 <SportsContainer name="BASKETBALL" boyfees="₹1500" girlfees="₹1000" type="2" />
                 <SportsContainer name="CRICKET" boyfees="₹1500" girlfees="₹1000" type="3" />
                 <SportsContainer name="VOLLEYBALL" boyfees="₹1500" girlfees="₹1000" type="3" />
-                <SportsContainer name="TABLETENNIS" boyfees="₹1500" girlfees="₹1000" type="1" />
+                <SportsContainer name="TABLE TENNIS" boyfees="₹1500" girlfees="₹1000" type="1" />
                 <SportsContainer name="FOOTBALL" boyfees="₹1500" girlfees="₹1000" type="2" />
             </div>
         </div>

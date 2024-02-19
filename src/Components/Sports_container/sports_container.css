@@ -1,4 +1,12 @@
 .sports-container {
+    --ratio: 3/2;
+}
+
+.expanded {
+    --ratio: 3/3.2;
+}
+
+.sports-container {
     --primary-color: #ffcc32;
     --secondary-color: #ee0942;
     border: 2px solid var(--secondary-color);
@@ -6,7 +14,7 @@
     background-color: white;
     width: 35vw;
     height: fit-content;
-    aspect-ratio: 3/2;
+    aspect-ratio: var(--ratio);
 }
 
 .red {
@@ -28,7 +36,8 @@
     margin-top: 2.5rem;
     font-family: 'SF Sports Night';
     color: var(--primary-color);
-    font-size: 170%;
+    font-size: 2.3vw;
+    max-width: 100%;
 }
 
 .reg {
@@ -36,6 +45,7 @@
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
+    max-width: 100%;
 }
 
 .reg img {
@@ -55,6 +65,7 @@
     flex: 1;
     margin-left: 1vw;
     width: 60%;
+    max-height: 100%;
 }
 
 .right-column {
@@ -77,6 +88,7 @@
     box-sizing: border-box;
     justify-content: space-evenly;
     padding: 10px 0;
+    width: 100%;
 }
 
 .fees {
@@ -108,6 +120,7 @@
     display: flex;
     justify-content: start;
     margin-top: 1rem;
+    width: 100%;
 }
 
 .primary {
@@ -135,9 +148,8 @@
     color: black;
     font-size: 16px;
     font-family: 'DM Sans';
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: auto;
+    max-width: 100%;
+    max-height: 50%;
 }
 
 .amount {
@@ -221,8 +233,8 @@ a:hover {
 }
 
 .hr {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .coord-text {
@@ -233,10 +245,32 @@ a:hover {
 .container{
     max-width: 100%;
     width: auto;
+    max-height: 50%;
+
 }
-@media only screen and (max-width:768px){
+
+@media only screen and (max-width: 1330px){
+    .expanded {
+        --ratio: 3/3.5;
+    }
+}
+
+@media only screen and (max-width: 1160px){
+    .sports-container {
+        --ratio: 3/2.2;
+    }
+    .expanded {
+        --ratio: 3/4;
+    }
+}
+
+@media only screen and (max-width:1000px){
     .sports-container{
         width: 70vw;
+        --ratio: 2/1.2;
+    }
+    .expanded{
+        --ratio: 3/2.8;
     }
     .sports-heading{
         font-size: 2.19rem;

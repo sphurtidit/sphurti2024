@@ -11,8 +11,9 @@ const SportsContainer = (games) => {
         setShowContent(!showContent);
     }
     let col = (games.type == 1) ? "yellow" : (games.type == 2) ? "red" : "purple";
+    let exp = (showContent)? "expanded" : "";
     return (
-        <div className={`sports-container ${col}`}>
+        <div className={`sports-container ${col} ${exp}`}>
             <div className="left-column">
                 <div className='container'>
                     <p className='sports-heading'>{games.name}</p>
