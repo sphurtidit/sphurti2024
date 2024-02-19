@@ -276,7 +276,7 @@ a:hover {
     }
 
     .expanded {
-        --ratio: 3/2.8;
+        --ratio: 3/3;
     }
     .sports-heading {
         font-size: 4.5vw;
@@ -352,8 +352,8 @@ a:hover {
         font-size: 2vw;
     }
     .hr {
-        margin-top: 3vh;
-        margin-bottom: 3vh;
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
 
     }
 }
@@ -364,7 +364,7 @@ a:hover {
     }
 
     .expanded {
-        --ratio: 3/3;
+        --ratio: 3/3.2;
     }
     .hr {
         margin-top: 1.5vh;
@@ -379,7 +379,7 @@ a:hover {
     }
 
     .expanded {
-        --ratio: 3/3.8;
+        --ratio: 3/4;
     }
 
     .sports-heading {
