@@ -58,7 +58,7 @@ const SportsSection = () => {
 
     return (
         <>
-            {badminton ? (<div className='parent-container'>
+            {badminton ? (<div className='parent-container-sports'>
                 <div className='heading'><h1>SPORTS</h1></div>
                 <div className='allsports'>
                     <SportsContainer game={badminton} type="1" image={badmintonimg} imagesmall={badmintonsmallimg} />
