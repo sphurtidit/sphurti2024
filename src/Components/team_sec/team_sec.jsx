@@ -12,23 +12,23 @@ function TeamSec() {
         Faculty co-ordinator
       </p>
       <div className="FacultyCard">
-        <TeamCard name={"R. S. Chauhan"} designation={"Sports Officer"} type={"red"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
+        <TeamCard name={"R. S. Chauhan"} designation={"Sports Officer"} phone={"1234567899"} type={"yellow"} />
+       
       </div>
       <p className="Heading2">
         Student co-ordinator
       </p>
       <div className="StudentCard">
-        <TeamCard name={"Tanya"} designation={"head"} type={"red"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"purple"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"red"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"purple"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"red"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"purple"} />
-        <TeamCard name={"Tanya"} designation={"head"} type={"yellow"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"red"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"yellow"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"purple"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"red"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"yellow"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"purple"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"red"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"yellow"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"purple"} />
+        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"yellow"} />
       </div>
     </div>
 
@@ -37,4 +37,4 @@ function TeamSec() {
 
 
 // src\Components\team_sec\team_sec.jsx
-export default TeamSec
+export default TeamSec;
