@@ -1,0 +1,45 @@
+.timer{
+    width: 100vw;
+}
+
+.heading-text {
+    font-size: 4vw;
+    margin-bottom: 1rem;
+    text-align: start;    
+    margin-left: 18vw;
+    font-family: 'SF Sports Upright';
+    color: #ee0942;
+    line-height: 0.5;
+}
+
+.inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 1vw;
+    width: 20vw;
+    height: 15vw;
+    line-height: 0.8;
+}
+
+.value{
+    color: #7f1bb6;
+    font-family: 'SF Sports Upright';
+    font-size: 10vw;
+}
+
+.key{
+    color: black;
+    font-family: 'SF Sports Upright';
+    font-size: 3.5vw;
+}

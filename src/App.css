@@ -12,6 +12,10 @@
     font-family: 'DM Sans';
     src: url('./fonts/DM/DMSans-Bold.ttf') format('truetype');
 }
+@font-face {
+    font-family: "outfit";
+    src: url('./fonts/outfit/Outfit-Regular.ttf') format('truetype');
+}
 
 *{
     margin: 0;
@@ -22,10 +26,10 @@
 .background-container{
     background-color: white;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url('./assets/effect.png');
-    /* background-repeat: repeat;
+    background-repeat: repeat-y;
     background-size: cover;
-    background-attachment: fixed; */
+    background-attachment: fixed;
 
 }
