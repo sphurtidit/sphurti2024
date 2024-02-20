@@ -38,7 +38,7 @@ const SportsContainer = ({rule, game, type, image}) => {
                         </div>
                     </div>
                     <div className="buttons">
-                        <button title='Register' className='primary' onClick={() => {
+                        <button title='Register' className='primary-s' onClick={() => {
                             window.open('https://forms.gle/m6F4P47PQ86q53Hy9', '_blank');
                         }}>
                             Register</button>
@@ -91,10 +91,10 @@ const SportsContainer = ({rule, game, type, image}) => {
 };
 
 SportsContainer.propTypes = {
-    type: PropTypes.string.isRequired,
-    rule: PropTypes.string.isRequired,
-    game: PropTypes.map.isRequired,
-    image: PropTypes.string.isRequired,
+    type: PropTypes.string,
+    rule: PropTypes.string,
+    game: PropTypes.map,
+    image: PropTypes.string,
   };
 
 export default SportsContainer;

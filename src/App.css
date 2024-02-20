@@ -13,8 +13,8 @@
     src: url('./fonts/DM/DMSans-Bold.ttf') format('truetype');
 }
 @font-face {
-    font-family: "outfit";
-    src: url('./fonts/outfit/Outfit-Regular.ttf') format('truetype');
+    font-family: "Outfit";
+    src: url('./fonts/outfit/Outfit-Bold.ttf') format('truetype');
 }
 
 *{
