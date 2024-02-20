@@ -1,28 +1,27 @@
+import { AiOutlineMenu } from 'react-icons/ai';
+import { useState } from 'react';
 import './navbar.css';
-// import DIT from '../../assets/DIT.png';
-// import NAAC from '../../assets/naac.png';
-// import SPHURTI from '../../assets/sphurti.png';
 
 function Navbar() {
-    return (
-        <nav>
-            {/* <div className="logo-left">
-                <img src={SPHURTI} alt="SPHURTI" className='logo' />
-                <img src={NAAC} alt="NAAC" className='logo'/>
-            </div> */}
-            <ul className="centered">
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>SPORTS</li>
-                <li>CONTACT</li>
-                <li>RESULTS</li>
-                <li><button href="/">REGISTER</button></li>
-            </ul>
-            {/* <div className="logo-right">
-                <img src={DIT} alt="DIT" className='logo'/>
-            </div> */}
-        </nav>
-    );
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <nav>
+      <div className="hamburger-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <AiOutlineMenu />
+      </div>
+      <ul className={`centered ${isMenuOpen ? 'open' : ''}`}>
+        <li>HOME</li>
+        <li>ABOUT</li>
+        <li>SPORTS</li>
+        <li>CONTACT</li>
+        <li>RESULTS</li>
+        <li>
+          <button href="/">REGISTER</button>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar;
