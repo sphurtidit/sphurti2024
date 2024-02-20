@@ -1,4 +1,6 @@
 // nimport React from 'react';
+import {useState, useEffect} from 'react';
+import {db} from '../../firebase';
 import SportsContainer from '../Sports_container/sports_container';
 import './Sports_section.css';
 import badminton from '../../assets/badminton.png'
@@ -14,6 +16,11 @@ import basketballsmall from '../../assets/football small.png'
 import tabletennis from '../../assets/table tennis.png'  
 import tabletennissmall from '../../assets/table tennis small.png'
 const SportsSection = () => {
+    const [data, setData] = useState([]);
+    const[loading, setLoading] = useState(true);
+    const unsub=onSnapshot(collection(db, "sports"), (snapshot) => {
+        console.log("snapshot", snapshot);
+    });
     return (
         <div className='parent-container'>
             <div className='heading'><h1>SPORTS</h1></div>
