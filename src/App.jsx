@@ -19,14 +19,6 @@ function App() {
         <SportsSection />
         <TeamSec />
       </div>
-    <div className="background-container">
-    <Navbar />   
-    <HeroPage />
-    <Timer/>
-    <Messages />
-    <SportsSection/>
-    <TeamSec/>
-    </div> 
     </>
   );
 }

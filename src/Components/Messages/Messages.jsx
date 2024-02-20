@@ -1,171 +1,97 @@
 import { useState } from "react";
-import "./messages.css";
+import "./Messages.css";
 import raghurama from "../../assets/graghurama.png";
 import drrakeshmohan from "../../assets/drrakeshmohan.png";
-
 const Messages = () => {
-  const [expandedContent, setExpandedContent] = useState(null);
+  const [expandedContent1, setExpandedContent1] = useState(false);
+  const [expandedContent2, setExpandedContent2] = useState(false);
 
-  const toggleContent = (contentNumber) => {
-    setExpandedContent(
-      expandedContent === contentNumber ? null : contentNumber
-    );
+  const toggleContent1 = () => {
+    setExpandedContent1(!expandedContent1);
+  };
+  const toggleContent2 = () => {
+    setExpandedContent2(!expandedContent2);
   };
 
-  const getBoxStyle = () => {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      if (expandedContent === 1) {
-        return {
-          marginTop: "-227%",
-        };
-      } else if (expandedContent === 2) {
-        return {
-          marginTop: "-245%",
-        };
-      } else {
-        return {
-          marginTop: "-167%",
-        };
-      }
-    }
-    return {
-      marginTop: expandedContent ? "-60%" : "-38%",
-    };
-  };
-
-  const box = getBoxStyle();
-
-  const getBox1Style = () => {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      return {
-        backgroundColor: "#FFB800",
-        marginTop: expandedContent === 1 ? "-61%" : "1%",
-        height: expandedContent === 1 ? "600px" : "330px",
-      };
-    }
-    return {
-      backgroundColor: "#FFB800",
-      marginTop: expandedContent === 1 ? "-44%" : "-30%",
-      height: expandedContent === 1 ? "580px" : "230px",
-    };
-  };
-  const box1 = getBox1Style();
-
-  const getBox2Style = () => {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      return {
-        height: expandedContent === 2 ? "660px" : "330px",
-        backgroundColor: "#7F1BB6",
-        marginTop: "3%",
-      };
-    }
-    return {
-      height: expandedContent === 2 ? "580px" : "230px",
-      backgroundColor: "#7F1BB6",
-      marginTop: "2%",
-    };
-  };
-  const box2 = getBox2Style();
-
-  const getHeadBoxStyle = () => {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      return {
-        marginTop: expandedContent ? "17%" : "0%",
-      };
-    }
-    return {
-      marginTop: expandedContent ? "2%" : "5%",
-    };
-  };
-
-  const headbox = getHeadBoxStyle();
-  const getContent1 = () => {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      return {
-        marginBottom: expandedContent === 1 ? "8%" : "20%",
-      };
-    }
-    return {
-      marginBottom: expandedContent === 1 ? "8%" : "10%",
-    };
-  };
-  const content1 = getContent1();
-  const content2 = {
-    marginBottom: expandedContent === 2 ? "12%" : "12%",
-  };
+  const Messagebox1 = { height: expandedContent1 ? "35rem" : "17rem" };
+  const Messagebox2 = { height: expandedContent2 ? "35rem" : "17rem" };
 
   return (
     <>
-      <div className="headbox" style={headbox}>
-        <h1 className="head">MESSAGES</h1>
-      </div>
-      <div className="contentbox">
-        <div className="content1" style={content1}>
-          <h1 className="facname">PROF. G. RAGHURAMA</h1>
-          <h3 className="designation">VICE CHANCELLOR, DIT UNIVERSITY </h3>
-          <p className="message">
-            Sports is not just about physical exercise and competition. It
-            instils team spirit, leadership qualities, and develops performance
-            character traits such as grit, resilience, and self-discipline. Its
-            benefits are not limited only to those who play, but also to those
-            who watch and support the players. DIT University’s annual sports
-            festival Sphurti is one of the occasions that brings all DITians
-            together
-            {expandedContent === 1 ? (
-              <>
-                {
-                  <p>
-                    <br />I am happy to note that the annual sports festival is
-                    being
-                    <br />
-                    organized during 13-15 March 2024.
-                    <br />
-                    This event will definitely encourage our students to improve
-                    their sports skill as well as improve their overall mental &
-                    physical health. My best wishes to the organizers for a
-                    successful event. This year being our Silver Jubilee year, I
-                    hope the event is organized in a manner befitting the
-                    occasion.
-                    <br />
-                    I wish the event a grand success.
-                    <br />
-                    May all have a great and peaceful &quot;SPHURTI -2024&quot;.
-                    <br />
-                    <br />
-                    Jai Hind!
-                    <br />
-                    <strong>Prof. G. Raghurama</strong>
-                    <br />
-                    <strong>Vice Chancellor </strong>
-                    <br />
-                    <strong>DIT University, Dehradun.</strong>
-                  </p>
-                }
-                <button className="readmore" onClick={() => toggleContent(1)}>
-                  Read less
-                </button>
-              </>
-            ) : (
-              <button className="readmore" onClick={() => toggleContent(1)}>
-                Read more
-              </button>
-            )}
-          </p>
+      <div className="parent-container-messages">
+        <div className="headingMessages">
+          <h1>MESSAGES</h1>
         </div>
-        <div className="content2" style={content2}>
-          <h1 className="facname">DR. RAKESH MOHAN</h1>
-          <h3 className="designation">
-            DEAN, STUDENT WELFARE, DIT UNIVERSITY{" "}
-          </h3>
-          <p className="message">
-            I take great pleasure in welcoming all students and sports persons
-            to the SPHURTI-2024, the eighth annual sports meet of DIT
-            University, from 13th March to 15 March 2024. On this occasion, I
-            extend my warm wishes to all the sports persons with a great motto
-            of &quot;Aim for excellence, not perfection.&quot; we will form the nucleus of
-            change when we combine efforts with those who have walked the path
-            before us and are
-            {expandedContent === 2 ? (
+        <div className="Messagebox1" style={Messagebox1}>
+          <img src={raghurama} alt="PROF. G. RAGHURAMA" />
+          <div className="content">
+            <h1>PROF. G. RAGHURAMA</h1>
+            <h3 className="designationVc">VICE CHANCELLOR, DIT UNIVERSITY </h3>
+            <p className="message">
+              Sports is not just about physical exercise and competition. It
+              instils team spirit, leadership qualities, and develops
+              performance character traits such as grit, resilience, and
+              self-discipline. Its benefits are not limited only to those who
+              play, but also to those who watch and support the players. DIT
+              University’s annual sports festival Sphurti is one of the
+              occasions that brings all DITians together
+              {expandedContent1 ? (
+                <>
+                  {
+                    <p>
+                      <br />I am happy to note that the annual sports festival
+                      is being
+                      <br />
+                      organized during 13-15 March 2024.
+                      <br />
+                      This event will definitely encourage our students to
+                      improve their sports skill as well as improve their
+                      overall mental & physical health. My best wishes to the
+                      organizers for a successful event. This year being our
+                      Silver Jubilee year,<br/>I hope the event is organized in a
+                      manner befitting the occasion.
+                      <br />
+                      I wish the event a grand success.
+                      <br />
+                      May all have a great and peaceful &quot;SPHURTI
+                      -2024&quot;.
+                      <br />
+                      <br />
+                      Jai Hind!
+                      <br />
+                      <strong>Prof. G. Raghurama</strong>
+                      <br />
+                      <strong>Vice Chancellor </strong>
+                      <br />
+                      <strong>DIT University, Dehradun.</strong>
+                    </p>
+                  }
+                  <button className="readmore" onClick={toggleContent1}>
+                    Read less
+                  </button>
+                </>
+              ) : (
+                <button className="readmore" onClick={toggleContent1}>
+                  Read more
+                </button>
+              )}
+            </p>
+          </div>
+        </div>
+        <div className="Messagebox2" style={Messagebox2}>
+          <img src={drrakeshmohan} alt="PROF. DR. RAKESH MOHAN" />
+          <div className="content">
+            <h1>DR. RAKESH MOHAN</h1>
+            <h3 className="designationDSW">DEAN, STUDENT WELFARE, DIT UNIVERSITY</h3>
+            <p className="message">
+              I take great pleasure in welcoming all students and sports persons
+              to the SPHURTI-2024, the eighth annual sports meet of DIT
+              University, from 13th March to 15 March 2024. On this occasion, I
+              extend my warm wishes to all the sports persons with a great motto
+              of &quot;Aim for excellence, not perfection.&quot; we will form
+              the nucleus of change when we combine efforts with those who have
+              walked the path before us are
+              {expandedContent2 ? (
               <>
                 {
                   <p>
@@ -195,28 +121,21 @@ const Messages = () => {
                     <strong>Dean(Student Welfare)</strong>
                   </p>
                 }
-                <button className="readmore" onClick={() => toggleContent(2)}>
+                <button className="readmore" onClick={toggleContent2}>
                   Read less
                 </button>
               </>
             ) : (
-              <button className="readmore" onClick={() => toggleContent(2)}>
+              <button className="readmore" onClick={toggleContent2}>
                 Read more
               </button>
             )}
-          </p>
-        </div>
-      </div>
-      <div style={box}>
-        <div className="box" style={box1}>
-          <img className="facpics" src={raghurama} alt="Raghurama" />
-        </div>
-        <div className="box" style={box2}>
-          <img className="facpics" src={drrakeshmohan} alt="Dr. Rakesh Mohan" />
+
+            </p>
+          </div>
         </div>
       </div>
     </>
   );
 };
-
 export default Messages;
