@@ -1,12 +1,12 @@
 // import React from 'react';
 import "./team_card.css";
 import PropTypes from "prop-types";
-import Proff from "../../assets/bg 3.png";
-const TeamCard = ({ type, name, designation,phone }) => {
+// import Proff from "../../assets/bg 3.png";
+const TeamCard = ({ type, name, designation,phone,image }) => {
   return (
     <div className={`parent-container ${type}`}>
       <div className="image-container">
-        <img src={Proff} className="image" />
+        <img src={image} className="image" />
       </div>
       <div className="contentContainerr">
         <p className="name">{name}</p>
@@ -22,6 +22,7 @@ TeamCard.propTypes = {
   name: PropTypes.string.isRequired,
   designation: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default TeamCard;
