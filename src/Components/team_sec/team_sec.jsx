@@ -1,8 +1,39 @@
 import './team_sec.css'
 import TeamCard from '../team_card/team_card'
+import { db } from '../../firebase';
+import { useEffect, useState } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
 
 function TeamSec() {
+    const [team,setTeam]=useState([]);
+    const [sports,setSports]=useState([]);
+    useEffect(()=>{
+      
+      const r=getDocs(collection(db,"Team")).then((querySnapshot)=>{
+        const temp=querySnapshot.docs.map((doc)=>doc.data());
+        temp.sort((a,b)=>a.precedence-b.precedence);
+        const sports=[]
+        const teams=[]
+        temp.map((t)=>{
+          if(t.category=="Sports Coordinator"){
+            
+            sports.push(t)
+          }
+          else{
+            
+            teams.push(t)
+          }
+          
+        })
+        setSports(sports);
+        setTeam(teams)
+        
+      })
 
+      return ()=>{
+        r;
+      }
+    },[])
   return (
     <div className="whole">
       <p className="Heading1">
@@ -12,26 +43,20 @@ function TeamSec() {
         Faculty co-ordinator
       </p>
       <div className="FacultyCard">
-        <TeamCard name={"R. S. Chauhan"} designation={"Sports Officer"} phone={"1234567899"} type={"yellow"} />
+        {sports.map((sport)=>{
+         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={"yellow"} />
+        })}
        
       </div>
       <p className="Heading2">
         Student co-ordinator
       </p>
       <div className="StudentCard">
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"red"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"yellow"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"purple"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"red"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"yellow"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"purple"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"red"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"yellow"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"purple"} />
-        <TeamCard name={"Tanya"} designation={"head"} phone={"1234567899"} type={"yellow"} />
+      {team.map((sport)=>{
+         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={"yellow"} />
+        })}
       </div>
     </div>
-
   )
 }
 
