@@ -1,0 +1,43 @@
+.logo {
+    height: 170px;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left{
+    width: 40vw;
+}
+
+.left-container {
+    grid-column: 2 / span 4;
+    grid-row: 1/span 2 ;
+}
+
+.center {
+    width: 67vw;
+}
+
+.center-container {
+    grid-column: 4 / span 8;
+    grid-row: 1 / span 6;
+}
+
+.right{
+    width:8vw;
+}
+
+.right-container {
+    grid-column: 11 / span 8;
+    grid-row: 1/ span 2;
+}
+
+.primary {
+    background-color: #ee0942;
+}   

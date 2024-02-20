@@ -1,5 +1,6 @@
 .sports-container {
     --ratio: 3/2;
+    transition: all 0.3s;
 }
 
 .expanded {
@@ -226,7 +227,9 @@ a:hover {
     display: flex;
 
 }
-
+.image{
+    transition: none;
+}
 .cinfo p {
     padding: 0rem 0.2rem;
 }
