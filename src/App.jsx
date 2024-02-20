@@ -1,12 +1,16 @@
 //  import Page from './coming_soon'
 import './App.css'
-// import SportsSection from './Components/Sports_section/Sports_section'
-import Timer from './Components/timer/timer'
+import SportsSection from './Components/Sports_section/Sports_section'
+import HeroPage from './pages/HeroPage/HeroPage'
+import Navbar from './Components/Navbar/navbar'
 function App() {
 
   return (
     <>
-       <Timer />
+    <div className="background-container">
+      <Navbar />   
+    <HeroPage />
+    </div> 
     </>
   )
 }
