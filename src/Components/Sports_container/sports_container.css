@@ -46,7 +46,6 @@
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
-    /* max-width: 100%; */
 }
 
 .reg img {
@@ -72,13 +71,15 @@
 .right-column {
     width: 40%;
     flex: 1;
-    display: flex;
-    justify-content: end;
+    overflow: hidden;
 }
 
 .right-column img {
     height: auto;
-    width: 95%;
+    width: auto;
+    max-width: 100%;
+    float: right;
+    transition: none;
 }
 
 .fee {
@@ -124,7 +125,7 @@
     width: 100%;
 }
 
-.primary {
+.primary-s {
     background-color: var(--primary-color);
     background-color: var(--primary-color);
     color: white;
@@ -231,7 +232,7 @@ a:hover {
     padding: 0rem 0.2rem;
 }
 
-.name {
+.cname {
     font-weight: 700;
 }
 
@@ -294,7 +295,7 @@ a:hover {
         font-size: 3.5vw;
     }
 
-    .primary {
+    .primary-s {
         font-size: 2.2vw;
         padding: 1.4vw 1.4vw;
         margin-top: 2.5vw;
@@ -398,7 +399,7 @@ a:hover {
         font-size: 3.5vw;
     }
 
-    .primary {
+    .primary-s {
         font-size: 2.2vw;
         padding: 1.4vw 1.4vw;
         margin-top: 2.5vw;
