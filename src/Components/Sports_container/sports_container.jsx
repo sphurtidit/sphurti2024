@@ -29,13 +29,13 @@ const SportsContainer = ({rule, game, type, image}) => {
                         </div>
                         <div className="fee-text">
                             <p className="cate">BOYS</p>
-                            <p className="cate-fees">{game['fees-boys']}</p>
+                            <p className="cate-fees">₹{game['fees-boys']}</p>
                         </div>
-                        <div className="vertical-line"></div>
+                        {game['separate'] ? <><div className="vertical-line"></div>
                         <div className="fee-text">
                             <p className="cate">GIRLS</p>
-                            <p className="cate-fees">{game['fees-girls']}</p>
-                        </div>
+                            <p className="cate-fees">₹{game['fees-girls']}</p>
+                        </div> </>: <></>}
                     </div>
                     <div className="buttons">
                         <button title='Register' className='primary-s' onClick={() => {
@@ -52,12 +52,13 @@ const SportsContainer = ({rule, game, type, image}) => {
                         <div className="hr">
                             <hr></hr>
                         </div>
-                        <p className="prize">Prize Money:</p>
+                        {game['showprize'] ? <><p className="prize">Prize Money:</p>
                         <div className="amount">
                             <p className="winner">Winners: ₹{game['winner']}</p>
                             <div className="vertical-line"></div>
                             <p className="runner">Runner Up: ₹{game['runnerup']}</p>
                         </div>
+                        </> : <><br /></>}
                         <div className="schedule">
                             <p className="sch-text">Schedule:</p>
                             {sch ? <a href={game['schedule']} target='_blank' rel="noopener noreferrer">Download Schedule</a> : <p className='sch-text'>Coming Soon</p>}
