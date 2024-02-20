@@ -1,4 +1,4 @@
-// nimport React from 'react';
+// import React from 'react';
 import { getDocs, collection } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import { db } from '../../firebase';
@@ -12,8 +12,8 @@ import footballimg from '../../assets/football.png'
 import footballsmallimg from '../../assets/football small.png'
 import volleyballimg from '../../assets/volleyball.png'
 import volleyballsmallimg from '../../assets/volleyball small.png'
-import basketballimg from '../../assets/football.png'
-import basketballsmallimg from '../../assets/football small.png'
+import basketballimg from '../../assets/basketball.png'
+import basketballsmallimg from '../../assets/basketball small.png'
 import tabletennisimg from '../../assets/table tennis.png'
 import tabletennissmallimg from '../../assets/table tennis small.png'
 const SportsSection = () => {
