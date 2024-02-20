@@ -3,18 +3,18 @@ import "./sports_container.css";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import flag from '../../assets/flag.png'
 
-const SportsContainer = (games) => {
+const SportsContainer = ({game, type, image, imagesmall}) => {
     const [showContent, setShowContent] = useState(false);
     const viewDetails = () => {
         setShowContent(!showContent);
     }
-    let col = (games.type == 1) ? "yellow" : (games.type == 2) ? "red" : "purple";
+    let col = (type == 1) ? "yellow" : (type == 2) ? "red" : "purple";
     let exp = (showContent)? "expanded" : "";
     return (
         <div className={`sports-container ${col} ${exp}`}>
             <div className="left-column">
                 <div className='container'>
-                    <p className='sports-heading'>{games.name}</p>
+                    <p className='sports-heading'>{game['name']}</p>
                     <div className="reg">
                         <img src={flag}></img>
                         <p className='reg-text'>REGISTRATION</p>
@@ -27,12 +27,12 @@ const SportsContainer = (games) => {
                         </div>
                         <div className="fee-text">
                             <p className="cate">BOYS</p>
-                            <p className="cate-fees">{games.boyfees}</p>
+                            <p className="cate-fees">{game['fees-boys']}</p>
                         </div>
                         <div className="vertical-line"></div>
                         <div className="fee-text">
                             <p className="cate">GIRLS</p>
-                            <p className="cate-fees">{games.girlfees}</p>
+                            <p className="cate-fees">{game['fees-girls']}</p>
                         </div>
                     </div>
                     <div className="buttons">
@@ -50,9 +50,9 @@ const SportsContainer = (games) => {
                         </div>
                         <p className="prize">Prize Money:</p>
                         <div className="amount">
-                            <p className="winner">Winners: ₹99</p>
+                            <p className="winner">Winners: ₹{game['winner']}</p>
                             <div className="vertical-line"></div>
-                            <p className="runner">Runner Up: ₹99</p>
+                            <p className="runner">Runner Up: ₹{game['runnerup']}</p>
                         </div>
                         <div className="schedule">
                             <p className="sch-text">Schedule:</p>
@@ -65,22 +65,21 @@ const SportsContainer = (games) => {
                         <div className="coord">
                             <p className="coord-text">Coordinators:</p>
                             <div className="info">
-                                <div className="cinfo">
-                                    <p className="name">Soumya Nilay:</p>
-                                    <p className="mob">8002686694</p>
-                                </div>
-
-                                <div className="cinfo">
-                                    <p className="name">Maanav Aryan:</p>
-                                    <p className="mob">9334914647</p>
-                                </div>
+                            {
+                                    Object.entries(game['coordinators']).map(([key, value]) => (
+                                        <div className="cinfo">
+                                            <p className="name">{key}:</p>
+                                            <p className="mob">{value}</p>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
                 }
             </div>
             <div className="right-column">
-                <img src={showContent ? games.image : games.imagesmall} className="image"></img>
+                <img src={showContent ? image : imagesmall} className="image"></img>
             </div>
         </div>
     );

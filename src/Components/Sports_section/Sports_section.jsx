@@ -29,7 +29,6 @@ const SportsSection = () => {
     useEffect(() => {
         const unsub = getDocs(collection(db, "sportDetails")).then((querySnapshot) => {
             const tempdata = querySnapshot.docs.map((doc) => doc.data());
-            // setData(tempdata);
             for (let i = 0; i < tempdata.length; i++) {
                 if (tempdata[i]['index'] == 1) {
                     console.log(tempdata[i]);
@@ -52,24 +51,26 @@ const SportsSection = () => {
                 }
             }
         });
-        // setLoading(false);
         return () => {
-            unsub();
+            unsub;
         }
     }, []);
-    
+
     return (
-        <div className='parent-container'>
-            <div className='heading'><h1>SPORTS</h1></div>
-            <div className='allsports'>
-                <SportsContainer name={badminton} type="1" image={badmintonimg} imagesmall={badmintonsmallimg} />
-                <SportsContainer name={basketball} type="2" image={basketballimg} imagesmall={basketballsmallimg} />
-                <SportsContainer name={cricket} type="3" image={cricketimg} imagesmall={cricketsmallimg} />
-                <SportsContainer name={volleyball} type="3" image={volleyballimg} imagesmall={volleyballsmallimg} />
-                <SportsContainer name={tabletennis} type="1" image={tabletennisimg} imagesmall={tabletennissmallimg} />
-                <SportsContainer name={football} type="2" image={footballimg} imagesmall={footballsmallimg} />
-            </div>
-        </div>
+        <>
+            {badminton ? (<div className='parent-container'>
+                <div className='heading'><h1>SPORTS</h1></div>
+                <div className='allsports'>
+                    <SportsContainer game={badminton} type="1" image={badmintonimg} imagesmall={badmintonsmallimg} />
+                    <SportsContainer game={basketball} type="2" image={basketballimg} imagesmall={basketballsmallimg} />
+                    <SportsContainer game={cricket} type="3" image={cricketimg} imagesmall={cricketsmallimg} />
+                    <SportsContainer game={volleyball} type="3" image={volleyballimg} imagesmall={volleyballsmallimg} />
+                    <SportsContainer game={tabletennis} type="1" image={tabletennisimg} imagesmall={tabletennissmallimg} />
+                    <SportsContainer game={football} type="2" image={footballimg} imagesmall={footballsmallimg} />
+                </div>
+            </div>) : <div className='loading'>Loading...</div>}
+
+        </>
     );
 };
 
