@@ -1,37 +1,33 @@
-// import React from 'react';
-import { getDocs, collection } from 'firebase/firestore';
+import { getDocs, collection, getDoc, doc } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import { db } from '../../firebase';
 import SportsContainer from '../Sports_container/sports_container';
 import './Sports_section.css';
 import badmintonimg from '../../assets/badminton.png'
-import badmintonsmallimg from '../../assets/badminton small.png'
 import cricketimg from '../../assets/cricket.png'
-import cricketsmallimg from '../../assets/cricket small.png'
 import footballimg from '../../assets/football.png'
-import footballsmallimg from '../../assets/football small.png'
 import volleyballimg from '../../assets/volleyball.png'
-import volleyballsmallimg from '../../assets/volleyball small.png'
 import basketballimg from '../../assets/basketball.png'
-import basketballsmallimg from '../../assets/basketball small.png'
 import tabletennisimg from '../../assets/table tennis.png'
-import tabletennissmallimg from '../../assets/table tennis small.png'
+
 const SportsSection = () => {
-    // const [data, setData] = useState([]);
-    // const [loading, setLoading] = useState(true);
     const [cricket, setcricket] = useState();
     const [football, setfootball] = useState();
     const [volleyball, setvolleyball] = useState();
     const [basketball, setbasketball] = useState();
     const [tabletennis, settabletennis] = useState();
     const [badminton, setbadminton] = useState();
+    const [rule, setrule] = useState();
 
     useEffect(() => {
+        const r = getDoc(doc(collection(db, "misc"), "links")).then((docu) => {
+        setrule(docu.data()['rulebook']);
+        console.log(docu.data()['rulebook']);
+        });
         const unsub = getDocs(collection(db, "sportDetails")).then((querySnapshot) => {
             const tempdata = querySnapshot.docs.map((doc) => doc.data());
             for (let i = 0; i < tempdata.length; i++) {
                 if (tempdata[i]['index'] == 1) {
-                    console.log(tempdata[i]);
                     setbadminton(tempdata[i]);
                 }
                 else if (tempdata[i]['index'] == 2) {
@@ -52,6 +48,7 @@ const SportsSection = () => {
             }
         });
         return () => {
+            r;
             unsub;
         }
     }, []);
@@ -61,12 +58,12 @@ const SportsSection = () => {
             {badminton ? (<div className='parent-container-sports'>
                 <div className='heading'><h1>SPORTS</h1></div>
                 <div className='allsports'>
-                    <SportsContainer game={badminton} type="1" image={badmintonimg} imagesmall={badmintonsmallimg} />
-                    <SportsContainer game={basketball} type="2" image={basketballimg} imagesmall={basketballsmallimg} />
-                    <SportsContainer game={cricket} type="3" image={cricketimg} imagesmall={cricketsmallimg} />
-                    <SportsContainer game={volleyball} type="3" image={volleyballimg} imagesmall={volleyballsmallimg} />
-                    <SportsContainer game={tabletennis} type="1" image={tabletennisimg} imagesmall={tabletennissmallimg} />
-                    <SportsContainer game={football} type="2" image={footballimg} imagesmall={footballsmallimg} />
+                    <SportsContainer rule = {rule} game={badminton} type="1" image={badmintonimg} key={badminton['index']}/>
+                    <SportsContainer rule = {rule} game={basketball} type="2" image={basketballimg} key={basketball['index']}/>
+                    <SportsContainer rule = {rule} game={cricket} type="3" image={cricketimg} key={cricket['index']}/>
+                    <SportsContainer rule = {rule} game={volleyball} type="3" image={volleyballimg} key={volleyball['index']}/>
+                    <SportsContainer rule = {rule} game={tabletennis} type="1" image={tabletennisimg} key={tabletennis['index']}/>
+                    <SportsContainer rule = {rule} game={football} type="2" image={footballimg} key={football['index']}/>
                 </div>
             </div>) : <div className='loading'>Loading...</div>}
 

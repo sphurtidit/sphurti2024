@@ -2,14 +2,16 @@ import { useState } from 'react';
 import "./sports_container.css";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import flag from '../../assets/flag.png'
+import PropTypes from "prop-types";
 
-const SportsContainer = ({game, type, image, imagesmall}) => {
+const SportsContainer = ({rule, game, type, image}) => {
     const [showContent, setShowContent] = useState(false);
     const viewDetails = () => {
         setShowContent(!showContent);
     }
     let col = (type == 1) ? "yellow" : (type == 2) ? "red" : "purple";
-    let exp = (showContent)? "expanded" : "";
+    let exp = (showContent) ? "expanded" : "";
+    let sch = game['schedule'] == '' ? false : true;
     return (
         <div className={`sports-container ${col} ${exp}`}>
             <div className="left-column">
@@ -36,7 +38,9 @@ const SportsContainer = ({game, type, image, imagesmall}) => {
                         </div>
                     </div>
                     <div className="buttons">
-                        <button title='Register' className='primary' >
+                        <button title='Register' className='primary' onClick={() => {
+                            window.open('https://forms.gle/m6F4P47PQ86q53Hy9', '_blank');
+                        }}>
                             Register</button>
                         <button title='detail' className='secondary' onClick={viewDetails}>
                             {showContent ? (<>View Less <MdKeyboardArrowUp /> </>) : (<>View More <MdKeyboardArrowDown /> </>)}
@@ -56,20 +60,21 @@ const SportsContainer = ({game, type, image, imagesmall}) => {
                         </div>
                         <div className="schedule">
                             <p className="sch-text">Schedule:</p>
-                            <a href="">Download Schedule</a>
+                            {sch ? <a href={game['schedule']} target='_blank' rel="noopener noreferrer">Download Schedule</a> : <p className='sch-text'>Coming Soon</p>}
+                            
                         </div>
                         <div className="schedule">
                             <p className="sch-text">Rule Book:</p>
-                            <a href="">Download</a>
+                            <a href={rule} download>Download</a>
                         </div>
                         <div className="coord">
                             <p className="coord-text">Coordinators:</p>
                             <div className="info">
-                            {
+                                {
                                     Object.entries(game['coordinators']).map(([key, value]) => (
-                                        <div className="cinfo">
-                                            <p className="name">{key}:</p>
-                                            <p className="mob">{value}</p>
+                                        <div className="cinfo" key={key}>
+                                            <p className="cname">{key}:</p>
+                                            <p className="cmob">{value}</p>
                                         </div>
                                     ))
                                 }
@@ -79,10 +84,17 @@ const SportsContainer = ({game, type, image, imagesmall}) => {
                 }
             </div>
             <div className="right-column">
-                <img src={showContent ? image : imagesmall} className="image"></img>
+                <img src={image} className="image"></img>
             </div>
         </div>
     );
 };
+
+SportsContainer.propTypes = {
+    type: PropTypes.string.isRequired,
+    rule: PropTypes.string.isRequired,
+    game: PropTypes.map.isRequired,
+    image: PropTypes.string.isRequired,
+  };
 
 export default SportsContainer;
