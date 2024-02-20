@@ -18,7 +18,8 @@ const HeroPage = () => {
      
         <div className="left-container">
         <img src={LeftBGI} alt="" className="left"/>
-        <button title='Register' className='primary' >Register</button>
+        <button href='https://docs.google.com/forms/d/1vxvzC-vwx6elSRgbsgPeZynvCnRxd3HCEPzyWIJn0n0/edit#responses
+        ' title='Register' className='primary'>Register</button>
         </div>
         <div className="center-container">
         <img src={CenterBGI} alt="" className="center"/>
