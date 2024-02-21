@@ -66,15 +66,20 @@
     align-items: center;
     flex: 1;
   }
-  
+  ul.centered>li>a{
+    text-decoration: none;
+  }
   ul.centered li {
     margin: 0 1rem;
     font-size: 1.2rem;
     transition: color 0.3s ease-in-out;
+    text-decoration: none;
   }
   
   ul.centered li:hover {
     color: #000000;
+    font-weight: 600;
+    transition: all 0.1s;
     cursor: pointer;
   }
   
@@ -84,7 +89,9 @@
     background-color: #ee0942;
     padding: 0.7rem 1rem;
     border-radius: 0.25rem;
+    font-weight: 600;
     cursor: pointer;
+    font-family: 'Outfit',sans-serif;
     transition: background-color 0.3s ease-in-out;
   }
   
@@ -117,11 +124,25 @@
     }
   
     ul.centered.open {
-      top: 10vh;
+      align-items: center;
+      justify-content: center;
+      top: 6vh;
+      height: 94vh; 
       transform: translateX(100%);
+    }
+    ul.centered.open>li>a{
+      font-size: 32px;
     }
   
     ul.centered li {
       margin: 0.5rem 0;
+    }
+    button {
+      font-family: 'Outfit',sans-serif;
+      font-weight: 600;
+      margin-top: 20px;
+      height: 8vh;
+      width: 40vw;
+      font-size: 24px;
     }
   }

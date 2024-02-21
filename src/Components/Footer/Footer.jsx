@@ -1,5 +1,5 @@
 import "./Footer.css";
-import Navbar from "../LogoNavbar/LogoNavbar";
+// import Navbar from "../LogoNavbar/LogoNavbar";
 import Sphurti from "../../assets/sphurti.png";
 import Naac from "../../assets/naac.png";
 import Dit from "../../assets/DIT.png";
@@ -13,6 +13,7 @@ const Footer = () => {
     const l = getDoc(doc(collection(db, "misc"), "links")).then((docu) => {
       setLink(docu.data()["2023"]);
       // console.log(docu.data()['rulebook']);
+      console.log(link)
     });
     return () => {
       l;
@@ -21,22 +22,12 @@ const Footer = () => {
   return (
     <>
       <div className="footerContainer">
-        <div className="content">
-          <h1>Made with ❤️ and effort </h1>
-          <span>Design Team X technical team</span>
-          <p>
-            sphurti 2024 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-            <a href={link} target="_blank" style={{fontFamily:'SF Sports',color:'black',textDecoration:'none'}}>SPHURTI 2023</a>{" "}
-          </p>
+        <div className="footercontent">
+          <p className="footerheader">Made with ❤️ and effort </p>
+          <p className="footermiddle">Design Team X technical team</p>
+          <p className="footerbottom">Sphurti 2024</p>
         </div>
-        <div className="logos">
+        <div className="footerlogos">
           <img src={Sphurti} alt="" className="sphurti" />
           <img src={Naac} alt="" className="naac" />
           <img src={Dit} alt="" className="dit" />
