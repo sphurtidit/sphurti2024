@@ -19,7 +19,7 @@ const Messages = () => {
         </div>
         <div className="Messagebox1" style={{height:"fit-content",transition:"all 0.3s"}}>
           <img className="facpics" src={raghurama} alt="PROF. G. RAGHURAMA" />
-          <div className="content">
+          <div className="message-content">
             <div className="info">
               <h1 className="facname">PROF. G. RAGHURAMA</h1>
               <h3 className="facdesignation">
@@ -48,7 +48,7 @@ const Messages = () => {
             src={drrakeshmohan}
             alt="PROF. DR. RAKESH MOHAN"
           />
-          <div className="content">
+          <div className="message-content">
             <div className="info">
               <h1 className="facname">DR. RAKESH MOHAN</h1>
               <h3 className="facdesignation">
