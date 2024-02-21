@@ -4,8 +4,8 @@
     flex-direction: column;
     align-items: center;
     /* margin-top: 5rem; */
-    height: 100vh;
-    padding-top: 5rem;
+    height: 70vh;
+    padding-top: 4rem;
 }
 
 .main-container .top-section {
@@ -13,7 +13,7 @@
     justify-content: center;
     /* background-color: aqua; */
     display: flex;
-    padding: 8% 5%;
+    padding: 5% 5%;
 }
 .main-container .top-section img {
     width: 60%;
@@ -33,7 +33,7 @@
         text-decoration: none;
         display: inline-block;
         font-size: 18px;
-        margin: 50px 2px 0 2px;
+        margin: 25px 2px 0 2px;
         cursor: pointer;
         transition-duration: 0.4s;
         transform: skew(-10deg);
