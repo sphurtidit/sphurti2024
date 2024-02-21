@@ -13,10 +13,12 @@
   color: #1f1f21;
   font-size: 1.2vw;
 }
-.facname {
-  font-family: "Outfit";
-  /* color:#FFFFFF; */
-  font-size: 3em;
+
+
+.facname{
+    font-family:'Outfit';
+    color:#FFFFFF;
+    font-size: 3em;
 }
 .facdesignation {
   font-family: "Poppins";
@@ -25,20 +27,22 @@
   font-size: 1vw;
 }
 .Messagebox1,
-.Messagebox2 {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1vw 5vw 5vw;
-  /* max-height:17rem ; */
-  max-width: 105vw;
-  color: #ffffff;
-  background-color: #ffb800;
-  transform: skew(0deg, -1.5deg);
-  margin-bottom: 1rem;
+.Messagebox2{
+    display:flex;
+    flex-wrap: wrap;
+    padding:  1vw 5vw 5vw;
+    /* max-height:17rem ; */
+    max-width: 105vw;
+    transition: background .1s linear; 
+    color: #FFFFFF;
+    background-color: #FFB800;
+    transform:skew(0deg,-1.5deg);
+    margin-bottom: 1rem;
 }
 
-.Messagebox2 {
-  background-color: #7f1bb6;
+.Messagebox2{
+    background-color: #7F1BB6;
+    height: fit-content;
 }
 
 .facpics {
@@ -46,14 +50,19 @@
   max-height: 33vh;
   max-width: 40vw;
 }
+.messages{
+    font-size: 2rem;
+}
 
-.message-content {
-  font-size: 1vw;
-  margin-left: 5rem;
-  width: 60vw;
-  transform: skew(0deg, 1.5deg);
-  display: flex;
-  flex-direction: column;
+.content{
+    font-size: 1vw;
+    margin-top: 2em;
+    margin-left: 5rem;
+    width: 60vw;
+    transform:skew(0deg,1.5deg);
+    display: flex;
+    flex-direction: column;
+    column-gap: 2em;
 }
 
 .message {
@@ -71,32 +80,32 @@
   text-decoration: underline;
 }
 @media only screen and (max-width: 730px) {
-  .facname {
-    margin-bottom: 2vw;
-    width: 15vw;
-    font-size: 1rem;
-  }
-  .facdesignation {
-    margin-bottom: 7vw;
-    width: 36vw;
-    font-size: 0.5rem;
-  }
-  .message {
-    /* margin-top: 1rem; */
-    font-size: 2vw;
-  }
-  .info {
-    margin-left: 35vw;
-  }
-  .message-content {
-    margin-top: -22vw;
-    width: 100%;
-    margin-left: 0rem;
-  }
-  .facpics {
-    max-height: 20vh;
-    max-width: 30vw;
-  }
+    .facname{
+        margin-bottom:2vw ;
+        width: 15vw;
+        font-size: 1rem;
+    }
+    .facdesignation{
+        margin-bottom:7vw ;
+        width: 36vw;
+        font-size: 0.5rem;
+    }
+    .messages{
+        /* margin-top: 1rem; */
+        font-size: 1rem;
+    }
+    .info{
+        margin-left: 35vw;
+    }
+    .content{
+        margin-top: -22vw;
+        width: 100%;
+        margin-left:0rem ;
+    }
+    .facpics{
+        max-height: 20vh;
+        max-width: 30vw;
+    }
 }
 @media only screen and (max-width: 400px) {
   .facname {

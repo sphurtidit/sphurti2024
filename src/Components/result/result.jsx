@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './result.css';
 import leftimage from '../../assets/left-image.png';
 import rightimage from '../../assets/right-image.png';

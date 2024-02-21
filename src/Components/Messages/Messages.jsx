@@ -5,37 +5,11 @@ import drrakeshmohan from "../../assets/drrakeshmohan.png";
 const Messages = () => {
   const [expandedContent1, setExpandedContent1] = useState(false);
   const [expandedContent2, setExpandedContent2] = useState(false);
-
-  const toggleContent1 = () => {
-    setExpandedContent1(!expandedContent1);
-  };
-  const toggleContent2 = () => {
-    setExpandedContent2(!expandedContent2);
-  };
-  const getMessagebox1 = () => {
-    if (window.matchMedia("only screen and (max-width: 730px)").matches) {
-      return {
-        height: expandedContent1 ? "18rem" : "13rem",
-      };
-    } else {
-      return {
-        height: expandedContent1 ? "20rem" : "16rem",
-      };
-    }
-  };
-  const getMessagebox2 = () => {
-    if (window.matchMedia("only screen and (max-width: 730px)").matches) {
-      return {
-        height: expandedContent2 ? "23rem" : "13rem",
-      };
-    } else {
-      return {
-        height: expandedContent2 ? "26rem" : "16rem",
-      };
-    }
-  };
-  const Messagebox1 = getMessagebox1();
-  const Messagebox2 = getMessagebox2();
+  const string1 =
+    "It gives me immense pleasure to welcome you all to the academic world of DIT University on the occasion of the 6th annual sports meet &quot;SPHURTI-2020&quot;.For the three days of Sports meet, DIT University will organize a number of sports events for you to join and enjoy. They include Cricket, Football, Basketball, Volleyball, Badminton, and Table-tennis. It gives me immense pleasure to welcome you all to the academic world of DIT University on the occasion of the 6th annual sports meet &quot;SPHURTI-2020&quot;.For the three days of Sports meet, DIT University will organize a number of sports events for you to join and enjoy. They include Cricket, Football, Basketball, Volleyball, Badminton, and Table-tennis.";
+  const string2 =
+    "I take great pleasure in welcoming all students and sports persons to the SPHURTI-2024, the eighth annual sports meet of DIT University, from 13th March to 15 March 2024. On this occasion, I extend my warm wishes to all the sports persons with a great motto of &quot;Aim for excellence, not perfection.&quot; we will form the nucleus of change when we combine efforts with those who have walked the path before us are combine efforts with those who have walked the path before us and are standing ready to create a year of not just being competitive but one of athletic dominance. Once you’ve prepared mentally and physically for your game, then you are ready to do your best-and your best is the best you can do. The DIT University, Dehradun, under the leadership of Hon'ble vice Chancellor, Prof. G. Raghurama is fully committed for all around development and empowerment of students so that they can realize their full potential and also contribute to the career-building process. Not only that, the DIT University, Dehradun is focused on Scientific development and firmly holds the view that the students should be active participants and not just passive recipients of the knowledge process. Sports play a key role in development of personality of the students. In fact, sports should be a way of life. I call upon the students to make sports an integral part of their life.";
+ 
 
   return (
     <>
@@ -43,7 +17,7 @@ const Messages = () => {
         <div className="headingMessages">
           <h1>MESSAGES</h1>
         </div>
-        <div className="Messagebox1" style={Messagebox1}>
+        <div className="Messagebox1" style={{height:"fit-content",transition:"all 0.3s"}}>
           <img className="facpics" src={raghurama} alt="PROF. G. RAGHURAMA" />
           <div className="message-content">
             <div className="info">
@@ -52,42 +26,23 @@ const Messages = () => {
                 VICE CHANCELLOR, DIT UNIVERSITY{" "}
               </h3>
             </div>
-            <p className="message">
-              Sports is not just about physical exercise and competition. It
-              instils team spirit, leadership qualities, and develops
-              performance character traits such as grit, resilience, and
-              self-discipline. Its benefits are not limited only to those who
-              play, but also to those who watch and support the players. DIT
-              University&apos;s annual sports festival Sphurti is one of the
-              occasions that brings all DITians together
-              {expandedContent1 ? (
-                <>
-                  {
-                    <p>
-                      I am happy to note that the annual sports festival is
-                      being organized during 13-15 March 2024. This event will
-                      definitely encourage our students to improve their sports
-                      skill as well as improve their overall mental & physical
-                      health. My best wishes to the organizers for a successful
-                      event. This year being our Silver Jubilee year, I hope the
-                      event is organized in a manner befitting the occasion. I
-                      wish the event a grand success. May all have a great and
-                      peaceful &quot;SPHURTI -2024&quot;.<br/> Jai Hind!
-                    </p>
-                  }
-                  <button className="readmore" onClick={toggleContent1}>
-                    Read less
-                  </button>
-                </>
-              ) : (
-                <button className="readmore" onClick={toggleContent1}>
-                  Read more
-                </button>
+
+            <span className="messages" >
+              {!expandedContent1 ? string1.slice(0, 250) : string1}
+              {string1.length > 150 && (
+                <span
+                  onClick={() => {
+                    setExpandedContent1(!expandedContent1);
+                  }}
+                  style={{color:"black",textDecoration:"underline",cursor:"pointer"}}
+                >
+                  {expandedContent1 ? "...Read Less" : "...Read More"}
+                </span>
               )}
-            </p>
+            </span>
           </div>
         </div>
-        <div className="Messagebox2" style={Messagebox2}>
+        <div className="Messagebox2" style={{height:"fit-content"}}>
           <img
             className="facpics"
             src={drrakeshmohan}
@@ -100,48 +55,19 @@ const Messages = () => {
                 DEAN, STUDENT WELFARE, DIT UNIVERSITY
               </h3>
             </div>
-            <p className="message">
-              I take great pleasure in welcoming all students and sports persons
-              to the SPHURTI-2024, the eighth annual sports meet of DIT
-              University, from 13th March to 15 March 2024. On this occasion, I
-              extend my warm wishes to all the sports persons with a great motto
-              of &quot; Aim for excellence, not perfection.&quot; we will form
-              the nucleus of change when we combine efforts with those who have
-              walked the path before us are
-              {expandedContent2 ? (
-                <>
-                  {
-                    <p>
-                      combine efforts with those who have walked the path before
-                      us and are standing ready to create a year of not just
-                      being competitive but one of athletic dominance. Once
-                      you&apos;ve prepared mentally and physically for your game,
-                      then you are ready to do your best-and your best is the
-                      best you can do. The DIT University, Dehradun, under the
-                      leadership of Hon&apos;ble vice Chancellor, Prof. G. Raghurama
-                      is fully committed for all around development and
-                      empowerment of students so that they can realize their
-                      full potential and also contribute to the career-building
-                      process. Not only that, the DIT University, Dehradun is
-                      focused on Scientific development and firmly holds the
-                      view that the students should be active participants and
-                      not just passive recipients of the knowledge process.
-                      Sports play a key role in development of personality of
-                      the students. In fact, sports should be a way of life. I
-                      call upon the students to make sports an integral part of
-                      their life.
-                    </p>
-                  }
-                  <button className="readmore" onClick={toggleContent2}>
-                    Read less
-                  </button>
-                </>
-              ) : (
-                <button className="readmore" onClick={toggleContent2}>
-                  Read more
-                </button>
+            <span className="messages">
+              {!expandedContent2 ? string2.slice(0, 250) : string2}
+              {string1.length > 250 && (
+                <span
+                  onClick={() => {
+                    setExpandedContent2(!expandedContent2);
+                  }}
+                  style={{color:"black",textDecoration:"underline",cursor:"pointer"}}
+                >
+                  {expandedContent2 ? "...Read Less" : "...Read More"}
+                </span>
               )}
-            </p>
+            </span>
           </div>
         </div>
       </div>

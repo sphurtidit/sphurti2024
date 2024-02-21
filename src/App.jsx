@@ -1,6 +1,6 @@
 import "./App.css";
 import SportsSection from "./Components/Sports_section/Sports_section";
-import HeroPage from "./pages/HeroPage/HeroPage";
+import Main_HeroPage from "./Components/Main_HeroPage/Main_HeroPage";
 import Navbar from "./Components/Navbar/navbar";
 import Timer from "./Components/timer/timer";
 import TeamSec from "./Components/team_sec/team_sec";
@@ -29,13 +29,13 @@ function App() {
     <React.Fragment>
     <div className="background-container">
     <Navbar />   
-    <HeroPage />
+    <Main_HeroPage/>
+    {/* <HeroPage /> */}
     <Timer/>
     <Messages/>
     <SportsSection/>
     <TeamSec/>
     {/* <Mobile_HeroPage /> */}
-    <Result />
     <Footer/>
     </div>
     <Lines  customLoading={loading} />
