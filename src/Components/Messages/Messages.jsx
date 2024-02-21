@@ -12,7 +12,7 @@ const Messages = () => {
  
 
   return (
-    <>
+    <div className="msg">
       <div className="parent-container-messages">
         <div className="headingMessages">
           <h1>MESSAGES</h1>
@@ -71,7 +71,7 @@ const Messages = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Messages;

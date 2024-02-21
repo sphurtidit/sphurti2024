@@ -29,12 +29,10 @@ function App() {
     <div className="background-container">
     <Navbar />   
     <Main_HeroPage/>
-    {/* <HeroPage /> */}
     <Timer/>
     <Messages/>
     <SportsSection/>
     <TeamSec/>
-    {/* <Mobile_HeroPage /> */}
     <Footer/>
     </div>
     <Lines  customLoading={loading} />

@@ -35,22 +35,22 @@ function TeamSec() {
       }
     },[])
   return (
-    <div className="whole">
-      <p className="Heading1">
-        OUR TEAM
-      </p>
-      <p className="Heading2">
-        Faculty co-ordinator
-      </p>
+    <div className="whole team">
+      <div className="heading">
+        <h1>OUR TEAM</h1>
+      </div>
+      <div className="heading">
+        <h3>FACULTY COORDINATOR</h3>
+      </div>
       <div className="FacultyCard">
         {sports.map((sport)=>{
          return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={"yellow"} />
         })}
        
       </div>
-      <p className="Heading2">
-        Student co-ordinator
-      </p>
+      <div className="heading">
+        <h3>STUDENT COORDINATOR</h3>
+      </div>
       <div className="StudentCard">
       {team.map((sport)=>{
          return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={"yellow"} />
@@ -60,6 +60,4 @@ function TeamSec() {
   )
 }
 
-
-// src\Components\team_sec\team_sec.jsx
 export default TeamSec;
