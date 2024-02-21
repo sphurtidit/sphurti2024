@@ -63,7 +63,6 @@ button:focus-visible {
     src: url('./fonts/SF/SF Sports Night NS.ttf') format('woff2'); /* IE9 Compat Modes */
     
 }
-
 @font-face {
   font-family: 'DM Sans';
   src: url('./fonts/DM/DMSans-Bold.ttf') format('woff2');
