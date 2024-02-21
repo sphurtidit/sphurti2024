@@ -34,7 +34,6 @@ function App() {
     <SportsSection/>
     <TeamSec/>
     {/* <Mobile_HeroPage /> */}
-    <Result />
     <Footer/>
     </div>
     <Lines  customLoading={loading} />
