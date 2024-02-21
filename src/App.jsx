@@ -6,6 +6,7 @@ import Timer from "./Components/timer/timer";
 import TeamSec from "./Components/team_sec/team_sec";
 import Footer from "./Components/Footer/Footer";
 import Messages from "./Components/Messages/Messages";
+import Result from "./Components/result/result";
 // import Mobile_HeroPage from './Components/Mobile_HeroPage/Mobile_HeroPage'
 import { Lines } from "react-preloaders";
 import React, { useState, useEffect } from "react";

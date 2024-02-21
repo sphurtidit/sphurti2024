@@ -1,0 +1,66 @@
+.result-container {
+    border: 2px solid #7f1bb6;
+    background-color: white;
+    display: flex;
+    height: fit-content;
+    margin: 0vw 10vw ;
+    line-height: 1;
+}
+
+.heading {
+    margin-top: 2.5rem;
+    font-family: "Outfit";
+    color: black;
+    font-size: 2.9vw;
+    max-width: 100%;
+}
+
+.right-column {
+    flex: 4;
+  
+}
+
+.rightimage img{
+    width: auto;
+    height: auto;
+    float: right;
+
+}
+
+.left-column {
+    flex:1;
+    margin-left: 1vw;
+    height: auto;
+
+}
+.leftimage img{
+    width: auto;
+    height: auto;
+    float: left;  
+    margin:1vw;  
+}
+.middle-column {
+    width: auto;
+    flex: 5;
+}
+.middle-heading{
+font-family: 'SF Sports Night';
+color: black;
+font-size: 5vw;
+padding-left: 4vw;
+padding-top: 4vw;
+}
+.resultimage img{
+    width: 200px;
+    height: auto;
+}
+.thisyear{
+    font-family: 'Outfit';
+    color: white;
+    background-color: grey;
+    font-size: 1.5vw;
+    height:30px;
+    width:200px;
+    padding: 0;
+
+}
