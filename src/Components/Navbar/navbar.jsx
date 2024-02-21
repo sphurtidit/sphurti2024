@@ -14,11 +14,11 @@ function Navbar() {
         <AiOutlineMenu />
       </div>
       <ul className={`centered ${isMenuOpen ? "open" : ""}`}>
-        <li>HOME</li>
-        <li>ABOUT</li>
-        <li>SPORTS</li>
-        <li>CONTACT</li>
-        <li>RESULTS</li>
+        <li><a href="#" onClick={() => setIsMenuOpen(false)}>HOME</a></li>
+        <li><a href="#" onClick={() => setIsMenuOpen(false)}>ABOUT</a></li>
+        <li><a href="#" onClick={() => setIsMenuOpen(false)}>SPORTS</a></li>
+        <li><a href="#" onClick={() => setIsMenuOpen(false)}>CONTACT</a></li>
+      
         <li>
           <button
             onClick={() => {
