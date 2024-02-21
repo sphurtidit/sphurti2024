@@ -35,7 +35,7 @@ function TeamSec() {
       }
     },[])
   return (
-    <div className="whole team">
+    <div className="whole team team-nav">
       <div className="heading">
         <h1>OUR TEAM</h1>
       </div>

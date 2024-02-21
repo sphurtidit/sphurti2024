@@ -1,11 +1,11 @@
 import "./App.css";
 import SportsSection from "./Components/Sports_section/Sports_section";
 import Main_HeroPage from "./Components/Main_HeroPage/Main_HeroPage";
-import Navbar from "./Components/Navbar/navbar";
 import Timer from "./Components/timer/timer";
 import TeamSec from "./Components/team_sec/team_sec";
 import Footer from "./Components/Footer/Footer";
 import Messages from "./Components/Messages/Messages";
+import Nav from "./Components/Navbar/nav";
 // import Mobile_HeroPage from './Components/Mobile_HeroPage/Mobile_HeroPage'
 import { Lines } from "react-preloaders";
 import React, { useState, useEffect } from "react";
@@ -27,7 +27,7 @@ function App() {
     <>
     <React.Fragment>
     <div className="background-container">
-    <Navbar />   
+    <Nav/>
     <Main_HeroPage/>
     <Timer/>
     <Messages/>

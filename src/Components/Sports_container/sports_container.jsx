@@ -70,7 +70,7 @@ const SportsContainer = ({rule, game, type, image}) => {
                         </div>
                         <div className="coord">
                             <p className="coord-text">Coordinators:</p>
-                            <div className="info">
+                            <div className="finfo">
                                 {
                                     Object.entries(game['coordinators']).map(([key, value]) => (
                                         <div className="cinfo" key={key}>
