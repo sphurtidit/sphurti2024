@@ -97,7 +97,7 @@
     cursor: pointer;
   }
   
-  button {
+  .rgst_btn {
     color: #fff;
     border: none;
     background-color: #ee0942;
@@ -160,8 +160,8 @@
     .button-cnt {
       margin-right: 10px;
     }
-    
-    button {
+
+    .rgst_btn {
       font-family: 'Outfit',sans-serif;
       font-weight: 400;
       padding: 0;
