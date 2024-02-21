@@ -2,44 +2,55 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    /* padding-top: 5vh; */
+    background-color: transparent;
     border-top: 0.5px solid black;
-    padding: 5vh 2% 2vh 2%;
+    padding: 2vh 5vw;
+    margin-top: 5vh;
+    max-width: 100vw;
 }
-.content{
+.footercontent{
     text-transform: uppercase;
-    /* padding-left: 2%; */
-    
+    line-height: 1;
 }
-
-.content>h1{
+.footerheader{
     color: black;
+    font-size: 3vw;
     font-family: 'SF Sports',sans-serif;
-    
-    
     height: fit-content;
     margin-bottom: 0;
+}
+.footermiddle{
+    font-size: 1.8vw;
+    font-family: 'DM Sans',sans-serif;
+    color: #01002086;
+}
+.footerbottom{
+    font-size: 1.5vw;
+    font-family: 'DM Sans',sans-serif;
+    color: #01002086;
 }
 
-.content>p,span{
-    color: #01002086;
-    font-family: 'DM Sans',sans-serif;
+.footerlogos img{
+    height: 5vw;
+    width: auto;
+    padding: 0 1vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .footerContainer{
+        align-items: center;
+    }
+    .footerheader{
+        font-size: 4vw;
+    }
+    .footermiddle{
+        font-size: 3vw;
+    }
+    .footerbottom{
+        font-size: 2.5vw;
+    }
+    .footerlogos img{
+        height: 7vw;
+    }
     
-    height: fit-content;
-    margin-bottom: 0;
-}
-.content>span{
-    font-size: 1.5rem;
-}
-.content>p{
-    font-size: 1.25rem;
-}
-.logos>.dit,.sphurti{
-    width: 20%;
-    margin: 0 5%;
-}
-.naac{
-    width: 30%;
-    margin: 0 5%;
 }
