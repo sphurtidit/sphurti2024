@@ -21,22 +21,12 @@ const Footer = () => {
   return (
     <>
       <div className="footerContainer">
-        <div className="content">
-          <h1>Made with ❤️ and effort </h1>
-          <span>Design Team X technical team</span>
-          <p>
-            sphurti 2024 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-            <a href={link} target="_blank" rel="noreferrer" style={{fontFamily:'SF Sports',color:'black',textDecoration:'none'}}>SPHURTI 2023</a>{" "}
-          </p>
+        <div className="footercontent">
+          <p className="footerheader">Made with ❤️ and effort </p>
+          <p className="footermiddle">Design Team X technical team</p>
+          <p className="footerbottom">Sphurti 2024</p>
         </div>
-        <div className="logos">
+        <div className="footerlogos">
           <img src={Sphurti} alt="" className="sphurti" />
           <img src={Naac} alt="" className="naac" />
           <img src={Dit} alt="" className="dit" />
