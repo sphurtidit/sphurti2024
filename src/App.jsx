@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/navbar'
 import Timer from './Components/timer/timer'
 import TeamSec from './Components/team_sec/team_sec'
 import Footer from './Components/Footer/Footer'
+import Messages from "./Components/Messages/Messages"
 function App() {
 
   return (
@@ -13,8 +14,10 @@ function App() {
     <Navbar />   
     <HeroPage />
     <Timer/>
+    <Messages/>
     <SportsSection/>
     <TeamSec/>
+    
     <Footer/>
     </div> 
     </>
