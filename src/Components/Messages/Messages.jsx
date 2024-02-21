@@ -13,40 +13,24 @@ const Messages = () => {
     setExpandedContent2(!expandedContent2);
   };
   const getMessagebox1 = () => {
-    if (window.matchMedia("only screen and (max-width: 400px)").matches) {
+    if (window.matchMedia("only screen and (max-width: 730px)").matches) {
       return {
-        height: expandedContent1 ? "22rem" : "12rem",
-      };
-    } 
-    else if (window.matchMedia("only screen and (max-width: 730px)").matches) {
-      return {
-        height: expandedContent1 ? "43rem" : "17rem",
-      };
-    } 
-    else if (window.matchMedia("only screen and (max-width: 1000px)").matches) {
-      return {
-        height: expandedContent1 ? "35rem" : "25rem",
+        height: expandedContent1 ? "26rem" : "13rem",
       };
     } else {
       return {
-        height: expandedContent1 ? "35rem" : "17rem",
+        height: expandedContent1 ? "32rem" : "16rem",
       };
     }
   };
   const getMessagebox2 = () => {
-    if (window.matchMedia("only screen and (max-width: 400px)").matches) {
+    if (window.matchMedia("only screen and (max-width: 730px)").matches) {
       return {
-        height: expandedContent2 ? "24rem" : "12rem",
-      };
-    } else if (
-      window.matchMedia("only screen and (max-width: 730px)").matches
-    ) {
-      return {
-        height: expandedContent2 ? "49rem" : "17rem",
+        height: expandedContent2 ? "26rem" : "13rem",
       };
     } else {
       return {
-        height: expandedContent2 ? "35rem" : "17rem",
+        height: expandedContent2 ? "32rem" : "16rem",
       };
     }
   };
@@ -61,7 +45,7 @@ const Messages = () => {
         </div>
         <div className="Messagebox1" style={Messagebox1}>
           <img className="facpics" src={raghurama} alt="PROF. G. RAGHURAMA" />
-          <div className="content">
+          <div className="message-content">
             <div className="info">
               <h1 className="facname">PROF. G. RAGHURAMA</h1>
               <h3 className="facdesignation">
@@ -126,7 +110,7 @@ const Messages = () => {
             src={drrakeshmohan}
             alt="PROF. DR. RAKESH MOHAN"
           />
-          <div className="content">
+          <div className="message-content">
             <div className="info">
               <h1 className="facname">DR. RAKESH MOHAN</h1>
               <h3 className="facdesignation">
@@ -138,7 +122,7 @@ const Messages = () => {
               to the SPHURTI-2024, the eighth annual sports meet of DIT
               University, from 13th March to 15 March 2024. On this occasion, I
               extend my warm wishes to all the sports persons with a great motto
-              of &quot;Aim for excellence, not perfection.&quot; we will form
+              of &quot; Aim for excellence, not perfection.&quot; we will form
               the nucleus of change when we combine efforts with those who have
               walked the path before us are
               {expandedContent2 ? (
@@ -149,9 +133,9 @@ const Messages = () => {
                       combine efforts with those who have walked the path before
                       us and are standing ready to create a year of not just
                       being competitive but one of athletic dominance. Once
-                      you&apos;ve prepared mentally and physically for your game,
-                      then you are ready to do your best-and your best is the
-                      best you can do.
+                      you&apos;ve prepared mentally and physically for your
+                      game, then you are ready to do your best-and your best is
+                      the best you can do.
                       <br />
                       The DIT University, Dehradun, under the leadership of
                       Hon&apos;ble vice Chancellor, Prof. G. Raghurama is fully

@@ -1,5 +1,5 @@
 import "./Footer.css";
-import Navbar from "../LogoNavbar/LogoNavbar";
+// import Navbar from "../LogoNavbar/LogoNavbar";
 import Sphurti from "../../assets/sphurti.png";
 import Naac from "../../assets/naac.png";
 import Dit from "../../assets/DIT.png";
