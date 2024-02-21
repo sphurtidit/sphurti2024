@@ -13,6 +13,7 @@ const Footer = () => {
     const l = getDoc(doc(collection(db, "misc"), "links")).then((docu) => {
       setLink(docu.data()["2023"]);
       // console.log(docu.data()['rulebook']);
+      console.log(link)
     });
     return () => {
       l;
