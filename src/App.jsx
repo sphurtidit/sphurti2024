@@ -7,10 +7,24 @@ import TeamSec from './Components/team_sec/team_sec'
 import Footer from './Components/Footer/Footer'
 import Messages from "./Components/Messages/Messages"
 import Mobile_HeroPage from './Components/Mobile_HeroPage/Mobile_HeroPage'
+import { Lines } from 'react-preloaders'
+import React, { useState, useEffect } from 'react'
 function App() {
-
+    const [loading,setLoading]=useState(true);
+    useEffect(() => {
+      fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(json => {
+          setLoading(false);
+        })
+        .catch(err => {
+          setLoading(true);
+        });
+    }, []);
+    
   return (
     <>
+    <React.Fragment>
     <div className="background-container">
     <Navbar />   
     <HeroPage />
@@ -20,7 +34,9 @@ function App() {
     <TeamSec/>
     {/* <Mobile_HeroPage /> */}
     <Footer/>
-    </div> 
+    </div>
+    <Lines  customLoading={loading} />
+    </React.Fragment> 
     </>
   )
 }
