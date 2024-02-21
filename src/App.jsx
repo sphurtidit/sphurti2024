@@ -9,6 +9,8 @@ import Messages from "./Components/Messages/Messages"
 import Mobile_HeroPage from './Components/Mobile_HeroPage/Mobile_HeroPage'
 import { Lines } from 'react-preloaders'
 import React, { useState, useEffect } from 'react'
+import Result  from './Components/result/result' 
+
 function App() {
     const [loading,setLoading]=useState(true);
     useEffect(() => {
@@ -33,6 +35,7 @@ function App() {
     <SportsSection/>
     <TeamSec/>
     {/* <Mobile_HeroPage /> */}
+    <Result />
     <Footer/>
     </div>
     <Lines  customLoading={loading} />
