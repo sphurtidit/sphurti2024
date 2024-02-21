@@ -33,7 +33,7 @@ const Footer = () => {
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-            <a href={link} target="_blank" style={{fontFamily:'SF Sports',color:'black',textDecoration:'none'}}>SPHURTI 2023</a>{" "}
+            <a href={link} target="_blank" rel="noreferrer" style={{fontFamily:'SF Sports',color:'black',textDecoration:'none'}}>SPHURTI 2023</a>{" "}
           </p>
         </div>
         <div className="logos">
