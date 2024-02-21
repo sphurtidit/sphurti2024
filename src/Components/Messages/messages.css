@@ -13,6 +13,8 @@
     color:#1F1F21;
     font-size: 1.2vw;
 }
+
+
 .facname{
     font-family:'Outfit';
     color:#FFFFFF;
@@ -31,6 +33,7 @@
     padding:  1vw 5vw 5vw;
     /* max-height:17rem ; */
     max-width: 105vw;
+    transition: background .1s linear; 
     color: #FFFFFF;
     background-color: #FFB800;
     transform:skew(0deg,-1.5deg);
@@ -39,6 +42,7 @@
 
 .Messagebox2{
     background-color: #7F1BB6;
+    height: fit-content;
 }
 
 .facpics{
@@ -46,7 +50,9 @@
     max-height: 33vh;
     max-width: 40vw;
 }
-
+.messages{
+    font-size: 2rem;
+}
 
 .content{
     font-size: 1vw;
@@ -90,9 +96,9 @@
         width: 36vw;
         font-size: 0.5rem;
     }
-    .message{
+    .messages{
         /* margin-top: 1rem; */
-        font-size: 2vw;
+        font-size: 1rem;
     }
     .info{
         margin-left: 35vw;

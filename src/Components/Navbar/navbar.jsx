@@ -20,15 +20,16 @@ function Navbar() {
         <li><a href="#" onClick={() => setIsMenuOpen(false)}>CONTACT</a></li>
       
         <li>
-          <button
+          
+        </li>
+      </ul>
+      <button
             onClick={() => {
               window.open("https://forms.gle/m6F4P47PQ86q53Hy9", "_blank");
             }}
           >
             REGISTER
           </button>
-        </li>
-      </ul>
     </nav>
   );
 }

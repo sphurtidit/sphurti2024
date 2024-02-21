@@ -42,6 +42,7 @@
  nav {
     display: flex;
     justify-content: space-between;
+    padding: 0 10%;
     align-items: center;
     background-color: #ffffff;
     color: #000;
@@ -140,9 +141,10 @@
     button {
       font-family: 'Outfit',sans-serif;
       font-weight: 600;
-      margin-top: 20px;
-      height: 8vh;
-      width: 40vw;
-      font-size: 24px;
+      justify-content: space-between;
+      /* margin-top: 20px; */
+      height: 4vh;
+      width: 20vw;
+      font-size: 12px;
     }
   }
