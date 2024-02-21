@@ -18,14 +18,9 @@ const HeroPage = () => {
      
         <div className="left-container">
         <img src={LeftBGI} alt="" className="left"/>
-<<<<<<< HEAD
-        <button href='https://docs.google.com/forms/d/1vxvzC-vwx6elSRgbsgPeZynvCnRxd3HCEPzyWIJn0n0/edit#responses
-        ' title='Register' className='primary'>Register</button>
-=======
         <button title='Register' className='primary' onClick={() => {
                             window.open('https://forms.gle/m6F4P47PQ86q53Hy9', '_blank');
                         }}>Register</button>
->>>>>>> 2ea9db3711bfe4a051ff9124d32203d85004d95a
         </div>
         <div className="center-container">
         <img src={CenterBGI} alt="" className="center"/>
