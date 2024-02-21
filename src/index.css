@@ -57,3 +57,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   } */
 }
+
+@font-face {
+  font-family: 'SF Sports';
+    src: url('./fonts/SF/SF Sports Night NS.ttf') format('woff2'); /* IE9 Compat Modes */
+    
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./fonts/DM/DMSans-Bold.ttf') format('woff2');
+}
+@font-face {
+  font-family: "Outfit";
+  src: url('./fonts/outfit/Outfit-Bold.ttf') format('woff2');
+}
