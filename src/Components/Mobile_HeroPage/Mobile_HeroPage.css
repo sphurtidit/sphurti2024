@@ -6,7 +6,10 @@
     /* margin-top: 5rem; */
     height: 70vh;
     padding-top: 4rem;
+    margin-bottom: 20rem;
 }
+
+
 
 .main-container .top-section {
     align-items: center;
@@ -37,4 +40,16 @@
         cursor: pointer;
         transition-duration: 0.4s;
         transform: skew(-10deg);
+}
+
+@media only screen  and (max-width: 580px){ 
+    .main-container {
+        margin-bottom: 15rem;
+    }
+}
+
+@media only screen  and (max-width: 400px){ 
+    .main-container {
+        margin-bottom: 12rem;
+    }
 }
