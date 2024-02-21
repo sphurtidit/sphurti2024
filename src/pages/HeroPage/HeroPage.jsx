@@ -11,7 +11,7 @@ const HeroPage = () => {
     <>
       
       {/* DO NOT TOUCH */}
-      <div className="main-container">
+      <div className="main-container-d">
         <img src={Sphurti} alt="" className="logo_1"/>
         <img src={Naac} alt="" className="logo_2"/>
         <img src={Dit} alt="" className="logo_3"/>
