@@ -14,6 +14,7 @@
 }
 .yellow{
     --imageurl:url("../../assets/yellow.png");
+    
 }
 .purple{
     --imageurl:url("../../assets/Purple.png");
@@ -27,6 +28,8 @@
 
 .image{
     width: 100%;
+    overflow: hidden;
+
 }
 .contentContainer{
     display: flex;
@@ -35,7 +38,7 @@
 }
 .name{
     font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 500;
     color: #000000;
     text-align: center;
@@ -60,3 +63,17 @@
     height: fit-content;
     text-transform: uppercase;
 }
+
+@media (max-width: 800px) {
+    .name{
+        font-size: 1rem;
+    
+    }
+    .designation{
+        font-size: 0.8rem;
+    }
+    .phone{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 500px) {}

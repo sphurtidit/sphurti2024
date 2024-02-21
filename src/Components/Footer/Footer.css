@@ -1,0 +1,45 @@
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* padding-top: 5vh; */
+    border-top: 0.5px solid black;
+    padding: 5vh 2% 2vh 2%;
+}
+.content{
+    text-transform: uppercase;
+    /* padding-left: 2%; */
+    
+}
+
+.content>h1{
+    color: black;
+    font-family: 'SF Sports',sans-serif;
+    
+    
+    height: fit-content;
+    margin-bottom: 0;
+}
+
+.content>p,span{
+    color: #01002086;
+    font-family: 'DM Sans',sans-serif;
+    
+    height: fit-content;
+    margin-bottom: 0;
+}
+.content>span{
+    font-size: 1.5rem;
+}
+.content>p{
+    font-size: 1.25rem;
+}
+.logos>.dit,.sphurti{
+    width: 20%;
+    margin: 0 5%;
+}
+.naac{
+    width: 30%;
+    margin: 0 5%;
+}

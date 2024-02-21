@@ -2,19 +2,21 @@ import { useState } from 'react';
 import "./sports_container.css";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import flag from '../../assets/flag.png'
+import PropTypes from "prop-types";
 
-const SportsContainer = (games) => {
+const SportsContainer = ({rule, game, type, image}) => {
     const [showContent, setShowContent] = useState(false);
     const viewDetails = () => {
         setShowContent(!showContent);
     }
-    let col = (games.type == 1) ? "yellow" : (games.type == 2) ? "red" : "purple";
-    let exp = (showContent)? "expanded" : "";
+    let col = (type == 1) ? "yellow" : (type == 2) ? "red" : "purple";
+    let exp = (showContent) ? "expanded" : "";
+    let sch = game['schedule'] == '' ? false : true;
     return (
         <div className={`sports-container ${col} ${exp}`}>
             <div className="left-column">
                 <div className='container'>
-                    <p className='sports-heading'>{games.name}</p>
+                    <p className='sports-heading'>{game['name']}</p>
                     <div className="reg">
                         <img src={flag}></img>
                         <p className='reg-text'>REGISTRATION</p>
@@ -27,16 +29,18 @@ const SportsContainer = (games) => {
                         </div>
                         <div className="fee-text">
                             <p className="cate">BOYS</p>
-                            <p className="cate-fees">{games.boyfees}</p>
+                            <p className="cate-fees">₹{game['fees-boys']}</p>
                         </div>
-                        <div className="vertical-line"></div>
+                        {game['separate'] ? <><div className="vertical-line"></div>
                         <div className="fee-text">
                             <p className="cate">GIRLS</p>
-                            <p className="cate-fees">{games.girlfees}</p>
-                        </div>
+                            <p className="cate-fees">₹{game['fees-girls']}</p>
+                        </div> </>: <></>}
                     </div>
                     <div className="buttons">
-                        <button title='Register' className='primary' >
+                        <button title='Register' className='primary-s' onClick={() => {
+                            window.open('https://forms.gle/m6F4P47PQ86q53Hy9', '_blank');
+                        }}>
                             Register</button>
                         <button title='detail' className='secondary' onClick={viewDetails}>
                             {showContent ? (<>View Less <MdKeyboardArrowUp /> </>) : (<>View More <MdKeyboardArrowDown /> </>)}
@@ -48,42 +52,50 @@ const SportsContainer = (games) => {
                         <div className="hr">
                             <hr></hr>
                         </div>
-                        <p className="prize">Prize Money:</p>
+                        {game['showprize'] ? <><p className="prize">Prize Money:</p>
                         <div className="amount">
-                            <p className="winner">Winners: ₹99</p>
+                            <p className="winner">Winners: ₹{game['winner']}</p>
                             <div className="vertical-line"></div>
-                            <p className="runner">Runner Up: ₹99</p>
+                            <p className="runner">Runner Up: ₹{game['runnerup']}</p>
                         </div>
+                        </> : <><br /></>}
                         <div className="schedule">
                             <p className="sch-text">Schedule:</p>
-                            <a href="">Download Schedule</a>
+                            {sch ? <a href={game['schedule']} target='_blank' rel="noopener noreferrer">Download Schedule</a> : <p className='sch-text'>Coming Soon</p>}
+                            
                         </div>
                         <div className="schedule">
                             <p className="sch-text">Rule Book:</p>
-                            <a href="">Download</a>
+                            <a href={rule} download>Download</a>
                         </div>
                         <div className="coord">
                             <p className="coord-text">Coordinators:</p>
                             <div className="info">
-                                <div className="cinfo">
-                                    <p className="name">Soumya Nilay:</p>
-                                    <p className="mob">8002686694</p>
-                                </div>
-
-                                <div className="cinfo">
-                                    <p className="name">Maanav Aryan:</p>
-                                    <p className="mob">9334914647</p>
-                                </div>
+                                {
+                                    Object.entries(game['coordinators']).map(([key, value]) => (
+                                        <div className="cinfo" key={key}>
+                                            <p className="cname">{key}:</p>
+                                            <p className="cmob">{value}</p>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
                 }
             </div>
             <div className="right-column">
-                <img src={showContent ? games.image : games.imagesmall} className="image"></img>
+                <img src={image} className="image"></img>
             </div>
         </div>
     );
 };
+
+SportsContainer.propTypes = {
+    type: PropTypes.string,
+    rule: PropTypes.string,
+    game: PropTypes.map,
+    image: PropTypes.string,
+  };
 
 export default SportsContainer;
