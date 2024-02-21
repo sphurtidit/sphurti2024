@@ -6,6 +6,7 @@ import Timer from './Components/timer/timer'
 import TeamSec from './Components/team_sec/team_sec'
 import Footer from './Components/Footer/Footer'
 import Messages from "./Components/Messages/Messages"
+import Mobile_HeroPage from './Components/Mobile_HeroPage/Mobile_HeroPage'
 function App() {
 
   return (
@@ -17,7 +18,7 @@ function App() {
     <Messages/>
     <SportsSection/>
     <TeamSec/>
-    
+    {/* <Mobile_HeroPage /> */}
     <Footer/>
     </div> 
     </>
