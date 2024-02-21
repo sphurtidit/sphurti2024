@@ -1,0 +1,40 @@
+.main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 5rem; */
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+.main-container .top-section {
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    display: flex;
+    padding: 8% 5%;
+}
+.main-container .top-section img {
+    width: 60%;
+}
+
+.main-container .bottom-section img {
+    width: 100%;
+    height: 50vh;
+}
+
+.register{
+        background-color: #ee0942;
+        border-radius: 0;
+        color: white;
+        padding: 15px 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 50px 2px 0 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        transform: skew(-10deg);
+}
