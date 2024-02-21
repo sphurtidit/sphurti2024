@@ -29,15 +29,66 @@
  justify-content: center;
  align-items: center;
 }
-.StudentCard{
+.StudentCard,.FacultyCard{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
     row-gap: 2rem;
     /* column-gap: 3rem; */
-    
 }
 
-.StudentCard .TeamCard {
-    flex-basis: 50%; /* Calculate width for three items in a row with gap */
+/* .StudentCard>div{
+    flex: 0 0 calc(25% - 80px);
+} */
+
+.StudentCard>div {
+    flex-basis: 22%; /* Calculate width for three items in a row with gap */
 }
+
+@media (max-width: 800px) {
+    .StudentCard {
+      /* flex-direction: column; */
+    justify-content: center;
+
+    }
+    .StudentCard > div {
+      flex-basis: 30%;
+    }
+    .FacultyCard {
+        /* flex-direction: column; */
+      justify-content: center;
+  
+      }
+      .FacultyCard > div {
+        flex-basis: 30%;
+      }
+      
+      .whole{
+        
+        line-height: 3vh;
+        margin-top: 5vh;
+    }
+    .Heading1{
+        font-size: 3rem;
+    }
+    .Heading2{font-size: 1.5rem;}
+  }
+  @media (max-width: 500px) {
+    .StudentCard {
+      /* flex-direction: column; */
+    justify-content: center;
+
+    }
+    .StudentCard > div {
+      flex-basis: 60%;
+    }
+    .FacultyCard {
+        /* flex-direction: column; */
+      justify-content: center;
+  
+      }
+      .FacultyCard > div {
+        flex-basis: 60%;
+      }
+  }

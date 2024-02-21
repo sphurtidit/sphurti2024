@@ -74,7 +74,7 @@ const Messages = () => {
               performance character traits such as grit, resilience, and
               self-discipline. Its benefits are not limited only to those who
               play, but also to those who watch and support the players. DIT
-              University’s annual sports festival Sphurti is one of the
+              University&apos;s annual sports festival Sphurti is one of the
               occasions that brings all DITians together
               {expandedContent1 ? (
                 <>
@@ -149,7 +149,7 @@ const Messages = () => {
                       combine efforts with those who have walked the path before
                       us and are standing ready to create a year of not just
                       being competitive but one of athletic dominance. Once
-                      you’ve prepared mentally and physically for your game,
+                      you&apos;ve prepared mentally and physically for your game,
                       then you are ready to do your best-and your best is the
                       best you can do.
                       <br />
