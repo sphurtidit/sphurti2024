@@ -1,6 +1,6 @@
 import React from 'react';
 import './message-section.css';
-import MsgContainer from './msg';
+// import MsgContainer from './msg';
 import FromTheDesk from './msg';
 import VC from '../../assets/graghurama.png';
 import DSW from '../../assets/drrakeshmohan.png';
