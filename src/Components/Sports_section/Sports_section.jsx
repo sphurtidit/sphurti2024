@@ -54,7 +54,7 @@ const SportsSection = () => {
     }, []);
 
     return (
-        <>
+        <div className='nav-sports'>
             {badminton ? (<div className='parent-container-sports'>
                 <div className='heading'><h1>SPORTS</h1></div>
                 <div className='allsports'>
@@ -67,7 +67,7 @@ const SportsSection = () => {
                 </div>
             </div>) : <div className='loading'>Loading...</div>}
 
-        </>
+        </div>
     );
 };
 

@@ -23,7 +23,7 @@ const Footer = () => {
     <>
       <div className="footerContainer">
         <div className="footercontent">
-          <p className="footerheader">Made with ❤️ and effort </p>
+          <p className="footerheader">Made with ❤️ and efforts</p>
           <p className="footermiddle">Design Team X technical team</p>
           <p className="footerbottom">Sphurti 2024</p>
         </div>
