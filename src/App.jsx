@@ -4,18 +4,14 @@ import Main_HeroPage from "./Components/Main_HeroPage/Main_HeroPage";
 import Timer from "./Components/timer/timer";
 import TeamSec from "./Components/team_sec/team_sec";
 import Footer from "./Components/Footer/Footer";
-<<<<<<< HEAD
+
 import Messages from "./Components/Messages/Messages";
 import Nav from "./Components/Navbar/nav";
 import { collection, getDocs, getDoc } from "firebase/firestore";
 import { db } from "./firebase";
 // import Mobile_HeroPage from './Components/Mobile_HeroPage/Mobile_HeroPage'
 import { Lines,Cube } from "react-preloaders";
-=======
-import Nav from "./Components/Navbar/nav"; 
-import MessageSection from "./Components/Messages/message-section";
-import { Lines } from "react-preloaders";
->>>>>>> 273f26e283dc02b08e7d4321f90549fdfd91258f
+
 import React, { useState, useEffect } from "react";
 function App() {
   const [loading, setLoading] = useState(true);
