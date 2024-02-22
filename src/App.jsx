@@ -34,6 +34,7 @@ function App() {
     <Messages/>
     <SportsSection/>
     <TeamSec/>
+    <Result/>
     <Footer/>
     </div>
     <Lines  customLoading={loading} />
