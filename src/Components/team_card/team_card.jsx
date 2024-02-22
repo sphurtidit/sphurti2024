@@ -3,6 +3,7 @@ import "./team_card.css";
 import PropTypes from "prop-types";
 // import Proff from "../../assets/bg 3.png";
 const TeamCard = ({ type, name, designation,phone,image }) => {
+  // console.log(image);
   return (
     <div className={`parent-container ${type}`}>
       <div className="image-container">

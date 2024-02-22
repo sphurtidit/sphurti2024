@@ -4,7 +4,9 @@ import { db } from '../../firebase';
 import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 
-function TeamSec() {
+function TeamSec(sport, teams ) {
+  console.log( sport,teams)
+ 
     const [team,setTeam]=useState([]);
     const [sports,setSports]=useState([]);
     useEffect(()=>{
@@ -12,21 +14,19 @@ function TeamSec() {
       const r=getDocs(collection(db,"Team")).then((querySnapshot)=>{
         const temp=querySnapshot.docs.map((doc)=>doc.data());
         temp.sort((a,b)=>a.precedence-b.precedence);
-        const sports=[]
-        const teams=[]
+        const sportss=[]
+        const teamss=[]
         temp.map((t)=>{
           if(t.category=="Sports Coordinator"){
-            
-            sports.push(t)
+            sportss.push(t)
           }
           else{
-            
-            teams.push(t)
+            teamss.push(t)
           }
           
         })
-        setSports(sports);
-        setTeam(teams)
+        setSports(sportss);
+        setTeam(teamss)
         
       })
 
