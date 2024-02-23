@@ -10,48 +10,8 @@ import volleyballimg from '../../assets/volleyball.png'
 import basketballimg from '../../assets/basketball.png'
 import tabletennisimg from '../../assets/table tennis.png'
 
-const SportsSection = () => {
-    const [cricket, setcricket] = useState();
-    const [football, setfootball] = useState();
-    const [volleyball, setvolleyball] = useState();
-    const [basketball, setbasketball] = useState();
-    const [tabletennis, settabletennis] = useState();
-    const [badminton, setbadminton] = useState();
-    const [rule, setrule] = useState();
+const SportsSection = ({rule ,cricket,badminton ,tabletennis ,football ,volleyball,basketball}) => {
 
-    useEffect(() => {
-        const r = getDoc(doc(collection(db, "misc"), "links")).then((docu) => {
-        setrule(docu.data()['rulebook']);
-        console.log(docu.data()['rulebook']);
-        });
-        const unsub = getDocs(collection(db, "sportDetails")).then((querySnapshot) => {
-            const tempdata = querySnapshot.docs.map((doc) => doc.data());
-            for (let i = 0; i < tempdata.length; i++) {
-                if (tempdata[i]['index'] == 1) {
-                    setbadminton(tempdata[i]);
-                }
-                else if (tempdata[i]['index'] == 2) {
-                    setbasketball(tempdata[i]);
-                }
-                else if (tempdata[i]['index'] == 3) {
-                    setcricket(tempdata[i]);
-                }
-                else if (tempdata[i]['index'] == 4) {
-                    setvolleyball(tempdata[i]);
-                }
-                else if (tempdata[i]['index'] == 5) {
-                    settabletennis(tempdata[i]);
-                }
-                else if (tempdata[i]['index'] == 6) {
-                    setfootball(tempdata[i]);
-                }
-            }
-        });
-        return () => {
-            r;
-            unsub;
-        }
-    }, []);
 
     return (
         <div className='nav-sports'>

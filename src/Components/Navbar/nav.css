@@ -90,7 +90,7 @@ nav li:hover{
         align-items: center;
         justify-content: center;
         background-color: #FFFFFF;
-        transform: translateX(100vh);
+        transform: translateX(100%);
         transition: 1s;
     }
     

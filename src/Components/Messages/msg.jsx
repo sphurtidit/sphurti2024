@@ -48,7 +48,7 @@ const toggle = () => {
             <p className='msg-content'>
                 {expandedContent ? text : text.slice(0, 400)} {
                     text.length > 400 && 
-                        <span onClick={toggle} className='toggle-button-msg'>
+                        <span onClick={toggle}  className='toggle-button-msg'>
                             {expandedContent ? '...Read Less' : '...Read More'}
                         </span>
                 }

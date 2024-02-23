@@ -3,37 +3,39 @@ import TeamCard from '../team_card/team_card'
 import { db } from '../../firebase';
 import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
+import PropTypes from "prop-types";
 
-function TeamSec(sport, teams ) {
-  console.log( sport,teams)
+
+function TeamSec({teams,sport}) {
+  // console.log(teams,sport);
  
-    const [team,setTeam]=useState([]);
-    const [sports,setSports]=useState([]);
-    useEffect(()=>{
+    const [team,setTeam]=useState(["hello","bye"]);
+    const [sports,setSports]=useState(["hi","bye"]);
+    // useEffect(()=>{
       
-      const r=getDocs(collection(db,"Team")).then((querySnapshot)=>{
-        const temp=querySnapshot.docs.map((doc)=>doc.data());
-        temp.sort((a,b)=>a.precedence-b.precedence);
-        const sportss=[]
-        const teamss=[]
-        temp.map((t)=>{
-          if(t.category=="Sports Coordinator"){
-            sportss.push(t)
-          }
-          else{
-            teamss.push(t)
-          }
+    //   const r=getDocs(collection(db,"Team")).then((querySnapshot)=>{
+    //     const temp=querySnapshot.docs.map((doc)=>doc.data());
+    //     temp.sort((a,b)=>a.precedence-b.precedence);
+    //     const sportss=[]
+    //     const teamss=[]
+    //     temp.map((t)=>{
+    //       if(t.category=="Sports Coordinator"){
+    //         sportss.push(t)
+    //       }
+    //       else{
+    //         teamss.push(t)
+    //       }
           
-        })
-        setSports(sportss);
-        setTeam(teamss)
+    //     })
+    //     setSports(sportss);
+    //     setTeam(teamss)
         
-      })
+    //   })
 
-      return ()=>{
-        r;
-      }
-    },[])
+    //   return ()=>{
+    //     r;
+    //   }
+    // },[])
   return (
     <div className="whole team team-nav">
       <div className="heading">
@@ -43,8 +45,8 @@ function TeamSec(sport, teams ) {
         <h3>FACULTY COORDINATOR</h3>
       </div>
       <div className="FacultyCard">
-        {sports.map((sport)=>{
-         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={"yellow"} />
+        {sport.map((sport)=>{
+         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={sport.color} />
         })}
        
       </div>
@@ -52,12 +54,17 @@ function TeamSec(sport, teams ) {
         <h3>STUDENT COORDINATOR</h3>
       </div>
       <div className="StudentCard">
-      {team.map((sport)=>{
-         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={"yellow"} />
+      {teams.map((sport)=>{
+         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={sport.color} />
         })}
       </div>
     </div>
   )
 }
+TeamSec.propTypes = {
+  sport: PropTypes.array,
+  teams: PropTypes.array,
+  
+};
 
 export default TeamSec;
