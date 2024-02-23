@@ -9,8 +9,7 @@ import PropTypes from "prop-types";
 function TeamSec({teams,sport}) {
   // console.log(teams,sport);
  
-    const [team,setTeam]=useState(["hello","bye"]);
-    const [sports,setSports]=useState(["hi","bye"]);
+    
     // useEffect(()=>{
       
     //   const r=getDocs(collection(db,"Team")).then((querySnapshot)=>{
