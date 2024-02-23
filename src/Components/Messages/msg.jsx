@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import './msg.css';
+import PropTypes from 'prop-types';
 const FromTheDesk = ({text, image, name, desgn, type}) => {
     const [isDesktopView, setIsDesktopView] = useState(false);
 
@@ -90,5 +91,29 @@ const toggle = () => {
     </div>
   );
 };
+
+FromTheDesk.propTypes = {
+    name: PropTypes.string,
+    desgn: PropTypes.string,
+    type: PropTypes.Number,
+    image: PropTypes.string,
+    text: PropTypes.string
+  };
+
+  MsgContainer.propTypes = {
+    name: PropTypes.string,
+    desgn: PropTypes.string,
+    type: PropTypes.number,
+    image: PropTypes.string,
+    text: PropTypes.string
+  };  
+
+  MsgContainerMob.propTypes = {
+    name: PropTypes.string,
+    desgn: PropTypes.string,
+    type: PropTypes.number,
+    image: PropTypes.string,
+    text: PropTypes.string
+  };
 
 export default FromTheDesk;
