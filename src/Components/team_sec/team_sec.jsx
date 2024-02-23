@@ -46,7 +46,7 @@ function TeamSec({teams,sport}) {
       </div>
       <div className="FacultyCard">
         {sport.map((sport)=>{
-         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={"yellow"} />
+         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={sport.color} />
         })}
        
       </div>
@@ -55,7 +55,7 @@ function TeamSec({teams,sport}) {
       </div>
       <div className="StudentCard">
       {teams.map((sport)=>{
-         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={"yellow"} />
+         return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={sport.color} />
         })}
       </div>
     </div>
