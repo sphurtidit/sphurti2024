@@ -57,6 +57,9 @@
     color: black;
     text-decoration: underline;
 }
+.toggle-button-msg:hover{
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 1000px){
     .left-column-msg{
