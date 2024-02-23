@@ -41,8 +41,8 @@ function TeamSec({teams,sport}) {
       <div className="heading">
         <h1>OUR TEAM</h1>
       </div>
-      <div className="heading">
-        <h3>FACULTY COORDINATOR</h3>
+      <div className="subheading">
+        <h1>FACULTY COORDINATOR</h1>
       </div>
       <div className="FacultyCard">
         {sport.map((sport)=>{
@@ -50,8 +50,8 @@ function TeamSec({teams,sport}) {
         })}
        
       </div>
-      <div className="heading">
-        <h3>STUDENT COORDINATOR</h3>
+      <div className="subheading">
+        <h1>STUDENT COORDINATOR</h1>
       </div>
       <div className="StudentCard">
       {teams.map((sport)=>{

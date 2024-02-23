@@ -15,6 +15,15 @@
     font-family: 'Outfit';
     text-align: center;
     color:black;
-    font-size: 1.5vw;
+    font-size: 1rem;
     margin-top: 10vmin;
+}
+
+.subheading{
+    font-family: 'Outfit';
+    text-align: center;
+    color:black;
+    font-size: 0.5rem;
+    margin-top: 10vmin;
+    margin-bottom: 5vmin;
 }
