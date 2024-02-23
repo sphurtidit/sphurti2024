@@ -5,7 +5,8 @@ import Timer from "./Components/timer/timer";
 import TeamSec from "./Components/team_sec/team_sec";
 import Footer from "./Components/Footer/Footer";
 
-import Messages from "./Components/Messages/Messages";
+// import Messages from "./Components/Messages/Messages";
+import MessageSection from "./Components/Messages/message-section";
 import Nav from "./Components/Navbar/nav";
 import { collection, getDocs, getDoc } from "firebase/firestore";
 import { db } from "./firebase";
@@ -61,7 +62,7 @@ function App() {
           <Nav />
           <Main_HeroPage />
           <Timer />
-          <Messages />
+          <MessageSection />
           <SportsSection teams={team} sport={sports} />
           <TeamSec />
           <Footer />
