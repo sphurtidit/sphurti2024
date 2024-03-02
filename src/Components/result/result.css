@@ -6,6 +6,7 @@
     margin: 0vw 10vw;
     line-height: 1;
     max-width: 80vw;
+    margin-top: 1.5rem;
 }
 
 
@@ -16,6 +17,7 @@
 
 .right-column {
     flex: 4;
+
 }
 
 .rightimage img {
@@ -81,7 +83,7 @@
 
 }
 
-.result-buttons button {
+.result-buttons a button {
     color: white;
     font-size: 1.5vw;
     display: flex;
@@ -95,52 +97,71 @@
     font-weight: 600;
 }
 
-.result-buttons button:nth-child(1) {
+.result-buttons a button:nth-child(1) {
     background-color: #5B4349;
     opacity: 0.3;
 }
 
-.result-buttons button:nth-child(2) {
+.result-buttons a button:nth-child(2) {
     background-color: #EE0942;
 }
-@media only screen and (max-width: 1150px)
-{
+
+@media only screen and (max-width: 1150px) {
     .resultimage {
         width: 90%;
     }
 }
-@media only screen and (max-width: 1000px)
-{
+
+@media only screen and (max-width: 1000px) {
     .resultimage {
         width: 80%;
     }
 }
-@media only screen and (max-width: 850px)
-{
+
+@media only screen and (max-width: 850px) {
     .resultimage {
         width: 70%;
     }
 }
-@media only screen and (max-width: 768px)
-{
+
+@media only screen and (max-width: 768px) {
     .resultimage {
         width: 60%;
     }
-    .leftimage img, .rightimage img{
-        height:15rem;
+
+    .leftimage img,
+    .rightimage img {
+        height: 15rem;
 
     }
 }
-@media only screen and (max-width: 550px)
-{
+
+@media only screen and (max-width: 550px) {
     .resultimage {
         width: 70%;
     }
-    .leftimage img, .rightimage img{
-        height:10rem;
 
+    .leftimage {
+        height: min-content;
+        width: 100%;
     }
-    .result-buttons button {
-        font-size: 2vw;
+
+    .result-buttons a button {
+        font-size: 3.5vw;
     }
+
+    .right-column {
+        display: none;
+        visibility: hidden;
+    }
+
+    .middle-heading {
+        font-size: 10vw;
+    }
+
+    .middle-column {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
 }
