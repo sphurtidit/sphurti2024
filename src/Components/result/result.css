@@ -1,0 +1,167 @@
+.result-container {
+    border: 2px solid #7f1bb6;
+    background-color: white;
+    display: flex;
+    /* height: fit-content; */
+    margin: 0vw 10vw;
+    line-height: 1;
+    max-width: 80vw;
+    margin-top: 1.5rem;
+}
+
+
+.left-column {
+    flex: 1;
+
+}
+
+.right-column-result {
+    flex: 4;
+
+}
+
+.rightimage img {
+    width: auto;
+    height: 20rem;
+    float: right;
+    padding-right: 4vw;
+
+}
+
+
+
+.leftimage img {
+    width: auto;
+    height: 20rem;
+    float: left;
+    padding-left: 1vw;
+}
+
+.middle-column {
+    width: 100%;
+    flex: 5;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.middle-heading {
+    font-family: 'SF Sports Night';
+    color: black;
+    font-size: 6vw;
+
+}
+
+.middlemain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.resultimage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    overflow: hidden;
+
+}
+
+.result-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: fit-content;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+
+}
+
+.result-buttons a button {
+    color: white;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    padding: 0.5rem;
+    font-family: 'Outfit';
+    gap: .8rem;
+    border: none;
+    font-weight: 600;
+}
+
+.result-buttons a button:nth-child(1) {
+    background-color: #5B4349;
+    opacity: 0.3;
+}
+
+.result-buttons a button:nth-child(2) {
+    background-color: #EE0942;
+}
+
+@media only screen and (max-width: 1150px) {
+    .resultimage {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .resultimage {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .resultimage {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .resultimage {
+        width: 60%;
+    }
+
+    .leftimage img,
+    .rightimage img {
+        height: 15rem;
+
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .resultimage {
+        width: 70%;
+    }
+
+    .leftimage {
+        height: min-content;
+        width: 100%;
+    }
+
+    .result-buttons a button {
+        font-size: 3.5vw;
+    }
+
+    .right-column-result {
+        display: none;
+        visibility: hidden;
+    }
+
+    .middle-heading {
+        font-size: 10vw;
+    }
+
+    .middle-column {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+}

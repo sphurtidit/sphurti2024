@@ -72,6 +72,8 @@
     width: 40%;
     flex: 1;
     overflow: hidden;
+    visibility: visible;
+    /* display: flex; */
 }
 
 .right-column img {
@@ -123,6 +125,7 @@
     justify-content: start;
     margin-top: 1vh;
     width: 100%;
+    
 }
 
 .primary-s {
@@ -134,6 +137,7 @@
     padding: 0.5vw 0.5vw;
     margin-top: 1vw;
     margin-right: 1vw;
+    border: none;
 }
 
 .secondary {
@@ -385,6 +389,11 @@ a:hover {
     .sports-container {
         --ratio: 3/2.3;
     }
+
+    /* .right-column{
+        display: none;
+        visibility: hidden;
+    } */
 
     .expanded {
         --ratio: 3/4;
