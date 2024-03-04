@@ -72,6 +72,8 @@
     width: 40%;
     flex: 1;
     overflow: hidden;
+    visibility: visible;
+    /* display: flex; */
 }
 
 .right-column img {

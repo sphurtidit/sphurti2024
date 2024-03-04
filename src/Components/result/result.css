@@ -15,7 +15,7 @@
 
 }
 
-.right-column {
+.right-column-result {
     flex: 4;
 
 }
@@ -150,7 +150,7 @@
         font-size: 3.5vw;
     }
 
-    .right-column {
+    .right-column-result {
         display: none;
         visibility: hidden;
     }

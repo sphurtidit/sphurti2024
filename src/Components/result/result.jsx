@@ -51,7 +51,7 @@ const Result = () => {
             </button></a>
           </div>
         </div>
-        <div className="right-column">
+        <div className="right-column-result">
           <div className="rightimage">
             <img src={rightimage} />
           </div>
