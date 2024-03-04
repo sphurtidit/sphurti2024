@@ -123,6 +123,7 @@
     justify-content: start;
     margin-top: 1vh;
     width: 100%;
+    
 }
 
 .primary-s {
@@ -134,6 +135,7 @@
     padding: 0.5vw 0.5vw;
     margin-top: 1vw;
     margin-right: 1vw;
+    border: none;
 }
 
 .secondary {

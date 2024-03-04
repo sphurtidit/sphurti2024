@@ -6,6 +6,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import PropTypes from "prop-types";
 
 
+
 function TeamSec({teams,sport}) {
   // console.log(teams,sport);
  
@@ -36,26 +37,31 @@ function TeamSec({teams,sport}) {
     //     r;
     //   }
     // },[])
+
   return (
     <div className="whole team team-nav">
       <div className="heading">
         <h1>OUR TEAM</h1>
       </div>
+
       <div className="subheading">
         <h1>FACULTY COORDINATOR</h1>
       </div>
       <div className="FacultyCard">
         {sport.map((sport)=>{
          return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={sport.color} />
+
         })}
-       
+
       </div>
+
       <div className="subheading">
         <h1>STUDENT COORDINATOR</h1>
       </div>
       <div className="StudentCard">
       {teams.map((sport)=>{
          return <TeamCard key={sport.name} name={sport.name} designation={sport.category} phone={sport.phone} image={sport.image} type={sport.color} />
+
         })}
       </div>
     </div>
