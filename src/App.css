@@ -22,6 +22,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    overflow-x: hidden;
+}
+*:hover{
+    cursor:default;
+}
+button{
+    cursor:pointer;
+}
 
 .background-container{
     background-color: white;
