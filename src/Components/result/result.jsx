@@ -6,7 +6,7 @@ import result from "../../assets/result.png";
 import { FaArrowDown } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { collection, doc, getDoc } from "firebase/firestore";
-import {db} from "../../firebase";
+import { db } from "../../firebase";
 
 const Result = () => {
   const [link, setlink] = useState();
@@ -18,6 +18,10 @@ const Result = () => {
       l;
     };
   }, []);
+
+  let openLink = (dest) => {
+    window.open(dest, "_blank");
+  }
   return (
     <>
       <div className="heading">
@@ -36,19 +40,21 @@ const Result = () => {
             <img className="resultimage" src={result} />
           </div>
           <div className="result-buttons">
-            <a><button
+            <button
               title="2024 Results"
               onClick={() => { }}
             >
               <FaArrowDown />
               2024 Results
-            </button></a>
-
-            <a href={link} target='_blank'><button
+            </button>
+            <button
               title="2023 Results"
-              onClick={() => { }}>
+              onClick={() => {
+                console.log(link);
+                openLink(link);
+              }}>
               <FaArrowDown /> 2023 Results
-            </button></a>
+            </button>
           </div>
         </div>
         <div className="right-column-result">
