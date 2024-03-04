@@ -44,7 +44,7 @@ function App() {
         const sports = [];
         const teams = [];
         temp.map((t) => {
-          if (t.category == "Sports Coordinator") {
+          if (t.precedence == -1) {
             // console.log(t);
             sports.push(t);
           } else {
