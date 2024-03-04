@@ -18,6 +18,8 @@ import { Lines, Cube } from "react-preloaders";
 
 import React, { useState, useEffect } from "react";
 import AccommodationSection from "./Components/Accomodation/Accommodation";
+
+import AccomodationCard from "./Components/Accomodation_2nd/Accomodation_2nd";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -117,7 +119,10 @@ function App() {
           <SportsSection rule={rule} cricket={cricket} badminton={badminton} tabletennis={tabletennis} football={football} volleyball={volleyball} basketball={basketball}   />
           <TeamSec teams={team} sport={sport}/>
 
+          <AccomodationCard />
+          
           <AccommodationSection rules={acc}/>
+
 
             <Result/>
 

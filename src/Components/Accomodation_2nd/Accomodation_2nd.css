@@ -1,0 +1,70 @@
+.cards-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container h1 {
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container p {
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards img {
+    height: 50vh;
+    padding: 1rem;
+}
+.apply {
+    background-color: #ee0942;
+    border-radius: 0;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 15px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transform: skew(-10deg);
+}
+/* .out-campus-card {
+    border: 1px solid #b42b2b;
+    border-radius: 5px;
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px;
+  }
+  
+  .out-campus-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .out-campus-card-details {
+    margin-bottom: 20px;
+  }
+  
+  .out-campus-card-details div {
+    margin-bottom: 10px;
+  }
+  
+  .out-campus-card-price {
+    font-size: 18px;
+    font-weight: bold;
+  } */
