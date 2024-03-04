@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+.Accommodation-Rules {
+  font-family: "Outfit";
+  text-align: start;
+  width: fit-content;
+  color: black;
+  font-size: 1vmin;
+  margin-top: 10vmin;
+  margin-left: 18vw;
+}
+.rules-container {
+  margin-top: 3vmin;
+  border: 1px solid #000;
+  width: 65vw;
+  height: fit-content;
+  padding: 0vw 5vw;
+  overflow: hidden;
+}
+.download-box {
+  margin-top:1vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.download-heading {
+  font-size: 2.5vmin;
+  text-align: center;
+  width: 40vmin;
+}
+.download-button {
+  background-color: #ee0942;
+  color: white;
+  padding: 1vw 3vw;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5vmax;
+  transition-duration: 0.4s;
+}
+.horizontal-line {
+  margin: 2vw;
+  border: 1px inset #0000005a;
+  height: 0%;
+  width: 98%;
+}
+.registration-box {
+    text-align: center;
+}
+.registration-heading{
+    font-family: "DM Sans";
+    font-size: 2vw;
+    font-weight:300;
+    margin-bottom: 1.5vw;
+}
+.registration-date{
+  font-size: 2.6vw;
+  margin-bottom: 2vw;
+}
+.star-red{
+    color: red;
+}.star-yellow{
+    color:rgb(255, 204, 50);
+}.star-purple{
+    color: rgb(138, 47, 188);
+}
+.lines{
+    display: flex;
+    justify-content: end;
+    height: 1vw;
+    width: 105%;
+    overflow-y:visible;
+}
+.strips{
+    width: 2vw;
+    height: 30vw;
+}
+@media (max-width: 1264px) {
+  .download-box {
+    justify-content: center;
+  }
+  .download-button{ 
+    margin-top: 1vw;
+  }
+  .Accommodation-Rules {
+    text-align: center;
+  }
+}

@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 
 function TeamSec({teams,sport}) {
   // console.log(teams,sport);
+  console.log(sport)
  
     
     // useEffect(()=>{

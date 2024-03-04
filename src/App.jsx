@@ -14,6 +14,7 @@ import { db } from "./firebase";
 import { Lines, Cube } from "react-preloaders";
 
 import React, { useState, useEffect } from "react";
+import AccommodationSection from "./Components/Accomodation/Accommodation";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -26,6 +27,7 @@ function App() {
   const [tabletennis, settabletennis] = useState();
   const [badminton, setbadminton] = useState();
   const [rule, setrule] = useState();
+  const [acc,setAcc]=useState();
 
   
 
@@ -57,6 +59,7 @@ function App() {
       .then(()=>{
         const r = getDoc(doc(collection(db, "misc"), "links")).then((docu) => {
           setrule(docu.data()['rulebook']);
+          setAcc(docu.data()['accrule'])
           // console.log(docu.data()['rulebook']);
           });
           const unsub = getDocs(collection(db, "sportDetails")).then((querySnapshot) => {
@@ -109,6 +112,7 @@ function App() {
           <MessageSection />
           <SportsSection rule={rule} cricket={cricket} badminton={badminton} tabletennis={tabletennis} football={football} volleyball={volleyball} basketball={basketball}   />
           <TeamSec teams={team} sport={sport}/>
+          <AccommodationSection rules={acc}/>
           <Footer />
         </div>
         <Lines customLoading={loading} />
