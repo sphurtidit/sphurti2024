@@ -5,8 +5,11 @@ import Timer from "./Components/timer/timer";
 import TeamSec from "./Components/team_sec/team_sec";
 import Footer from "./Components/Footer/Footer";
 
+import Result from "./Components/result/result";
+
 // import Messages from "./Components/Messages/Messages";
 import MessageSection from "./Components/Messages/message-section";
+
 import Nav from "./Components/Navbar/nav";
 import { collection, getDocs, getDoc,doc } from "firebase/firestore";
 import { db } from "./firebase";
@@ -101,6 +104,7 @@ function App() {
 
   return (
     <>
+
       <React.Fragment>
         <div className="background-container">
           <Nav />
@@ -109,6 +113,7 @@ function App() {
           <MessageSection />
           <SportsSection rule={rule} cricket={cricket} badminton={badminton} tabletennis={tabletennis} football={football} volleyball={volleyball} basketball={basketball}   />
           <TeamSec teams={team} sport={sport}/>
+            <Result/>
           <Footer />
         </div>
         <Lines customLoading={loading} />
