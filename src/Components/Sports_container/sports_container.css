@@ -386,10 +386,10 @@ a:hover {
         --ratio: 3/2.3;
     }
 
-    .right-column{
+    /* .right-column{
         display: none;
         visibility: hidden;
-    }
+    } */
 
     .expanded {
         --ratio: 3/4;
