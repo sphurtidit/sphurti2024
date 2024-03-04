@@ -83,7 +83,7 @@
 
 }
 
-.result-buttons a button {
+.result-buttons button {
     color: white;
     font-size: 1.5vw;
     display: flex;
@@ -97,12 +97,14 @@
     font-weight: 600;
 }
 
-.result-buttons a button:nth-child(1) {
+.result-buttons button:nth-child(1) {
     background-color: #5B4349;
     opacity: 0.3;
+    /* UNHIDE AFTER SPHURTI */
+    display: none;
 }
 
-.result-buttons a button:nth-child(2) {
+.result-buttons button:nth-child(2) {
     background-color: #EE0942;
 }
 
@@ -146,7 +148,7 @@
         width: 100%;
     }
 
-    .result-buttons a button {
+    .result-buttons button {
         font-size: 3.5vw;
     }
 
