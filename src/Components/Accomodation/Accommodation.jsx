@@ -1,6 +1,8 @@
 import "./Accomodation.css";
 import strips from "../../assets/strips.png";
 import arrow from "../../assets/arrow.png";
+import { PropTypes } from 'prop-types';
+
 const AccommodationSection = ({rules}) => {
 
   return (
@@ -36,6 +38,10 @@ const AccommodationSection = ({rules}) => {
       </div>
     </>
   );
+};
+
+AccommodationSection.propTypes = {
+  rules: PropTypes.string,
 };
 
 export default AccommodationSection;

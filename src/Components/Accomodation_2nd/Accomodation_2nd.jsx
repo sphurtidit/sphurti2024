@@ -1,6 +1,5 @@
 import "./Accomodation_2nd.css";
 import Card from "../../assets/cards.png";
-import React from "react";
 
 const AccomodationCard = () => {
   return (

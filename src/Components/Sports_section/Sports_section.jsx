@@ -1,6 +1,3 @@
-import { getDocs, collection, getDoc, doc } from 'firebase/firestore';
-import { useState, useEffect } from 'react';
-import { db } from '../../firebase';
 import SportsContainer from '../Sports_container/sports_container';
 import './Sports_section.css';
 import badmintonimg from '../../assets/badminton.png'
@@ -9,6 +6,7 @@ import footballimg from '../../assets/football.png'
 import volleyballimg from '../../assets/volleyball.png'
 import basketballimg from '../../assets/basketball.png'
 import tabletennisimg from '../../assets/table tennis.png'
+import { PropTypes } from 'prop-types';
 
 const SportsSection = ({rule ,cricket,badminton ,tabletennis ,football ,volleyball,basketball}) => {
 
@@ -30,5 +28,15 @@ const SportsSection = ({rule ,cricket,badminton ,tabletennis ,football ,volleyba
         </div>
     );
 };
+
+SportsSection.propTypes = {
+    cricket: PropTypes.map,
+    badminton: PropTypes.map,
+    tabletennis: PropTypes.map,
+    football: PropTypes.map,
+    volleyball: PropTypes.map,
+    basketball: PropTypes.map,
+    rule: PropTypes.string,
+  };
 
 export default SportsSection;

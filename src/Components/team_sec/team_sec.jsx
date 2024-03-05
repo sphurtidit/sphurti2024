@@ -1,8 +1,5 @@
 import './team_sec.css'
 import TeamCard from '../team_card/team_card'
-import { db } from '../../firebase';
-import { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
 import PropTypes from "prop-types";
 
 

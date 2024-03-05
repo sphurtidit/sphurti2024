@@ -14,7 +14,7 @@ import Nav from "./Components/Navbar/nav";
 import { collection, getDocs, getDoc,doc } from "firebase/firestore";
 import { db } from "./firebase";
 // import Mobile_HeroPage from './Components/Mobile_HeroPage/Mobile_HeroPage'
-import { Lines, Cube } from "react-preloaders";
+import { Lines} from "react-preloaders";
 
 import React, { useState, useEffect } from "react";
 import AccommodationSection from "./Components/Accomodation/Accommodation";
@@ -91,6 +91,8 @@ function App() {
               }
 
           });
+          console.log(r);
+          console.log(unsub);
       })
       .then(()=>{
         setLoading(false);
