@@ -9,7 +9,7 @@ const AccomodationCard = () => {
     <div className="cards">
         <img src={Card} alt="" className="card-img"></img>
     </div>
-    <button className="apply">Apply Now</button>
+    <a href="https://forms.gle/XoDEt8h4vGrLdwpz9" target="_blank"><button className="apply">Apply Now</button></a>
     <p>* The Accommodation Registration Fee is Non Refundable</p>
       </div>
       </div>
