@@ -44,7 +44,6 @@
 @media only screen  and (max-width: 1200px) {
     .cards img {
         height: 40vh;
-        overflow-x: scroll;
     }
 }
 
@@ -55,7 +54,25 @@
 }
 
 @media only screen  and (max-width: 768px) {
+    .cards::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+    .cards {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    
+    .cards {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: start;
+        align-items: start;
+    }
     .cards img {
         height: 30vh;
-        overflow-x: scroll;
+        width: auto;
+    }
 }

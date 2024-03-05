@@ -30,6 +30,7 @@ function Nav() {
                     <Link to="home" offset={-80}><li onClick={showNav}>HOME</li></Link>
                     <Link to="msg" offset={-80}><li onClick={showNav}>MESSAGES</li></Link>
                     <Link to="nav-sports" offset={-80}><li onClick={showNav}>SPORTS</li></Link>
+                    <Link to="acc-section" offset={-80}><li onClick={showNav}>ACCOMMODATION</li></Link>
                     <Link to="team-nav" offset={-80}><li onClick={showNav}>CONTACT</li></Link>
                     {/* <Link to="home" offset={-80}><a>RESULTS</a></Link> */}
                     <a href='https://forms.gle/m6F4P47PQ86q53Hy9' target="_blank" rel="noreferrer"><li className='reg-nav-button'>REGISTER</li></a>

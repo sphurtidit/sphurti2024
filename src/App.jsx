@@ -117,15 +117,10 @@ function App() {
           <Timer />
           <MessageSection />
           <SportsSection rule={rule} cricket={cricket} badminton={badminton} tabletennis={tabletennis} football={football} volleyball={volleyball} basketball={basketball}   />
-          <TeamSec teams={team} sport={sport}/>
-
           <AccomodationCard />
-          
           <AccommodationSection rules={acc}/>
-
-
-            <Result/>
-
+          <TeamSec teams={team} sport={sport}/>
+          <Result/>
           <Footer />
         </div>
         <Lines customLoading={loading} />
