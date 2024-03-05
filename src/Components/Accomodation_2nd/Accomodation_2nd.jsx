@@ -18,3 +18,4 @@ const AccomodationCard = () => {
 };
 
 export default AccomodationCard;
+ 

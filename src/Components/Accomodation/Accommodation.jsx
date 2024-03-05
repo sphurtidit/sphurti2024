@@ -21,7 +21,7 @@ const AccommodationSection = ({rules}) => {
           <div className="horizontal-line"></div>
           <div className="registration-box">
             <h1 className="registration-heading">
-              REGISTRATION ARE OPEN UNTILL
+              REGISTRATION IS OPEN UNTILL
             </h1>
             <h1 className="registration-date">
               <span className="star-red">*</span>
