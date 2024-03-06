@@ -4,11 +4,13 @@
   text-align: start;
   width: fit-content;
   color: black;
+  
   font-size: 1vmin;
   margin-top: 10vmin;
   margin-left: 18vw;
 }
 .rules-container {
+  background-color: white;
   margin-top: 3vmin;
   border: 1px solid #000;
   width: 65vw;
@@ -41,7 +43,7 @@
 }
 .horizontal-line {
   margin: 2vw;
-  border: 1px inset #0000005a;
+  margin-left: 0vw;  border: 1px inset #0000005a;
   height: 0%;
   width: 98%;
 }
