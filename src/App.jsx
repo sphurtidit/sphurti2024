@@ -12,10 +12,10 @@ import Result from "./Components/result/result";
 import MessageSection from "./Components/Messages/message-section";
 
 import Nav from "./Components/Navbar/nav";
-import { collection, getDocs, getDoc,doc } from "firebase/firestore";
+import { collection, getDocs, getDoc, doc } from "firebase/firestore";
 import { db } from "./firebase";
 // import Mobile_HeroPage from './Components/Mobile_HeroPage/Mobile_HeroPage'
-import { Lines} from "react-preloaders";
+import { Lines } from "react-preloaders";
 
 import React, { useState, useEffect } from "react";
 import AccommodationSection from "./Components/Accomodation/Accommodation";
@@ -33,9 +33,9 @@ function App() {
   const [tabletennis, settabletennis] = useState();
   const [badminton, setbadminton] = useState();
   const [rule, setrule] = useState();
-  const [acc,setAcc]=useState();
+  const [acc, setAcc] = useState();
 
-  
+
 
 
   useEffect(() => {
@@ -62,40 +62,40 @@ function App() {
         setSports(sports);
         setTeam(teams);
       })
-      .then(()=>{
+      .then(() => {
         const r = getDoc(doc(collection(db, "misc"), "links")).then((docu) => {
           setrule(docu.data()['rulebook']);
           setAcc(docu.data()['accrule'])
           // console.log(docu.data()['rulebook']);
-          });
-          const unsub = getDocs(collection(db, "sportDetails")).then((querySnapshot) => {
-              const tempdata = querySnapshot.docs.map((doc) => doc.data());
-              for (let i = 0; i < tempdata.length; i++) {
-                  if (tempdata[i]['index'] == 1) {
-                      setbadminton(tempdata[i]);
-                  }
-                  else if (tempdata[i]['index'] == 2) {
-                      setbasketball(tempdata[i]);
-                  }
-                  else if (tempdata[i]['index'] == 3) {
-                      setcricket(tempdata[i]);
-                  }
-                  else if (tempdata[i]['index'] == 4) {
-                      setvolleyball(tempdata[i]);
-                  }
-                  else if (tempdata[i]['index'] == 5) {
-                      settabletennis(tempdata[i]);
-                  }
-                  else if (tempdata[i]['index'] == 6) {
-                      setfootball(tempdata[i]);
-                  }
-              }
+        });
+        const unsub = getDocs(collection(db, "sportDetails")).then((querySnapshot) => {
+          const tempdata = querySnapshot.docs.map((doc) => doc.data());
+          for (let i = 0; i < tempdata.length; i++) {
+            if (tempdata[i]['index'] == 1) {
+              setbadminton(tempdata[i]);
+            }
+            else if (tempdata[i]['index'] == 2) {
+              setbasketball(tempdata[i]);
+            }
+            else if (tempdata[i]['index'] == 3) {
+              setcricket(tempdata[i]);
+            }
+            else if (tempdata[i]['index'] == 4) {
+              setvolleyball(tempdata[i]);
+            }
+            else if (tempdata[i]['index'] == 5) {
+              settabletennis(tempdata[i]);
+            }
+            else if (tempdata[i]['index'] == 6) {
+              setfootball(tempdata[i]);
+            }
+          }
 
-          });
-          console.log(r);
-          console.log(unsub);
+        });
+        console.log(r);
+        console.log(unsub);
       })
-      .then(()=>{
+      .then(() => {
         setLoading(false);
 
       })
@@ -119,12 +119,12 @@ function App() {
           <Main_HeroPage />
           <Timer />
           <MessageSection />
-          <SportsSection rule={rule} cricket={cricket} badminton={badminton} tabletennis={tabletennis} football={football} volleyball={volleyball} basketball={basketball}   />
+          <Tribute />
+          <SportsSection rule={rule} cricket={cricket} badminton={badminton} tabletennis={tabletennis} football={football} volleyball={volleyball} basketball={basketball} />
           <AccomodationCard />
-          <AccommodationSection rules={acc}/>
-          <TeamSec teams={team} sport={sport}/>
-          <Result/>
-          <Tribute/>
+          <AccommodationSection rules={acc} />
+          <TeamSec teams={team} sport={sport} />
+          <Result />
           <Footer />
         </div>
         <Lines customLoading={loading} />
