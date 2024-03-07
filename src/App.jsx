@@ -4,6 +4,7 @@ import Main_HeroPage from "./Components/Main_HeroPage/Main_HeroPage";
 import Timer from "./Components/timer/timer";
 import TeamSec from "./Components/team_sec/team_sec";
 import Footer from "./Components/Footer/Footer";
+import Tribute from "./Components/Tribute/tribute";
 
 import Result from "./Components/result/result";
 
@@ -123,6 +124,7 @@ function App() {
           <AccommodationSection rules={acc}/>
           <TeamSec teams={team} sport={sport}/>
           <Result/>
+          <Tribute/>
           <Footer />
         </div>
         <Lines customLoading={loading} />
