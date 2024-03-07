@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 
-.yellow_boxes{
+.yellow_boxes {
+    margin-top: 2rem;
     display: flex;
     flex-direction: row;
-    width:100vw;
+    width: 100vw;
     align-items: center;
     justify-content: center;
 }
-.box2{
+
+.box2 {
     width: 70%;
     border: 2px solid black;
     margin-left: 3%;
@@ -16,19 +18,28 @@
     padding: 4% 4% 4% 4%;
 }
 
-.box2 p{
+.box2 p {
     line-height: 1;
-    font-family: 'Outfit',sans-serif;
+    font-family: 'Outfit', sans-serif;
+    color: black;
     font-size: 20px;
-    font-weight:300;
+    font-weight: 300;
     line-height: 25.2px;
 }
 
-.text{
+.text {
     text-align: center;
 }
-.lastText{
-    font-family:"Times New Roman"; 
-    font-style:italic; 
-    font-weight:bold;
+
+.lastText {
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .box2 p {
+        font-size: 12px;
+        line-height: 16px;
+    }
 }

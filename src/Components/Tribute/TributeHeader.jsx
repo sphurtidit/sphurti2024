@@ -1,6 +1,6 @@
 import "./TributeHeader.css";
 import tributeimg from "../../assets/tributeimg.png";
-const Tribute = () =>{
+const TributeHeader = () =>{
 return(
     <>
         <div className="heading">
@@ -12,4 +12,4 @@ return(
     </>
 );
 };
-export default Tribute;
+export default TributeHeader;
