@@ -125,7 +125,7 @@
     justify-content: start;
     margin-top: 1vh;
     width: 100%;
-    
+
 }
 
 .primary-s {
@@ -229,9 +229,11 @@ a:hover {
     display: flex;
 
 }
-.image{
+
+.image {
     transition: none;
 }
+
 .cinfo p {
     padding: 0rem 0.2rem;
 }
@@ -269,8 +271,10 @@ a:hover {
     .sports-container {
         --ratio: 4/2.5;
     }
+
     .sports-heading {
-        margin-top: 2vw;}
+        margin-top: 2vw;
+    }
 
     .expanded {
         --ratio: 3/3.5;
@@ -286,6 +290,7 @@ a:hover {
     .expanded {
         --ratio: 3/3;
     }
+
     .sports-heading {
         font-size: 4.5vw;
     }
@@ -311,6 +316,7 @@ a:hover {
         padding: 1.4vw 1.4vw;
         margin-top: 2.5vw;
     }
+
     .fees {
         font-size: 3vw;
     }
@@ -359,6 +365,7 @@ a:hover {
     .cinfo {
         font-size: 2vw;
     }
+
     .hr {
         margin-top: 2.5vh;
         margin-bottom: 2.5vh;
@@ -378,6 +385,7 @@ a:hover {
     .expanded {
         --ratio: 3/3.2;
     }
+
     .hr {
         margin-top: 1.5vh;
         margin-bottom: 1.5vh;
@@ -385,48 +393,126 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .sports-container {
         --ratio: 3/2.3;
     }
 
-    /* .right-column{
+    .right-column {
         display: none;
         visibility: hidden;
-    } */
+    }
+
+    .left-column {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
 
     .expanded {
-        --ratio: 3/4;
+        --ratio: 3/4.3;
     }
 
     .sports-heading {
-        font-size: 4.5vw;
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    .reg {
+        justify-content: center;
     }
 
     .reg img {
-        height: 2.5vw;
+        height: 3vw;
     }
 
     .reg-text {
+        font-size: 6vw;
+    }
 
-        font-size: 3.5vw;
+    .fee {
+        padding: 10px 0;
+        justify-content: space-around;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fees {
+        font-size: 4vw;
+    }
+
+    .fee-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team {
+        font-size: 2.1vw;
+    }
+
+    .cate {
+        font-size: 4vw;
+    }
+
+    .cate-fees {
+        font-size: 3vw;
+    }
+
+    .buttons {
+        justify-content: center;
     }
 
     .primary-s {
-        font-size: 2.2vw;
+        font-size: 3.5vw;
         padding: 1.4vw 1.4vw;
         margin-top: 2.5vw;
         margin-right: 1vw;
     }
 
     .secondary {
-        font-size: 2.2vw;
+        font-size: 3.5vw;
         padding: 1.4vw 1.4vw;
         margin-top: 2.5vw;
     }
+
     .hr {
         margin-top: 2vh;
         margin-bottom: 2vh;
 
+    }
+
+    .sch-text {
+        font-size: 3.5vw;
+    }
+
+    a {
+        font-size: 3.5vw;
+    }
+
+    .coord-text {
+        font-size: 3.5vw;
+    }
+
+    .cinfo p {
+        font-size: 3.5vw;
+        padding: 0rem;
+
+    }
+
+    .details {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .prize,
+    .winner,
+    .runner {
+        font-size: 3.5vw;
+    }
+    .cmob{
+        margin-left: 0.2rem;
     }
 }

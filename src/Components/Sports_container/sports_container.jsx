@@ -25,21 +25,21 @@ const SportsContainer = ({ rule, game, type, image }) => {
             <img src={flag}></img>
           </div>
           <div className="fee">
-                        <div className="fee-text">
-                            <p className="fees">FEES</p>
-                            <p className="team">PER TEAM</p>
-                        </div>
-                        <div className="fee-text">
-                            <p className="cate">BOYS</p>
-                            <p className="cate-fees">₹{game['fees-boys']}</p>
-                        </div>
-                        {game['separate'] ? <><div className="vertical-line"></div>
-                        <div className="fee-text">
-                            {game["name"]=="TABLE TENNIS"?<p className="cate">MIXED (Doubles)</p>:<p className="cate">GIRLS</p>}
-                            <p className="cate-fees">₹{game['fees-girls']}</p>
-                        </div> </>: <></>}
-                    </div>
-         
+            <div className="fee-text">
+              <p className="fees">FEES</p>
+              <p className="team">PER TEAM</p>
+            </div>
+            <div className="fee-text">
+              <p className="cate">BOYS</p>
+              <p className="cate-fees">₹{game['fees-boys']}</p>
+            </div>
+            {game['separate'] ? <><div className="vertical-line"></div>
+              <div className="fee-text">
+                {game["name"] == "TABLE TENNIS" ? <p className="cate">MIXED (Doubles)</p> : <p className="cate">GIRLS</p>}
+                <p className="cate-fees">₹{game['fees-girls']}</p>
+              </div> </> : <></>}
+          </div>
+
           <div className="buttons">
             <button
               title="Register"
