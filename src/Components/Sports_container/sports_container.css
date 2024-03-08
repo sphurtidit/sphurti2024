@@ -138,6 +138,11 @@
     margin-top: 1vw;
     margin-right: 1vw;
     border: none;
+    pointer-events: auto;
+}
+
+.disabled-reg {
+    opacity: 0.5;
 }
 
 .secondary {
