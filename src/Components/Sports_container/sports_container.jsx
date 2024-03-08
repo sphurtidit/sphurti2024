@@ -42,8 +42,9 @@ const SportsContainer = ({ rule, game, type, image }) => {
 
           <div className="buttons">
             <button
-              title="Register"
-              className="primary-s"
+              title={game['registrationOpen'] ? "Register" : "Registration Closed"}
+              className={`primary-s ` + (game['registrationOpen'] ? "" : "disabled-reg")}
+              disabled={!game['registrationOpen']}
               onClick={() => {
                 window.open("https://forms.gle/m6F4P47PQ86q53Hy9", "_blank");
               }}
