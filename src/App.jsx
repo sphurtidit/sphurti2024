@@ -125,6 +125,7 @@ function App() {
           <AccommodationSection rules={acc} />
           <TeamSec teams={team} sport={sport} />
           <Result />
+          
           <Footer />
         </div>
         <Lines customLoading={loading} />
