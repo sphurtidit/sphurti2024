@@ -7,7 +7,6 @@ import Footer from "./Components/Footer/Footer";
 import Tribute from "./Components/Tribute/tribute";
 
 import Result from "./Components/result/result";
-
 // import Messages from "./Components/Messages/Messages";
 import MessageSection from "./Components/Messages/message-section";
 
