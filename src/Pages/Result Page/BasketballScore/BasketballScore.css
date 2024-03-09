@@ -53,6 +53,8 @@
     border-collapse: collapse;
     width: 35%;
     margin-left: auto;
+    margin-bottom: 10vh;
+    padding-bottom: 10vh;
     margin-right: auto;
     margin-top: 2vw;
     color: black;
