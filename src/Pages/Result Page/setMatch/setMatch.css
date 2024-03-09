@@ -6,6 +6,8 @@
     margin-right: auto;
     border-left: 6px solid red;
     border-right: 6px solid red;
+    margin-top: 10vh;
+    text-transform: capitalize;
 }
 .BlackBox{
     color: white;
@@ -32,24 +34,35 @@
     text-align: center;
     align-items: center;
 }
-.GreenBox{
+.playing{
+    background-color: rgb(255, 191, 0);
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+.Won{
     background-color: #40BD21;
     flex: 1;
     text-align: center;
     color: white;
 }
-.RedBox{
+.Lost{
     background-color: #F81111;
     text-align: center;
+    flex: 1;
     color: white;
 }
 .DarkPink1{
+    border-left: 1px solid black;
     flex: 1;
     text-align: center;
+    align-items: center;
+    align-self: center;
     height: auto;
     min-height: 100%;
-    border-left: 1px solid black;
 }
+
+
 
 .set1{
     flex: 1;

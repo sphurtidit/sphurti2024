@@ -1,3 +1,4 @@
+import Badminton from '../Badminton/Badminton';
 import BBSection from '../BasketballScore/BasketBallSection';
 import './Navbar.css';
 
@@ -49,7 +50,8 @@ export default function Navbar(){
                 }
               </ul>
               <div className="sportContainer">
-                <BBSection/>
+                {/* <BBSection/> */}
+                <Badminton/>
               </div>
         </div></>)
 }
