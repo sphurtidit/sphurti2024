@@ -26,10 +26,9 @@ const VolleyballResult = () => {
             {loading ? <h1>Loading...</h1> :
                 <>
                     {fixture.map((item, i) => {
-                        return item.start ? <div key={i} className="volleyball-match-card">
-                            <p><span>{item.name}</span> - {item.team1} vs {item.team2}</p>
+                        return item.start ? 
                             <SetMatch matchData={item} type = {0}/>
-                        </div> : <> </>
+                         : <> </>
                     }
                     )}
                 </>

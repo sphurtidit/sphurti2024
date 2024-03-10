@@ -3,6 +3,7 @@ import { useState } from "react";
 import imgTeam from "../../../assets/sphurti.png"
 
 const SetMatch = ({ matchData, type }) => {
+  console.log(matchData)
   const columns = new Array(parseInt(matchData.sets) + 1).fill(0);
   console.log(matchData);
   const [teamWon, setTeamWon] = useState('');
@@ -18,6 +19,13 @@ const SetMatch = ({ matchData, type }) => {
         </div>
     );
 };
+const PLaying=()=>{
+    return(
+        <div className="result-declare playing">
+            Playing
+        </div>
+    )
+}
 
   if(matchData.complete){
     console.log("Match is complete");
@@ -53,7 +61,7 @@ const SetMatch = ({ matchData, type }) => {
           columns.map((_, index) => {
             if (index === 0) {
               return <th className="table-heading live">
-                {!matchData.complete ? <></>: <ResultDiv isWon = {teamWon == 'A'}/>}
+                {!matchData.complete ? <PLaying/>: <ResultDiv isWon = {teamWon == 'A'}/>}
               </th>;
             }
             return <th className="table-heading">
@@ -82,7 +90,7 @@ const SetMatch = ({ matchData, type }) => {
           columns.map((_, index) => {
             if (index === 0) {
               return <td className="table-content-data">
-                {!matchData.complete ? <></>: <ResultDiv isWon = {teamWon == 'B'}/>}
+                {!matchData.complete ? <PLaying/>: <ResultDiv isWon = {teamWon == 'B'}/>}
                 {/* <img src={imgTeam} alt="team" /> */}
                 <p>{matchData.team2}</p>
               </td>;

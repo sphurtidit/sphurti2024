@@ -28,6 +28,7 @@
     border: 0px 15px 0px 15px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10vh;
     border-left: 6px solid var(--color);
     border-right: 6px solid var(--color);
     text-transform: capitalize;

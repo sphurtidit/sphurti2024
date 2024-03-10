@@ -22,6 +22,7 @@ import AccommodationSection from "./Components/Accomodation/Accommodation";
 
 import AccomodationCard from "./Components/Accomodation_2nd/Accomodation_2nd";
 import Navbar from "./Pages/Result Page/Navbar/Navbar";
+import FootballScore from "./Pages/Result Page/Football/FootballScore";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -119,7 +120,7 @@ function App() {
         <div className="background-container">
           
           
-          <Main_HeroPage />
+          {/* <Main_HeroPage />
           <Timer />
           <MessageSection />
           <Tribute />
@@ -129,7 +130,8 @@ function App() {
           <TeamSec teams={team} sport={sport} />
           <Result />
           
-          <Footer />
+          <Footer /> */}
+          <FootballScore/>
         </div>
         <Lines customLoading={loading} />
       </React.Fragment>

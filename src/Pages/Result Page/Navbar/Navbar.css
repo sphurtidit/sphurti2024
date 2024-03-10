@@ -1,8 +1,9 @@
 .results-navContainer{
     padding-top: 15vh;
     justify-content: center;
-    margin-left: 20%;
-    width: 100%;
+    margin-left: 10vw;
+    
+    width: 90vw;
     height: max-content;
 }
 .divContainer{
@@ -11,6 +12,7 @@
 .results-navContainer>ul{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     justify-content: center;
     font-family: 'Outfit',sans-serif;
     
@@ -22,5 +24,5 @@
     background-color: rgba(0, 0, 0, 0.29);
     border-right: 1px solid black;
     padding:0 3%;
-    
+    width: fit-content;
 }
