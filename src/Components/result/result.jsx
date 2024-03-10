@@ -7,6 +7,7 @@ import { FaArrowDown } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
+import { Link } from "react-router-dom";
 
 const Result = () => {
   const [link, setlink] = useState();
@@ -40,6 +41,7 @@ const Result = () => {
             <img className="resultimage" src={result} />
           </div>
           <div className="result-buttons">
+            <Link to="/live-results">
             <button
               title="2024 Results"
               onClick={() => { }}
@@ -47,6 +49,7 @@ const Result = () => {
               <FaArrowDown />
               2024 Results
             </button>
+            </Link>
             <button
               title="2023 Results"
               onClick={() => {

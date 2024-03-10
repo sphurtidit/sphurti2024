@@ -1,5 +1,7 @@
 .results-navContainer{
     padding-top: 15vh;
+    justify-content: center;
+    margin-left: 20%;
     width: 100%;
     height: max-content;
 }

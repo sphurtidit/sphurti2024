@@ -3,6 +3,7 @@ import imgTeam from "../../../assets/sphurti.png"
 
 const SetMatch = ({team1,team2,prop}) => {
     var complete=prop.complete
+    console.log(prop)
     var text=["playing","playing"]
     var total1=0
     var total2=0
@@ -27,7 +28,7 @@ const SetMatch = ({team1,team2,prop}) => {
 
     
     
-    delete prop.complete
+    // delete prop.complete
     
     return <>
     <table className="WholeContent">
