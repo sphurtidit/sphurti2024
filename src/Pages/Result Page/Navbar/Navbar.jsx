@@ -1,6 +1,7 @@
 import Badminton from '../Badminton/Badminton';
 import BBSection from '../BasketballScore/BasketBallSection';
 import './Navbar.css';
+import VolleyballResult from '../Volleyball/volleyball';
 
 const navJSON=[{
     name: "Cricket",
@@ -35,7 +36,7 @@ export default function Navbar(){
     
     return (<>
     <div className="results-navContainer">
-    <ul>
+    {/* <ul>
                 {
                   navJSON.map((item, i) => {
                     console.log(item.name)
@@ -48,10 +49,11 @@ export default function Navbar(){
                     );
                   })
                 }
-              </ul>
+              </ul> */}
               <div className="sportContainer">
                 {/* <BBSection/> */}
-                <Badminton/>
+                {/* <Badminton/> */}
+                <VolleyballResult/>
               </div>
         </div></>)
 }
