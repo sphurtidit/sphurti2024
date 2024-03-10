@@ -2,15 +2,15 @@ import "./BasketballScore.css";
 const BasketballScore = ({  prop }) => {
   console.log(prop)
   var totalteam1 =
-    prop.set1.team1 +
-    prop.set2.team1 +
-    prop.set3.team1 +
-    prop.set4.team1;
+    Number(prop.set1.team1) +
+    Number(prop.set2.team1) +
+    Number(prop.set3.team1) +
+    Number(prop.set4.team1);
   var totalteam2 =
-    prop.set1.team2 +
-    prop.set2.team2 +
-    prop.set3.team2 +
-    prop.set4.team2;
+  Number(prop.set1.team2) +
+  Number(prop.set2.team2) +
+  Number(prop.set3.team2) +
+  Number(prop.set4.team2);
 
   return (
     <>

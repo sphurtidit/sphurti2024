@@ -120,7 +120,7 @@ function App() {
         <div className="background-container">
           
           
-          {/* <Main_HeroPage />
+          <Main_HeroPage />
           <Timer />
           <MessageSection />
           <Tribute />
@@ -130,8 +130,8 @@ function App() {
           <TeamSec teams={team} sport={sport} />
           <Result />
           
-          <Footer /> */}
-          <FootballScore/>
+          <Footer />
+          
         </div>
         <Lines customLoading={loading} />
       </React.Fragment>
