@@ -22,7 +22,7 @@ import AccommodationSection from "./Components/Accomodation/Accommodation";
 
 import AccomodationCard from "./Components/Accomodation_2nd/Accomodation_2nd";
 // import BasketballScore from "./pages/Result Page/BasketballScore/BasketballScore";
-import Navbar from "./pages/Result Page/Navbar/Navbar";
+import Navbar from "./pages/Result_Page/Navbar/Navbar";
 // import FootballScore from "./Pages/Result Page/Football/FootballScore";
 
 
@@ -133,9 +133,9 @@ function App() {
           <AccommodationSection rules={acc} />
           <TeamSec teams={team} sport={sport} />
           <Result />
-          
           <Footer />
           
+
           {/* <FootballScore/> */}
           {/* <BasketballScore/> */}
         </div>

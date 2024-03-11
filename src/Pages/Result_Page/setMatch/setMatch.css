@@ -1,0 +1,166 @@
+.contentBox{
+    --color: #ffcc32;
+    --topCol : #fff7e0;
+    --bottomCol : #ffeebd;
+}
+
+.yellow{
+    --color: #ffcc32;
+    --topCol : #fff7e0;
+    --bottomCol : #ffeebd;
+}
+
+.purple{
+    --color: #7f1bb6;
+    --topCol : #f7eaff;
+    --bottomCol : #eac9ff;
+}
+
+.red{
+    --color: #ee0942;
+    --topCol : #fff1f5;
+    --bottomCol : #ffc9d8;
+}
+
+.contentBox{
+    color: black;
+    width: 70vw;
+    border: 0px 15px 0px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    border-left: 6px solid var(--color);
+    border-right: 6px solid var(--color);
+    text-transform: capitalize;
+}
+.topRow,  .firstRow, .secondRow{
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+}
+
+.topRow th{
+    background-color: black;
+    color: white;
+}
+
+.topRow th:nth-child(1){
+    background-color: #d9d9d9;
+    padding: 0;
+}
+
+.firstRow td{
+    background-color: var(--topCol);
+    color: black;
+    font-weight: bold;
+
+}
+
+.secondRow td{
+    background-color: var(--bottomCol);
+    color: black;
+    font-weight: bold;
+}
+
+
+.result-declare{
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.table-heading, .table-content-data{
+    flex: 1;
+    color: white;
+    background-color: transparent;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.secondRow td:nth-child(1){
+    padding: 0;
+    flex-direction: column;
+}
+
+
+.LightPink{
+    background-color: #FFF1F5;
+    display:flex;
+    justify-content: center;
+    justify-content: space-between;
+    height:20vh;
+    text-align: center;
+    align-items: center;
+}
+.DarkPink{
+    background-color: #FFC9D8;
+    display:flex;
+    justify-content: center;
+    justify-content: space-between;
+    height:27vh;
+    text-align: center;
+    align-items: center;
+}
+.playing{
+    background-color: rgb(255, 191, 0);
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+.won{
+    background-color: #40BD21;
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+.lost{
+    background-color: #F81111;
+    text-align: center;
+    flex: 1;
+    color: white;
+}
+.DarkPink1{
+    border-left: 1px solid black;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    height: auto;
+    min-height: 100%;
+}
+
+
+
+.set1{
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+.LightPink1{
+    border-left: 1px solid black;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    height: auto;
+    min-height: 100%;
+}
+
+.LightPink1 img {
+    height: 5rem;
+    width: 5rem;
+}
+
+
+@media only screen and (max-width: 600px){
+.LightPink1 img, .DarkPink1 img {
+    height: 3rem;
+    width: 3rem;
+}
+}
