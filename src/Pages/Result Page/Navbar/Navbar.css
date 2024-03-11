@@ -1,10 +1,11 @@
 .results-navContainer{
     padding-top: 15vh;
     justify-content: center;
-    margin-left: 10vw;
-    
-    width: 90vw;
+    /* margin-left: 10vw; */
+    top: 0;
+    width: 100vw;
     height: max-content;
+    position:absolute;
 }
 .divContainer{
     color: black;
@@ -13,16 +14,18 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     font-family: 'Outfit',sans-serif;
-    
-    padding: 0 10%;
+    /* align-items: center; */
+    /* padding: 0 20%; */
     font-size: 28px;
     list-style-type: none;
+    margin-left: 0;
 }
 .results-navContainer>ul>li{
+    flex: 1;
     background-color: rgba(0, 0, 0, 0.29);
-    border-right: 1px solid black;
     padding:0 3%;
     width: fit-content;
+    width: 10rem;
 }

@@ -1,7 +1,7 @@
 import Badminton from '../Badminton/Badminton';
 import BBSection from '../BasketballScore/BasketBallSection';
 import './Navbar.css';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import VolleyballResult from '../Volleyball/volleyball';
 import Cricket from '../CricketScore/CricketSection';
 import TableTennis from '../TableTennis/TableTennisSection';
