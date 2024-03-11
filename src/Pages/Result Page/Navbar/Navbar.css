@@ -1,0 +1,39 @@
+.results-navContainer{
+    padding-top: 15vh;
+    justify-content: center;
+    margin-left: 5vw;
+    
+    width: 90vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.divContainer{
+    color: black;
+}
+.results-navContainer>ul{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Outfit',sans-serif;
+    
+    padding: 0 10%;
+    font-size: 28px;
+    list-style-type: none;
+}
+.results-navContainer>ul>li{
+    background-color: rgba(0, 0, 0, 0.29);
+    border-right: 1px solid black;
+    padding:0 3%;
+    width: fit-content;
+}
+
+.results-navContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .results-navContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

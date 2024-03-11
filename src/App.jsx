@@ -20,6 +20,8 @@ import React, { useState, useEffect } from "react";
 import AccommodationSection from "./Components/Accomodation/Accommodation";
 
 import AccomodationCard from "./Components/Accomodation_2nd/Accomodation_2nd";
+import Navbar from "./Pages/Result Page/Navbar/Navbar";
+import FootballScore from "./Pages/Result Page/Football/FootballScore";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -40,6 +42,7 @@ function App() {
   useEffect(() => {
     const r = getDocs(collection(db, "Team"))
       .then((querySnapshot) => {
+        setLoading(true)
         const temp = querySnapshot.docs.map((doc) => doc.data());
         temp.sort((a, b) => a.precedence - b.precedence);
         // console.log("heading");
@@ -114,7 +117,8 @@ function App() {
 
       <React.Fragment>
         <div className="background-container">
-          <Nav />
+          
+          
           <Main_HeroPage />
           <Timer />
           <MessageSection />
@@ -126,6 +130,7 @@ function App() {
           <Result />
           
           <Footer />
+          
         </div>
         <Lines customLoading={loading} />
       </React.Fragment>
