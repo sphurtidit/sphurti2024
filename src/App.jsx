@@ -124,6 +124,7 @@ function App() {
           
           
           <Main_HeroPage />
+          <Main_HeroPage />
           <Timer />
           <MessageSection />
           <Tribute />
@@ -132,6 +133,8 @@ function App() {
           <AccommodationSection rules={acc} />
           <TeamSec teams={team} sport={sport} />
           <Result />
+          
+          <Footer />
           
           <Footer />
           {/* <FootballScore/> */}
