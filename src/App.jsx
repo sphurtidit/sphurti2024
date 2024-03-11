@@ -136,7 +136,6 @@ function App() {
           
           <Footer />
           
-          <Footer />
           {/* <FootballScore/> */}
           {/* <BasketballScore/> */}
         </div>
