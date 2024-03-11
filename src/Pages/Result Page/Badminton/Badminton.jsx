@@ -84,7 +84,7 @@ export default function Badminton() {
         </div>
         {loading?<div>Loading</div>:<div>
         {viewBoys?<div className="boysContainer">{boysData.map((item) => {
-                        return <SetMatch matchData={item} type = {1}/>
+                        return <SetMatch matchData={item} type = {2}/>
                          
                     }
                     )}</div>:<div className="girlsContainer">{girlsData.map((item) => {

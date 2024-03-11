@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 .footballScore {
     display: flex;
-    border-right: 9px solid rgba(238, 9, 66, 1)
-    ;
-    border-left: 9px solid rgba(238, 9, 66, 1)
-    ;
+    border-right: 9px solid rgba(238, 9, 66, 1);
+    border-left: 9px solid rgba(238, 9, 66, 1);
     background-color: #FFF7E0;
     width: 70vw;
     margin-left: auto;
@@ -58,6 +56,13 @@
     width: 55%;
     padding:  4vh 0vh;
     justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Outfit";
+    font-weight: 500;
+    margin-top: 2vw;
+    color: black;
+    
 }
 .table>.tableColumn{
     border-top: 1px solid red;

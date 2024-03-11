@@ -26,7 +26,7 @@ const BasketballScore = ({  prop }) => {
         </div>
         <div className="teamnames">{prop.team2}</div>
       </div>
-      <table class="table">
+      <table class="table_basketball">
         <tbody>
           <tr>
             <td>Q1</td>

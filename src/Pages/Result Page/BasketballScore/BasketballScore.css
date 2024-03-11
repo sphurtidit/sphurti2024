@@ -50,11 +50,10 @@
     transform: skew(-15deg);
 }
 
-.table {
+.table_basketball {
     border-collapse: collapse;
     width: 35%;
     margin-left: auto;
-    
     padding-bottom: 10vh;
     margin-right: auto;
     margin-top: 2vw;
