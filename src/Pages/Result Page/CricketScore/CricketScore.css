@@ -1,3 +1,18 @@
+.match-heading{
+    margin-top: 2vh ;
+    font-size: 1.2rem;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-transform: uppercase;
+    font-family: 'Outfit';
+}
+
+.match-heading span{
+    font-weight: 700;
+}
+
 .cricketScore {
     border-right: 10px solid #ffb800;
     border-left: 10px solid #ffb800;
@@ -8,10 +23,9 @@
 
 .ScoreInfo {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     background-color: #fff7e0;
     align-items: center;
-
     padding: 1.8vw 2vw ;
 }
 
@@ -36,9 +50,11 @@
 
 .desc {
     font-family: 'Outfit';
-    font-weight: 500;
+    font-weight: 700;
     color: black;
     justify-content: center;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
 }
 
 .Information {
@@ -84,6 +100,7 @@
     background-color: #1f1f21;
     font-weight: 500;
     text-align: center;
+    text-transform: uppercase;
 }
 @media screen and (max-width: 768px){
     .ScoreInfo{
