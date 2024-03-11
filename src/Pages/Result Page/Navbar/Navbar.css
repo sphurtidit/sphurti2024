@@ -4,7 +4,8 @@
     margin-left: 5vw;
     
     width: 90vw;
-    height: max-content;
+    height: 100vh;
+    overflow-y: scroll;
 }
 .divContainer{
     color: black;
@@ -26,3 +27,13 @@
     padding:0 3%;
     width: fit-content;
 }
+
+.results-navContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .results-navContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
