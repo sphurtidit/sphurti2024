@@ -12,50 +12,44 @@ export default function BBSection() {
   const [viewBoys, setViewBoys] = useState(true);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const DataLoad=()=>{
+    const DataLoad = () => {
       const q = query(collection(db, "fixtures", "basketball", "boys"));
-    const p = query(collection(db, "fixtures", "basketball", "girls"));
-    const unsub = onSnapshot(q, (snapshot) => {
-      const newFix = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      // console.log(newFix);
-      setBoysData(newFix);
-    });
-    const upsub = onSnapshot(p, (snapshot) => {
-      const newFix = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
+      const p = query(collection(db, "fixtures", "basketball", "girls"));
+      const unsub = onSnapshot(q, (snapshot) => {
+        const newFix = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        // console.log(newFix);
+        setBoysData(newFix);
+      });
+      const upsub = onSnapshot(p, (snapshot) => {
+        const newFix = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
         setGirlsData(newFix);
-      
-      // console.log(newFix);
-      
-    })
-      
+
+        // console.log(newFix);
+
+      })
+
     }
     console.log(girlsData)
-    
     DataLoad()
-      
-    
-    return () =>{
-      
-    } ;
+    return () => {
+    };
   }, []);
 
-  useEffect(()=>{
-    if(boysData.length>0 && girlsData.length>0){
+  useEffect(() => {
+    if (boysData.length > 0 && girlsData.length > 0) {
       setLoading(false)
     }
-    else{
+    else {
       setLoading(true)
     }
-  },[boysData,girlsData])
+  }, [boysData, girlsData])
 
-  
-  
   // console.log(boysData);
   console.log(girlsData);
   useEffect(() => {
@@ -93,7 +87,11 @@ export default function BBSection() {
       ) : (
         <div>
           {/* {viewBoys?<div className="boysContainer">{Object.keys(boysData).map((key,index)=><BasketballScore team1={"Harsheet"} team2={"Vijayant"} prop={boysData[key]}/>)}</div>:<div className="girlsContainer">{Object.keys(girlsData).map((key,index)=><BasketballScore team1={"Harsheet"} team2={"Vijayant"} prop={girlsData[key]}/>)}</div>}   */}
-          {viewBoys?<div className="boysContainer">{boysData.map((data)=><BasketballScore prop={data}/>)}</div>:<div className="boysContainer">{girlsData.map((data)=><BasketballScore prop={data}/>)}</div>}
+          {viewBoys ? 
+          <div className="boysContainer">
+            {boysData.map((data) => (data.start ? <BasketballScore prop={data} /> : <></>))}</div> 
+            : <div className="boysContainer">{girlsData.map((data) => (data.start ? <BasketballScore prop={data} /> : <></>))}
+          </div>}
         </div>
       )}
     </section>
