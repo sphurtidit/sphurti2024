@@ -84,17 +84,14 @@ export default function TableTennis() {
         </div>
         {loading?<div>Loading</div>:<div>
         {viewBoys?<div className="boysContainer">{boysData.map((item) => {
-                        return <SetMatch matchData={item} type = {1}/>
+                        return item.start? <SetMatch matchData={item} type = {1}/> : <></>
                          
                     }
                     )}</div>:<div className="girlsContainer">{girlsData.map((item) => {
-                     
-                          return <SetMatch matchData={item} type = {1}/>
-                       
+                      return item.start? <SetMatch matchData={item} type = {1}/> : <></>
                   }
                   )}</div>}  
-        </div>}
-        
+        </div>}        
     </section>
   );
 }

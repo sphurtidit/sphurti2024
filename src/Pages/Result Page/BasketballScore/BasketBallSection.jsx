@@ -86,7 +86,6 @@ export default function BBSection() {
         <div>Loading</div>
       ) : (
         <div>
-          {/* {viewBoys?<div className="boysContainer">{Object.keys(boysData).map((key,index)=><BasketballScore team1={"Harsheet"} team2={"Vijayant"} prop={boysData[key]}/>)}</div>:<div className="girlsContainer">{Object.keys(girlsData).map((key,index)=><BasketballScore team1={"Harsheet"} team2={"Vijayant"} prop={girlsData[key]}/>)}</div>}   */}
           {viewBoys ? 
           <div className="boysContainer">
             {boysData.map((data) => (data.start ? <BasketballScore prop={data} /> : <></>))}</div> 
