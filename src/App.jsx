@@ -36,13 +36,10 @@ function App() {
   const [rule, setrule] = useState();
   const [acc, setAcc] = useState();
 
-
-
-
   useEffect(() => {
     const r = getDocs(collection(db, "Team"))
       .then((querySnapshot) => {
-        setLoading(true)
+        setLoading(true);
         const temp = querySnapshot.docs.map((doc) => doc.data());
         temp.sort((a, b) => a.precedence - b.precedence);
         // console.log("heading");
@@ -66,40 +63,35 @@ function App() {
       })
       .then(() => {
         const r = getDoc(doc(collection(db, "misc"), "links")).then((docu) => {
-          setrule(docu.data()['rulebook']);
-          setAcc(docu.data()['accrule'])
+          setrule(docu.data()["rulebook"]);
+          setAcc(docu.data()["accrule"]);
           // console.log(docu.data()['rulebook']);
         });
-        const unsub = getDocs(collection(db, "sportDetails")).then((querySnapshot) => {
-          const tempdata = querySnapshot.docs.map((doc) => doc.data());
-          for (let i = 0; i < tempdata.length; i++) {
-            if (tempdata[i]['index'] == 1) {
-              setbadminton(tempdata[i]);
-            }
-            else if (tempdata[i]['index'] == 2) {
-              setbasketball(tempdata[i]);
-            }
-            else if (tempdata[i]['index'] == 3) {
-              setcricket(tempdata[i]);
-            }
-            else if (tempdata[i]['index'] == 4) {
-              setvolleyball(tempdata[i]);
-            }
-            else if (tempdata[i]['index'] == 5) {
-              settabletennis(tempdata[i]);
-            }
-            else if (tempdata[i]['index'] == 6) {
-              setfootball(tempdata[i]);
+        const unsub = getDocs(collection(db, "sportDetails")).then(
+          (querySnapshot) => {
+            const tempdata = querySnapshot.docs.map((doc) => doc.data());
+            for (let i = 0; i < tempdata.length; i++) {
+              if (tempdata[i]["index"] == 1) {
+                setbadminton(tempdata[i]);
+              } else if (tempdata[i]["index"] == 2) {
+                setbasketball(tempdata[i]);
+              } else if (tempdata[i]["index"] == 3) {
+                setcricket(tempdata[i]);
+              } else if (tempdata[i]["index"] == 4) {
+                setvolleyball(tempdata[i]);
+              } else if (tempdata[i]["index"] == 5) {
+                settabletennis(tempdata[i]);
+              } else if (tempdata[i]["index"] == 6) {
+                setfootball(tempdata[i]);
+              }
             }
           }
-
-        });
+        );
         console.log(r);
         console.log(unsub);
       })
       .then(() => {
         setLoading(false);
-
       })
       .catch((error) => {
         setLoading(true);
@@ -114,23 +106,28 @@ function App() {
 
   return (
     <>
-
       <React.Fragment>
         <div className="background-container">
-          
-          
+          <Nav />
           <Main_HeroPage />
           <Timer />
           <MessageSection />
           <Tribute />
-          <SportsSection rule={rule} cricket={cricket} badminton={badminton} tabletennis={tabletennis} football={football} volleyball={volleyball} basketball={basketball} />
+          <SportsSection
+            rule={rule}
+            cricket={cricket}
+            badminton={badminton}
+            tabletennis={tabletennis}
+            football={football}
+            volleyball={volleyball}
+            basketball={basketball}
+          />
           <AccomodationCard />
           <AccommodationSection rules={acc} />
           <TeamSec teams={team} sport={sport} />
           <Result />
-          
+
           <Footer />
-          
         </div>
         <Lines customLoading={loading} />
       </React.Fragment>

@@ -9,7 +9,7 @@ export const Home=()=>{
         <main>
         
        <Router>
-       <Nav/>
+       
         <Routes>
         <Route path="/" element={<App/>} />
         <Route path="/gallery" element={<Gallery_Section/>} />
