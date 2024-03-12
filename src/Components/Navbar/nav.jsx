@@ -7,6 +7,7 @@ import SPH from '../../assets/sph.png';
 import { MdClose } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-scroll";
+import Gallery_Button from '../Gallery_Button/Gallery_Button';
 
 function Nav() {
     const navRef = useRef();
@@ -33,7 +34,8 @@ function Nav() {
                     <Link to="acc-section" offset={-80}><li onClick={showNav}>ACCOMMODATION</li></Link>
                     <Link to="team-nav" offset={-80}><li onClick={showNav}>CONTACT</li></Link>
                     {/* <Link to="home" offset={-80}><a>RESULTS</a></Link> */}
-                    <Link to="/live-results"><li className='reg-nav-button'>RESULTS</li></Link>
+                    {/* <a  rel="noreferrer"><li className='reg-nav-button'>GALLERY</li></a> */}
+                    <Gallery_Button />
                 </div>
                 <button className='nav-button nav-close-button' onClick={showNav}>
                     <MdClose />

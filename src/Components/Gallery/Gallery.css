@@ -1,3 +1,7 @@
+.main-gallery {
+    padding: 0 0 2rem 0;
+}
+
 .Moments {
     display: flex;
     flex-wrap: wrap;

@@ -9,45 +9,61 @@ import image7 from "../../assets/Gallery/image7.png";
 import image8 from "../../assets/Gallery/image8.png";
 import { useState } from "react";
 const Gallery = () => {
-    const [displayAll, setdisplayAll] = useState(false);
-    const imageList = [
-        image1, image2, image3,
-        image4, image5, image6,
-        image7, image8, image1,
-        image2, image3, image4,
-        image5, image6, image7,
-        image8, image1, image2,
-        image3, image4, image5,
-        image6, image7, image8,
-    ];
-    const [displayList, setdisplayList] = useState(imageList.slice(0, 12));
+  const [displayAll, setdisplayAll] = useState(false);
+  const imageList = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+  ];
+  const [displayList, setdisplayList] = useState(imageList.slice(0, 12));
 
-
-    const handleViewAll = () => {
-        if (!displayAll) {
-            setdisplayList(imageList);
-        }
-        else {
-            setdisplayList(imageList.slice(0, 12));
-        }
-        setdisplayAll(!displayAll);
+  const handleViewAll = () => {
+    if (!displayAll) {
+      setdisplayList(imageList);
+    } else {
+      setdisplayList(imageList.slice(0, 12));
     }
-    return (
-        <>
-            <div className="heading">
-                <h1>MOMENTS</h1>
-            </div>
-            <div className="Moments">
-                {displayList.map((image, index) => {
-                    return <img key={index} src={image} />;
-                })}
-            </div>
-            <div className="momentsbutton">
-                <button className="viewall" onClick={handleViewAll}>
-                    {!displayAll ? 'View All' : 'View Less'}</button>
-            </div>
-            
-        </>
-    );
+    setdisplayAll(!displayAll);
+  };
+  return (
+    <>
+      <div className="main-gallery">
+        <div className="heading">
+          <h1>MOMENTS</h1>
+        </div>
+        <div className="Moments">
+          {displayList.map((image, index) => {
+            return <img key={index} src={image} />;
+          })}
+        </div>
+        <div className="momentsbutton">
+          <button className="viewall" onClick={handleViewAll}>
+            {!displayAll ? "View All" : "View Less"}
+          </button>
+        </div>
+      </div>
+    </>
+  );
 };
 export default Gallery;
