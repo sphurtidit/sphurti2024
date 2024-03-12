@@ -1,4 +1,6 @@
 import "./Footer.css";
+import {Link} from 'react-router-dom';
+import LinkIcon from "../../assets/link.svg";
 // import Navbar from "../LogoNavbar/LogoNavbar";
 import Sphurti from "../../assets/sphurti.png";
 import Naac from "../../assets/naac.png";
@@ -24,7 +26,8 @@ const Footer = () => {
       <div className="footerContainer">
         <div className="footercontent">
           <p className="footerheader">Made with ❤️ and efforts</p>
-          <p className="footermiddle">Design Team X technical team</p>
+          
+          <Link to="/developers" ><p className="footermiddle"><img src={LinkIcon} alt="Link Icon" />Design Team X technical team</p></Link>
           <p className="footerbottom">Sphurti 2024</p>
         </div>
         <div className="footerlogos">
