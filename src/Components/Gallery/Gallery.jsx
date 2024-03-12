@@ -7,6 +7,23 @@ import image5 from "../../assets/Gallery/image5.png";
 import image6 from "../../assets/Gallery/image6.png";
 import image7 from "../../assets/Gallery/image7.png";
 import image8 from "../../assets/Gallery/image8.png";
+import image9 from "../../assets/Gallery/img9.jpg";
+import image10 from "../../assets/Gallery/img10.jpg";
+import image11 from "../../assets/Gallery/img11.jpg";
+import image12 from "../../assets/Gallery/img12.jpg";
+import image13 from "../../assets/Gallery/img13.jpg";
+import image14 from "../../assets/Gallery/img14.jpg";
+import image15 from "../../assets/Gallery/img15.jpg";
+import image16 from "../../assets/Gallery/img16.jpg";
+import image17 from "../../assets/Gallery/img17.jpg";
+import image18 from "../../assets/Gallery/img18.jpg";
+import image19 from "../../assets/Gallery/img19.jpg";
+import image20 from "../../assets/Gallery/img20.jpg";
+import image21 from "../../assets/Gallery/img21.jpg";
+import image22 from "../../assets/Gallery/img22.jpg";
+import image23 from "../../assets/Gallery/img23.jpg";
+import image24 from "../../assets/Gallery/img24.jpg";
+
 import { useState } from "react";
 const Gallery = () => {
   const [displayAll, setdisplayAll] = useState(false);
@@ -19,22 +36,22 @@ const Gallery = () => {
     image6,
     image7,
     image8,
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
+    image9,
+    image10,
+    image11,
+    image12,
+    image13,
+    image14,
+    image15,
+    image16,
+    image17,
+    image18,
+    image19,
+    image20,
+    image21,
+    image22,
+    image23,
+    image24,
   ];
   const [displayList, setdisplayList] = useState(imageList.slice(0, 12));
 
