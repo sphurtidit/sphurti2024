@@ -33,7 +33,7 @@ function Nav() {
                     <Link to="acc-section" offset={-80}><li onClick={showNav}>ACCOMMODATION</li></Link>
                     <Link to="team-nav" offset={-80}><li onClick={showNav}>CONTACT</li></Link>
                     {/* <Link to="home" offset={-80}><a>RESULTS</a></Link> */}
-                    <a href='https://forms.gle/m6F4P47PQ86q53Hy9' target="_blank" rel="noreferrer"><li className='reg-nav-button'>REGISTER</li></a>
+                    <Link to="/live-results"><li className='reg-nav-button'>RESULTS</li></Link>
                 </div>
                 <button className='nav-button nav-close-button' onClick={showNav}>
                     <MdClose />
