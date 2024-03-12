@@ -24,13 +24,13 @@
 
 .contentBox{
     color: black;
-    width: 70vw;
+    width: 50vw;
+    border: 0px 15px 0px 15px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10vh;
     border-left: 6px solid var(--color);
     border-right: 6px solid var(--color);
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .topRow,  .firstRow, .secondRow{
     display:flex;
@@ -43,24 +43,47 @@
 .topRow th{
     background-color: black;
     color: white;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .topRow th:nth-child(1){
-    background-color: #d9d9d9;
-    padding: 0;
+    align-items: stretch;
 }
 
 .firstRow td{
     background-color: var(--topCol);
     color: black;
     font-weight: bold;
+    width: 25%;
+    padding: 0;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
 }
 
 .secondRow td{
     background-color: var(--bottomCol);
     color: black;
     font-weight: bold;
-    
+    width: 25%; 
+    padding: 0;
+    height: 80px;
+    justify-content:center;
+    align-items: center;
+}
+
+.table-content-data > :first-child:last-child {
+    margin: 0; /* Remove margin when there's only one child */
+}
+
+.table-content-data > :first-child {
+    margin-top: 0px; /* Push first child to the left edge */
+}
+
+.table-content-data > :last-child {
+    margin-bottom: auto; /* Push last child to the right edge */
 }
 
 
@@ -77,36 +100,9 @@
     color: white;
     background-color: transparent;
     display:flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     text-align: center;
     width: 100%;
-    padding: 0.5rem;
-}
-
-.secondRow td:nth-child(1){
-    padding: 0;
-    flex-direction: column;
-    
-}
-
-
-.LightPink{
-    background-color: #FFF1F5;
-    display:flex;
-    justify-content: center;
-    justify-content: space-between;
-    height:20vh;
-    text-align: center;
-    align-items: center;
-}
-.DarkPink{
-    background-color: #FFC9D8;
-    display:flex;
-    justify-content: center;
-    justify-content: space-between;
-    height:20vh;
-    text-align: center;
-    align-items: center;
 }
 .playing{
     background-color: rgb(255, 191, 0);
@@ -116,52 +112,20 @@
 }
 .won{
     background-color: #40BD21;
-    flex: 1;
+    height: 40px;
     text-align: center;
     color: white;
 }
 .lost{
     background-color: #F81111;
     text-align: center;
-    flex: 1;
     color: white;
-}
-.DarkPink1{
-    border-left: 1px solid black;
-    flex: 1;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    height: auto;
-    min-height: 100%;
+    height: 40px;
 }
 
-
-
-.set1{
-    flex: 1;
-    justify-content: center;
-    text-align: center;
-}
-.LightPink1{
-    border-left: 1px solid black;
-    flex: 1;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    height: auto;
-    min-height: 100%;
-}
-
-.LightPink1 img {
-    height: 5rem;
-    width: 5rem;
-}
-
-
-@media only screen and (max-width: 600px){
-.LightPink1 img, .DarkPink1 img {
-    height: 3rem;
-    width: 3rem;
-}
+@media only screen and (max-width : 768px){
+    .contentBox{
+        color: black;
+        width: 80vw;
+    }
 }

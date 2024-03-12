@@ -1,4 +1,5 @@
 import "./BasketballScore.css";
+import Heading from "../ScoreHeading/ScoreHeading";
 const BasketballScore = ({  prop }) => {
   console.log(prop)
   var totalteam1 =
@@ -12,22 +13,31 @@ const BasketballScore = ({  prop }) => {
   Number(prop.set3.team2) +
   Number(prop.set4.team2);
 
+  const getWinnerStatement = () => {
+    if(totalteam1>totalteam2){
+      return `${prop.team1} WON THE MATCH`
+    }
+    if(totalteam2>totalteam1){
+      return `${prop.team2} WON THE MATCH`
+    }
+    return "MATCH DRAW"
+  }
+
   return (
     <>
-      <div className="basketballScore">
-        <div className="teamnames">{prop.team1}</div>
-        <div className="ScoreInformation">
-          <div className="Score1">
-            <p className="ScoreofScore">{totalteam1}</p>
-          </div>
-          <div className="Score2">
-            <p className="ScoreofScore">{totalteam2}</p>
-          </div>
-        </div>
-        <div className="teamnames">{prop.team2}</div>
+    <div className="match-heading">
+        <p><span className="match-name">{prop.name}</span>{` - ${prop.team1} VS ${prop.team2}`}</p>
       </div>
-      <table class="table_basketball">
+      <div className="basketballScore">
+        <Heading team1={prop.team1} team1Score={totalteam1} team2={prop.team2} team2Score={totalteam2}/>
+      </div>
+      <table class="basket-table">
         <tbody>
+        <tr>
+            <td>QUARTER</td>
+            <td class="tableborder">{prop.team1}</td>
+            <td>{prop.team2}</td>
+          </tr>
           <tr>
             <td>Q1</td>
             <td class="tableborder">{prop.set1.team1}</td>
@@ -51,6 +61,10 @@ const BasketballScore = ({  prop }) => {
           </tr>
         </tbody>
       </table>
+      {prop.complete? <div className="FootballFooter">
+          <div className="FooterText">
+          {getWinnerStatement()}</div>
+        </div> : <></>}
     </>
   );
 };

@@ -1,58 +1,19 @@
 .basketballScore {
     display: flex;
     border-right: 9px solid #ffb800;
-    border-left: 9px solid #ffb800;
+    border-left: 9px solid #ffb800;         
     background-color: #FFF7E0;
-    width: 70vw;
+    width: 80vw;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-evenly;
     padding: 1.5vw;
-    margin-top: 10vh;
     align-items: center;
 }
 
-.teamnames {
-    color: black;
-    font-family: 'Outfit';
-    font-weight: 500;
-    font-size: 1rem;
-
-}
-
-.ScoreInformation {
-    display: flex;
-}
-
-.ScoreofScore {
-    transform: skew(15deg);
-}
-
-.Score1 {
-    font-size: 1.3rem;
-    font-family: "Outfit";
-    font-weight: 800;
-    color: white;
-    background-color: #ee0942;
-    height: 120%;
-    padding: 0.4vw 2vw;
-    transform: skew(-15deg);
-}
-
-.Score2 {
-    font-size: 1.3rem;
-    font-weight: 800;
-    font-family: "Outfit";
-    color: white;
-    background-color: #3f3f43;
-    height: 120%;
-    padding: 0.4vw 2vw;
-    transform: skew(-15deg);
-}
-
-.table_basketball {
+.basket-table {
     border-collapse: collapse;
-    width: 35%;
+    width: 70%;
     margin-left: auto;
     padding-bottom: 10vh;
     margin-right: auto;
@@ -60,6 +21,7 @@
     color: black;
     font-family: 'Outfit';
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 td {

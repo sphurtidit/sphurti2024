@@ -1,6 +1,5 @@
 import "./setMatch.css";
 import { useState } from "react";
-import imgTeam from "../../../assets/sphurti.png"
 
 const SetMatch = ({ matchData, type }) => {
   console.log(matchData)
@@ -22,7 +21,7 @@ const SetMatch = ({ matchData, type }) => {
 const PLaying=()=>{
     return(
         <div className="result-declare playing">
-            Playing
+            LIVE
         </div>
     )
 }
@@ -55,6 +54,9 @@ const PLaying=()=>{
 
   const col = type === 0 ? "yellow" : type === 1 ? "purple" : "red";
   return <>
+  <div className="match-heading">
+        <p><span className="match-name">{matchData.name}</span>{` - ${matchData.team1} VS ${matchData.team2}`}</p>
+      </div>
     <table className={`contentBox ${col}`}>
       <tr className="topRow">
         {
@@ -65,7 +67,7 @@ const PLaying=()=>{
               </th>;
             }
             return <th className="table-heading">
-              Set {index + 1}
+              Set {index }
             </th>
           })
         }
@@ -75,7 +77,6 @@ const PLaying=()=>{
           columns.map((_, index) => {
             if (index === 0) {
               return <td className="table-content-data">
-                {/* <img src={imgTeam} alt="team" /> */}
                 <p>{matchData.team1}</p>
               </td>;
             }
@@ -89,9 +90,8 @@ const PLaying=()=>{
         {
           columns.map((_, index) => {
             if (index === 0) {
-              return <td className="table-content-data">
-                {!matchData.complete ? <PLaying/>: <ResultDiv isWon = {teamWon == 'B'}/>}
-                {/* <img src={imgTeam} alt="team" /> */}
+              return <td className="table-content-data ">
+                {!matchData.complete ? <></>: <ResultDiv isWon = {teamWon == 'B'}/>}
                 <p>{matchData.team2}</p>
               </td>;
             }

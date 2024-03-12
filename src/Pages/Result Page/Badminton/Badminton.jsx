@@ -2,11 +2,6 @@ import './Badminton.css'
 import { useEffect, useState } from "react";
 import { db } from "../../../firebase";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
-// import data from "../../../Data/BasketBall.json";
-// import bdata from "../../../Data/TableTennisBoys.json"
-// import mdata from "../../../Data/TableTennisMixed.json"
-
-// import BasketballScore from "./BasketballScore";
 import SetMatch from '../setMatch/setMatch';
 
 export default function Badminton() {
@@ -84,13 +79,10 @@ export default function Badminton() {
         </div>
         {loading?<div>Loading</div>:<div>
         {viewBoys?<div className="boysContainer">{boysData.map((item) => {
-                        return <SetMatch matchData={item} type = {2}/>
-                         
+                        return item.start ? <SetMatch matchData={item} type = {2}/> : <></>
                     }
                     )}</div>:<div className="girlsContainer">{girlsData.map((item) => {
-                     
-                          return <SetMatch matchData={item} type = {1}/>
-                       
+                          return item.start ? <SetMatch matchData={item} type = {2}/> : <></>                     
                   }
                   )}</div>}  
         </div>}
