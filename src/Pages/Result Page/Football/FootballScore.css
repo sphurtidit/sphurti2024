@@ -17,7 +17,13 @@
     background-color: rgba(255, 241, 245, 1);
     width: 65vw;
     padding:  4vh 0vh;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    color: black;
+    font-family: 'Outfit';
+    font-weight: 500;
 }
 .table>.tableColumn{
     border-top: 1px solid red;
