@@ -3,8 +3,9 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 10%;
-    font-family: 'Outfit ';
-    font-size: 28px;
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 1.5rem;
     margin-top: 2vh;
     transform: skew(-15deg);
 }
