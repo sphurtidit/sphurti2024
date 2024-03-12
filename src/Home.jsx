@@ -6,8 +6,9 @@ import Nav from "./Components/Navbar/nav"
 export const Home=()=>{
     return(
         <main>
-        <Nav/>
+        
        <Router>
+       <Nav/>
         <Routes>
         <Route path="/" element={<App/>} />
         <Route exact path="/live-results" element={<Navbar/>} />

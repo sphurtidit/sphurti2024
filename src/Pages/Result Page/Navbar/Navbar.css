@@ -24,15 +24,18 @@
     list-style-type: none;
 }
 .results-navContainer>ul>li{
-    background-color: rgba(0, 0, 0, 0.29);
+    /* background-color: rgba(0, 0, 0, 0.29); */
+    background-color: rgba(193, 193, 193, 0.19);
     /* border-right: 1px solid black; */
     padding:0 3%;
     width: fit-content;
 }
 
 .results-navContainer .activeNav {
-    background-color: #B4A3A8;
-    border-bottom: 4px #6a0808 solid;
+    /* background-color: #B4A3A8;
+    border-bottom: 4px #6a0808 solid; */
+    background-color: #FEEBC5;
+    border-bottom: 4px #EE0942 solid;
 }
 .results-navContainer::-webkit-scrollbar {
     display: none;
