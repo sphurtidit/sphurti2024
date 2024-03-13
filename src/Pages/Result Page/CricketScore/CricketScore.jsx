@@ -22,7 +22,7 @@ const CricketScore = ({ matchData }) => {
     } else if (matchData.firstInningComplete == '') {
       return `${matchData.toss} WON THE TOSS AND SELECTED TO ${matchData.choose}`;
     } else if (!matchData.complete) {
-      return `${team2[0]} needs ${team1[1] - team2[1] + 1} runs in ${15 - team2[2]} overs`;
+      return `${team2[0]} needs ${team1[1] - team2[1] + 1} runs in ${10 - team2[2]} overs`;
     } else {
       if (team1[1] > team2[1]) {
         return `${team1[0]} WON BY ${team1[1] - team2[1]} RUNS`;

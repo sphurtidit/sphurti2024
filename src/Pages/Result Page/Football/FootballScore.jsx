@@ -10,7 +10,7 @@ const FootballScore = ({item}) => {
     if(goal1.length>goal2.length){
       return `${item.team1} WON THE MATCH`
     }
-    if(goal2.length<goal1.length){
+    if(goal2.length>goal1.length){
       return `${item.team2} WON THE MATCH`
     }
     return "MATCH DRAW"

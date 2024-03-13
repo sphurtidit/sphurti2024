@@ -13,8 +13,8 @@ export default function BBSection() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const DataLoad = () => {
-      const q = query(collection(db, "fixtures", "basketball", "boys"));
-      const p = query(collection(db, "fixtures", "basketball", "girls"));
+      const q = query(collection(db, "fixtures", "basketball", "boys"), orderBy('order'));
+      const p = query(collection(db, "fixtures", "basketball", "girls"), orderBy('order'));
       const unsub = onSnapshot(q, (snapshot) => {
         const newFix = snapshot.docs.map((doc) => ({
           id: doc.id,

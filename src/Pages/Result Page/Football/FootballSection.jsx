@@ -10,7 +10,7 @@ const Football = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const q = query(collection(db, 'fixtures', 'Footbatt', 'boys'));
+        const q = query(collection(db, 'fixtures', 'Footbatt', 'boys'), orderBy('order'));
         const unsub = onSnapshot(q, snapshot => {
             const newFix = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             setFixture(newFix);
