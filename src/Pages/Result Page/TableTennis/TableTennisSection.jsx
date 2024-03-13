@@ -1,100 +1,120 @@
-import './TableTennisSection.css'
+import './TableTennisSection.css';
 import { useEffect, useState } from "react";
 import { db } from "../../../firebase";
-import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
-// import data from "../../../Data/BasketBall.json";
-// import bdata from "../../../Data/TableTennisBoys.json"
-// import mdata from "../../../Data/TableTennisMixed.json"
-
-// import BasketballScore from "./BasketballScore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import SetMatch from '../setMatch/setMatch';
 
 export default function TableTennis() {
-  const [boys, setBoys] = useState("active");
-  const [girls, setGirls] = useState("inactive");
-  const [boysData, setBoysData] = useState([]);
-  const [girlsData, setGirlsData] = useState([]);
-  const [viewBoys, setViewBoys] = useState(true);
-  const [loading,setLoading]=useState(true)
-  useEffect(() => {
-    const DataLoad=()=>{
-      const q = query(collection(db, "fixtures", "Table Tennis", "boys"));
-    const p = query(collection(db, "fixtures", "Table Tennis", "mixed"));
-    console.log(q)
-    const unsub = onSnapshot(q, (snapshot) => {
-      const newFix = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      // console.log(newFix);
-      setBoysData(newFix);
-    });
-    const upsub = onSnapshot(p, (snapshot) => {
-      const newFix = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
-        setGirlsData(newFix);
-      
-      // console.log(newFix);
-      
-    })
-      
-    }
-    console.log(girlsData)
-    
-    DataLoad()
-      
-    
-    return () =>{
-      
-    } ;
-  }, []);
+ const [boys, setBoys] = useState("active");
+ const [girls, setGirls] = useState("inactive");
+ const [naruto, setNaruto] = useState([]);
+ const [boysData, setBoysData] = useState([]);
+ const [girlsData, setGirlsData] = useState([]);
+ const [viewBoys, setViewBoys] = useState(true);
+ const [loading, setLoading] = useState(true);
 
-  useEffect(()=>{
-    if(boysData.length>0 && girlsData.length>0){
-      console.log(boysData)
-      setLoading(false)
-    }
-    else{
-      setLoading(true)
-    }
-  },[boysData,girlsData])
+ useEffect(() => {
+    const DataLoad = () => {
+      const q = query(collection(db, "fixtures", "Table Tennis", "boys"),orderBy("order"));
+      // const p = query(collection(db, "fixtures", "Table Tennis", "mixed"));
 
-  useEffect(() => {
-    if(viewBoys){
-        setBoys("active")
-        setGirls("inactive")
+      const unsub = onSnapshot(q, (snapshot) => {
+        const newFix = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setBoysData(newFix);
+      });
+
+      // const upsub = onSnapshot(p, (snapshot) => {
+      //   const newFix = snapshot.docs.map((doc) => ({
+      //     id: doc.id,
+      //     ...doc.data(),
+      //   }));
+      //   setGirlsData(newFix);
+      // });
+
+      return () => {
+        unsub();
+        upsub();
+      };
+    };
+
+    DataLoad();
+ }, []);
+
+ function sortBoys() {
+    let newnaruto = [];
+    let rasengan = [];
+
+    rasengan.push(boysData[0]);
+    rasengan.push(boysData[1]);
+    rasengan.push(boysData[2]);
+    newnaruto.push(rasengan);
+    rasengan = [];
+
+    for (let i = 3; i < boysData.length; i++) {
+      if (boysData[i].sid !== boysData[i - 1].sid) {
+        if (rasengan.length > 0) {
+          newnaruto.push(rasengan);
+          rasengan = [];
+          rasengan.push(boysData[i]);
+        } else {
+          rasengan.push(boysData[i]);
+          continue;
+        }
+      } else {
+        rasengan.push(boysData[i]);
+      }
     }
-    else{
-        setBoys("inactive")
-        setGirls("active")
+    newnaruto.push(rasengan);
+    setNaruto(newnaruto);
+ }
+
+ useEffect(() => {
+    if (boysData.length > 0) {
+      sortBoys();
     }
-  },[viewBoys]);
-  
-  return (
+ }, [boysData]);
+
+ useEffect(() => {
+    if (viewBoys) {
+      setBoys("active");
+      setGirls("inactive");
+    } else {
+      setBoys("inactive");
+      setGirls("active");
+    }
+ }, [viewBoys]);
+
+ useEffect(() => {
+    if (naruto.length > 0) {
+      setLoading(false);
+    } else {
+      setLoading(true);
+    }
+ }, [naruto]);
+
+ return (
     <section className="basketballContainer">
-      <div className="optionsContainer">
-        <div onClick={()=>{setViewBoys(true)}} className={boys+' options'} >
-            Boys
+      {loading ? (
+        <div>Loading</div>
+      ) : (
+        <div>
+          {viewBoys ? (
+            <div className="boysContainer">
+              {naruto.map((row) => (
+                <div className="MatchCard">
+                 <p className="matchname">{row[0].name.split("-")[0]}</p>
+                 {row.map((data) => (
+                    data.start ? <SetMatch matchData={data} type={2} /> : null
+                  ))}
+                </div>
+              ))}
+            </div>
+          ) : null}
         </div>
-        <div onClick={()=>{setViewBoys(false)}} className={girls+" options"}>
-            Mixed
-        </div>
-        </div>
-        {loading?<div>Loading</div>:<div>
-        {viewBoys?<div className="boysContainer">{boysData.map((item) => {
-                        return item.start? <SetMatch matchData={item} type = {1}/> : <></>
-                         
-                    }
-                    )}</div>:<div className="girlsContainer">{girlsData.map((item) => {
-                      return item.start? <SetMatch matchData={item} type = {1}/> : <></>
-                  }
-                  )}</div>}  
-        </div>}        
+      )}
     </section>
-  );
+ );
 }
-
-
-// 
