@@ -6,8 +6,8 @@ import DIT from '../../assets/DIT.png';
 import NAAC from '../../assets/naac.png';
 import SPHURTI from '../../assets/sphurti.png';
 import SPH from '../../assets/sph.png';
-import { MdClose } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Gallery_Button from '../../Components/Gallery_Button/Gallery_Button';
 
