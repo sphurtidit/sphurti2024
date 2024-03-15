@@ -24,13 +24,20 @@
     transition:0.7s;
 }
 @media only screen and (max-width: 1024px){
+    .DevelopersSection{
+        padding: 7em 0;
+    }
     .developers{
         flex-direction: column;
+        flex-wrap: nowrap;
         height: 100vh;
-        margin-top: 10%;
+        margin-top: 20%;
     }
     .developer{
         width: 30%;
         margin: 3%;
+    }
+    #designer{
+        margin-top: 1%;
     }
 }
