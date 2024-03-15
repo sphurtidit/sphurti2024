@@ -11,6 +11,9 @@ import tanyajr from "../../assets/tanyajr.jpg";
 import tanyasnr from "../../assets/tanyasnr.jpg";
 import rudraksh from "../../assets/rudraksh.jpg";
 import divik from "../../assets/divik.jpg";
+import jairus from "../../assets/jairus.jpg";
+import abhinav from "../../assets/abhinav.jpg";
+import garv from "../../assets/garv.jpg";
 function Nav() {
   const navRef = useRef();
 
@@ -48,7 +51,7 @@ function DevelopersSection() {
   return (
     <div className="DevelopersSection">
       <div className="heading">
-        <h1>DEVELOPERS PAGE</h1>
+        <h1>TECHNICAL TEAM</h1>
       </div>
       <div className="developers">
         <div className="developer" onClick={() => window.location.href = 'https://www.linkedin.com/in/divik-goel-12a056143/'}>
@@ -77,11 +80,40 @@ function DevelopersSection() {
     </div>
   );
 }
+function Designersseciton() {
+  return (
+    <>
+    <div className="DevelopersSection">
+      <div className="heading">
+        <h1>DESIGN TEAM</h1>
+      </div>
+      <div id="designer" className="developers">
+        <div className="developer">
+          <img width="100%" src={jairus} alt="developer" />
+          <h1 style={{margin:"0px"}} className="heading">Jairus Joseph</h1>
+        </div>
+        <div className="developer">
+          <img width="100%" src={abhinav} alt="developer" />
+          
+          <h1 style={{margin:"0px"}} className="heading">Abhinav Agnihotri</h1>
+        </div>
+        <div className="developer">
+
+          <img width="100%" src={garv} alt="developer" />
+          
+          <h1 style={{margin:"0px"}} className="heading">Garv Chawla</h1>
+        </div>
+      </div>
+    </div>
+    </>
+  );
+}
 const DevelopersPage = () => {
   return (
     <>
       <Nav />
       <DevelopersSection />
+      <Designersseciton />
     </>
   );
 };
